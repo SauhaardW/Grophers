@@ -1,0 +1,12 @@
+Name: Andres Prada
+
+What have you done since yesterday?
+	- N/A, started today.
+
+What are you planning on doing today?
+	- Create GitHub, folder structure, agreement, etc.
+    - Create Firebase project
+    - Begin contributing to design on Figma
+
+Any impediments or stumbling blocks?
+	- None
