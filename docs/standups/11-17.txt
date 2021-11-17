@@ -24,3 +24,16 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- N/A, started today.
+
+What are you planning on doing today?
+	- Got familiar with Figma
+	- Begin contributing to layout of the xml pages
+	- Set up token for Git and cloned the repo
+
+Any impediments or stumbling blocks?
+	- None
