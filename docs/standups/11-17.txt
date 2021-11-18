@@ -10,3 +10,30 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+Name: Sauhaard Walia
+
+What have you done since yesterday?
+	- N/A, started today.
+
+What are you planning on doing today?
+	- Set up our teams design project on Figma
+	- Share design project with the team on Figma
+	- Begin contributing to the design structure for the entire app
+	- Set up GitHub on my MacBook and provide token code to verify
+
+Any impediments or stumbling blocks?
+	- None
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- N/A, started today.
+
+What are you planning on doing today?
+	- Got familiar with Figma
+	- Begin contributing to layout of the xml pages
+	- Set up token for Git and cloned the repo
+
+Any impediments or stumbling blocks?
+	- None
