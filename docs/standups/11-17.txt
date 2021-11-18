@@ -38,4 +38,16 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- None
 
-Hello
+Name: Sayed Mojtaba Hosseini
+
+What have you done since yesterday?
+	- N/A, started today.
+
+What are you planning on doing today?
+	- Formed our group
+	- Understood the basic functionalities of Figma and created a Figma account
+	- Created the Rough Design of our android application for implementation in Figma
+	- Set up GitHub and GitHub desktop on my laptop
+
+Any impediments or stumbling blocks?
+	- None
