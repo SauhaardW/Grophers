@@ -1,0 +1,11 @@
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Set up firebase SDK on project from the project I created on Firebase yesterday
+	- Created template code for reading/writing data
+
+What are you planning on doing today?
+   	- If time permits, check out Figma partners have been working on and try contributing
+
+Any impediments or stumbling blocks?
+	- Time, other courses have been keeping me busy

@@ -1,0 +1,10 @@
+Name: 
+
+What have you done since yesterday?
+	- 
+
+What are you planning on doing today?
+   	- 
+
+Any impediments or stumbling blocks?
+	- 
