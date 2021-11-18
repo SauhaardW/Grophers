@@ -25,6 +25,20 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- None
 
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- N/A, started today.
+
+What are you planning on doing today?
+	- Developed familiarity with Git and GitHub
+	- Set up GitHub Desktop and cloned the repository
+	- Collaborated and designed with Mojo an initial
+	  rough sketch of the overall layout design
+
+Any impediments or stumbling blocks?
+	- None
+
 Name: Nicole Droi
 
 What have you done since yesterday?
