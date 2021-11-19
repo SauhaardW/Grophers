@@ -22,6 +22,21 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Time, studying for other courses
 
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Developed basic familiarity with Figma such as creating
+	  and deleting objects, changing color and opacity, etc...
+	- Added a page that allows a signed-in owner to upload
+	  a profile picture
+
+What are you planning on doing today?
+	- Watch a tutorial on youtube about how to better use Figma
+	- Ameliorate the UI designs of already existing layout pages 
+
+Any impediments or stumbling blocks?
+	- Time, attending lectures and studying for other courses
+
 Name: Sauhaard Walia
 
 What have you done since yesterday?
