@@ -9,3 +9,15 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Time, other courses have been keeping me busy
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Became familiar with the different aspects of Figma including prototype, text editing etc.
+	- Created a couple pages relating to the login portion of the app
+
+What are you planning on doing today?
+   	- Add to pages already created in Figma to make them less boring
+
+Any impediments or stumbling blocks?
+	- Time, studying for other courses
