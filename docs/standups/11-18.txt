@@ -21,3 +21,16 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Time, studying for other courses
+
+Name: Sauhaard Walia
+
+What have you done since yesterday?
+	- Started working intensively on understanding the basics of Figma and how to set up pages 
+	- Set up past orders, reset password for users, reset password for customers
+	- Downloaded GitHub application onto my laptop so I can commit easier and more efficiently
+
+What are you planning on doing today?
+   	- Add to color scheme on our front end and develop more pages for the application on Figma
+
+Any impediments or stumbling blocks?
+	- Due to have 3 midterms it has been extremely difficult to be able to allocate time.
