@@ -25,7 +25,7 @@ Any impediments or stumbling blocks?
 Name: Sauhaard Walia
 
 What have you done since yesterday?
-	- Started working intensively on understanding the basics of Figma and how to set up pages 
+	- Started working intensively on understanding the basics of Figma and how to set up pages
 	- Set up past orders, reset password for users, reset password for customers
 	- Downloaded GitHub application onto my laptop so I can commit easier and more efficiently
 
@@ -34,3 +34,15 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Due to have 3 midterms it has been extremely difficult to be able to allocate time.
+
+	Name: Sayed Mojtaba Hosseini
+
+	What have you done since yesterday?
+		- Tried understanding the basic functionalities on Figma to design the layout of our app
+		- Edited some pages on Figma that were created by my team mates
+
+	What are you planning on doing today?
+	   	- Edit the Owner's view page for our application
+
+	Any impediments or stumbling blocks?
+		- Wasn't able to allocate proper time for the project today due to my ongoing preparations for 3 midterms over the course of Friday and Saturday
