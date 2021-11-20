@@ -38,3 +38,15 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- No time.
 >>>>>>> 09b06ca06ac28064e6ddfbd9fe2fdfe195fae831
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Created pages for the design on Figma
+	- Added details to existing pages, changed up the landing page to make it a bit more interesting, in the process I learnt more about the different features that Figma has	 
+
+What are you planning on doing today?
+   	- If time permits, take a look at the design on Figma 
+
+Any impediments or stumbling blocks?
+	- Time, many midterms/tests
