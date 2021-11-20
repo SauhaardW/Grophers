@@ -13,3 +13,15 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Time, I had to communicate back and forth with the
       Co-op Office and write a 4-hour long exam.
+
+Name: Sauhaard Walia 
+
+What have you done since yesterday?
+	- Added final touch ups to existing pages such as owners orders list to include additional details such as the time and date the order was placed 
+	- Did further reading into Android Studio and its features to be best prepared for when we begin coding on Android Studio
+
+What are you planning on doing today?
+	- Brush up and familiarize myself with the basics of Firebase so that I can be able to utilize it efficiently once we build the database
+
+Any impediments or stumbling blocks?
+	- Finding enough time to work as I had 2 midterms today along with a quiz that I had to write which took up the majority of my time today
