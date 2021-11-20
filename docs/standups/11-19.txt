@@ -14,6 +14,7 @@ Any impediments or stumbling blocks?
 	- Time, I had to communicate back and forth with the
       Co-op Office and write a 4-hour long exam.
 
+<<<<<<< HEAD
 Name: Sauhaard Walia 
 
 What have you done since yesterday?
@@ -25,3 +26,15 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Finding enough time to work as I had 2 midterms today along with a quiz that I had to write which took up the majority of my time today
+=======
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Largely contributed to design of UI on Figma, including Customer & Owner Hamburger Modals, Past Customer order modals, Past order details modals, customer view, store view, item view modal, cart, success, and more
+
+What are you planning on doing today?
+	- Nothing, due to time restrictions
+
+Any impediments or stumbling blocks?
+	- No time.
+>>>>>>> 09b06ca06ac28064e6ddfbd9fe2fdfe195fae831
