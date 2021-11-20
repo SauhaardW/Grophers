@@ -1,0 +1,15 @@
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Changed the layout features of certain pages such as
+      the color of the main login page to match the overall
+      application's main light green and orange colors. 
+	- Created the standup file for today's scrum.
+
+What are you planning on doing today?
+	- Revisit our first Figma layout rough draft to 
+      search for and add any overlooked pages and objects.
+
+Any impediments or stumbling blocks?
+	- Time, I had to communicate back and forth with the
+      Co-op Office and write a 4-hour long exam.
