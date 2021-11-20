@@ -13,3 +13,14 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Time, I had to communicate back and forth with the
       Co-op Office and write a 4-hour long exam.
+
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Largely contributed to design of UI on Figma, including Customer & Owner Hamburger Modals, Past Customer order modals, Past order details modals, customer view, store view, item view modal, cart, success, and more
+
+What are you planning on doing today?
+	- Nothing, due to time restrictions
+
+Any impediments or stumbling blocks?
+	- No time.
