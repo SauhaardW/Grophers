@@ -31,3 +31,15 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Still having to prepare for my midterm on Monday and having to complete a take home quiz due tomorrow morning meant I still struggled to be able to find enough time
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Nothing
+
+What are you planning on doing today?
+   	- Learn more about Firebase to try to understand it thoroughly
+	- Take another look at the design in Figma and make sure there is nothing missing that we had forgotten 
+
+Any impediments or stumbling blocks?
+	- Time, other classes
