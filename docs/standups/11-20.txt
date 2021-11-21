@@ -9,6 +9,17 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Time
 
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Nothing
+
+What are you planning on doing today?
+   	- Review the user stories to and try to catch if anything was missed within our initial rough sketch (of the overall layout design).
+
+Any impediments or stumbling blocks?
+	- Time, won't be able to start working effectively on this project until November 23, 2022
+
 Name: Sauhaard Walia
 
 What have you done since yesterday?
