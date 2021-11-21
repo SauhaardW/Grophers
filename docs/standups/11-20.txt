@@ -1,0 +1,10 @@
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Nothing
+
+What are you planning on doing today?
+   	- Review the project handout and see if we have missed anything for UI, prepare for next week when I'm more free to work.
+
+Any impediments or stumbling blocks?
+	- Time
