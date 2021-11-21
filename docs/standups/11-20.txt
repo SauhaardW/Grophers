@@ -8,3 +8,15 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Time
+
+Name: Sauhaard Walia
+
+What have you done since yesterday?
+	- Reviewed Firebase and watched several tutorials online to familiarize myself with a realtime database to be best prepared for when we begin linking our code to the database
+	- Looked over our Figma UI and added any further small implementations I could further add to it
+
+What are you planning on doing today?
+   	- Review what components would be required for our database after reviewing our Figma UI and gain a strong understanding of how those components can be developed once we get to that part of our project
+
+Any impediments or stumbling blocks?
+	- Still having to prepare for my midterm on Monday and having to complete a take home quiz due tomorrow morning meant I still struggled to be able to find enough time
