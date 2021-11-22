@@ -20,3 +20,14 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Midterm preparation for MATB24
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Added a drop down menu to the order info modal on Figma and created a new page displaying what the drop down menu shows
+
+What are you planning on doing today?
+   	- Nothing in relation to this project.
+
+Any impediments or stumbling blocks?
+	- Time, preparing/studying for upcoming midterm
