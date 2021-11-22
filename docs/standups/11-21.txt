@@ -1,0 +1,11 @@
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Created the standup file for today's scrum
+
+What are you planning on doing today?
+   	- Nothing in relation to this project.
+
+Any impediments or stumbling blocks?
+	- Time, MATB41 Assignment + Midterm preparation for MATB24 (won't be able
+      to start working effectively on this project until November 23, 2022)
