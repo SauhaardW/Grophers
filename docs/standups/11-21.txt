@@ -38,7 +38,7 @@ What have you done since yesterday?
 	- I looked over the components of Firebase realtime database system and how to that we would be required to utilize based on our Figma UI that we have already formatted.
 
 What are you planning on doing today?
-   	- Go back to our application UI on Figma and removed the forgot password feature for both login page for owner and user as that is no longer a feature we plan to provide
+   	- Go back to our application UI on Figma and remove the forgot password feature for both login page for owner and user as that is no longer a feature we plan to provide
 
 Any impediments or stumbling blocks?
 	- Time as I have a MATB24 Midterm tomorrow hence I was really unable to be able to find enough time to be able to spend on this project instead of studying for my midterm. 
