@@ -100,7 +100,7 @@
         android:layout_marginTop="199dp"
         android:gravity="center"
         android:text="Add profile photo"
-        android:textColor="#FF8201"
+        android:textColor="@color/OwnerOrange"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
