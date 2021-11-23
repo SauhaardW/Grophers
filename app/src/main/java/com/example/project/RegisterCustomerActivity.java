@@ -49,11 +49,13 @@ public class RegisterCustomerActivity extends AppCompatActivity {
     }
 
     private void registerUser() {
+        // Declare views by ID
         EditText editTextUsername = (EditText)findViewById(R.id.editTextUsername);
         EditText editTextEmail = (EditText)findViewById(R.id.editTextEmail);
         EditText editTextPassword = (EditText)findViewById(R.id.editTextPassword);
         EditText editTextConfirmPassword = (EditText)findViewById(R.id.editTextConfirmPassword);
 
+        // Grab text from views
         String username = editTextUsername.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
@@ -80,13 +82,16 @@ public class RegisterCustomerActivity extends AppCompatActivity {
             return;
         }
 
+        // Set progress bar to visible, we're processing stuff now
         ProgressBar pb = (ProgressBar) findViewById(R.id.progressBar);
         pb.setVisibility(View.VISIBLE);
 
+        // Use Firebase mAuth to create new user
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
+                    // Create User Object
                     User user = new User(username, email);
 
                     FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -104,6 +109,7 @@ public class RegisterCustomerActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(RegisterCustomerActivity.this, "Your account failed to be registered", Toast.LENGTH_LONG).show();
                 }
+                // Processing is done, set progress bar back to invisible
                 pb.setVisibility(View.INVISIBLE);
             }
         });
