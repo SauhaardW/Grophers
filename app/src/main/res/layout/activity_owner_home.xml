@@ -10,22 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="142dp"
-            android:layout_marginTop="107dp"
-            android:layout_marginEnd="142dp"
-            android:layout_marginBottom="571dp"
-            android:text="activity"
-            android:textSize="40sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></TextView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        />
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
