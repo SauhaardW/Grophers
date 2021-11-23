@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity
+            android:name=".CustomerHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginCustomerActivity"
             android:exported="false" />
         <activity
