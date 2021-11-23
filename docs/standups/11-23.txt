@@ -1,0 +1,19 @@
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Created basic customer login UI, customer registration UI to begin backend work
+	- Implemented customer login backend, customer registration backend
+	- Created basic owner login UI, owner registration UI to begin backend work
+	- Implemented owner login backend, owner registration backend
+	- Created classes for Product, User, Customer
+	- Begun working on hamburger menu for owner
+
+What are you planning on doing today?
+   	- Finish hamburger menu for owner
+	- Start and finish hambuer menu for user
+	- Begin work on owner profile setup backend
+	- Begin work on owner product creation
+	- Begin work on customer store and product view backend
+
+Any impediments or stumbling blocks?
+	- Time
