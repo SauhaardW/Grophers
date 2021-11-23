@@ -1,0 +1,12 @@
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Looked into the transfer of UI design on Figma to code
+	- Found plugins that could help this transfer be easier and other applications that could be used to create the code
+
+What are you planning on doing today?
+   	- Nothing in relation to this course, due to midterm
+
+Any impediments or stumbling blocks?
+	- Some plugins are outdated and no longer work
+	- Time, midterm today
