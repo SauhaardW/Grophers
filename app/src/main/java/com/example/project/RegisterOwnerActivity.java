@@ -3,6 +3,7 @@ package com.example.project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -100,6 +101,7 @@ public class RegisterOwnerActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
                                 Toast.makeText(RegisterOwnerActivity.this, "Your account has been registered", Toast.LENGTH_LONG).show();
+                                startActivity(new Intent(RegisterOwnerActivity.this, LoginOwnerActivity.class));
                             } else {
                                 Toast.makeText(RegisterOwnerActivity.this, "Your account failed to be registered", Toast.LENGTH_LONG).show();
                             }
