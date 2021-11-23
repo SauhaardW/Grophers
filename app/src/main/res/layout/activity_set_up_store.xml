@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ownerProfileImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetUpStore">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="411dp"
+        android:layout_height="63dp"
+        android:background="@drawable/orangebox"
+        android:gravity="center"
+        android:text="Create profile"
+
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/storeNameTextBox"
+        android:layout_width="358dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="282dp"
+        android:background="@drawable/gettext"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/StoreName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="261dp"
+        android:text="Store name*"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/openHoursTextBox"
+        android:layout_width="358dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="393dp"
+        android:background="@drawable/gettext"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/OpenHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="372dp"
+        android:text="Open Hours*"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profileImg"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="99dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ownerimagecircle" />
+
+    <TextView
+        android:id="@+id/done"
+        android:layout_width="122dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="661dp"
+        android:gravity="center"
+        android:text="Done"
+        android:textColor="#FF8201"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addProfilePhoto"
+        android:layout_width="122dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="199dp"
+        android:gravity="center"
+        android:text="Add profile photo"
+        android:textColor="#FF8201"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
