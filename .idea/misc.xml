@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_customer_home.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_login_customer.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_login_owner.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_register_customer.xml" value="0.5385416666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_register_owner.xml" value="0.5541666666666667" />
       </map>
     </option>
   </component>

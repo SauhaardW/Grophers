@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity
+            android:name=".RegisterOwnerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginOwnerActivity"
+            android:exported="false" />
+        <activity
             android:name=".CustomerHomeActivity"
             android:exported="false" />
         <activity

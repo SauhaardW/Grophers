@@ -4,64 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginCustomerActivity">
-
-    <ProgressBar
-        android:id="@+id/progressBarCustomerLogin"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="77dp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerButton"
-        tools:visibility="invisible" />
-
-    <Button
-        android:id="@+id/registerButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="@color/CustomerOrange"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginSubmitCustomer" />
+    tools:context=".LoginOwnerActivity">
 
     <EditText
-        android:id="@+id/editTextPasswordCustomerLogin"
+        android:id="@+id/editTextPasswordOwnerLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="34dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailCustomerLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailOwnerLogin"
+        tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/loginSubmitCustomer"
+        android:id="@+id/registerButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="162dp"
-        android:backgroundTint="@color/CustomerOrange"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/OwnerGreen"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginSubmitOwner" />
+
+    <ProgressBar
+        android:id="@+id/progressBarOwnerLogin"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton2"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/loginSubmitOwner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="@color/OwnerGreen"
         android:text="Log In"
         app:backgroundTint="#FF8201"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordCustomerLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordOwnerLogin" />
 
     <EditText
-        android:id="@+id/editTextEmailCustomerLogin"
+        android:id="@+id/editTextEmailOwnerLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="206dp"
-        android:layout_marginEnd="101dp"
+        android:layout_marginTop="264dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"

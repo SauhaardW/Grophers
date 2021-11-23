@@ -16,56 +16,56 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class LoginCustomerActivity extends AppCompatActivity {
+public class LoginOwnerActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_customer);
+        setContentView(R.layout.activity_login_owner);
 
         // Create Firebase Auth instance
         mAuth = FirebaseAuth.getInstance();
 
-        Button submitButton = (Button) findViewById(R.id.loginSubmitCustomer);
+        Button submitButton = (Button) findViewById(R.id.loginSubmitOwner);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Call function that handles log-ins
-                logInCustomer();
+                logInOwner();
             }
         });
 
-        Button registerButton = (Button) findViewById(R.id.registerButton);
+        Button registerButton = (Button) findViewById(R.id.registerButton2);
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginCustomerActivity.this, RegisterCustomerActivity.class));
+                startActivity(new Intent(LoginOwnerActivity.this, RegisterOwnerActivity.class));
             }
         });
     }
 
-    private void logInCustomer() {
+    private void logInOwner() {
         // Declare Views
-        EditText editTextEmail = (EditText) findViewById(R.id.editTextEmailCustomerLogin);
-        EditText editTextPassword = (EditText) findViewById(R.id.editTextPasswordCustomerLogin);
+        EditText editTextEmail = (EditText) findViewById(R.id.editTextEmailOwnerLogin);
+        EditText editTextPassword = (EditText) findViewById(R.id.editTextPasswordOwnerLogin);
 
         // Get text from views
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
         // Set progress bar to visible, we are processing
-        ProgressBar pb = (ProgressBar) findViewById(R.id.progressBarCustomerLogin);
+        ProgressBar pb = (ProgressBar) findViewById(R.id.progressBarOwnerLogin);
         pb.setVisibility(View.VISIBLE);
 
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(LoginCustomerActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginOwnerActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(LoginCustomerActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginOwnerActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
                 }
                 pb.setVisibility(View.INVISIBLE);
             }
