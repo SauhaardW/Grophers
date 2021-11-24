@@ -7,33 +7,40 @@
     tools:context=".AddProductActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewAddProductPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Price"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="578dp" />
+        android:layout_marginTop="44dp"
+        android:text="Price*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEditAddProductBrand" />
 
     <TextView
         android:id="@+id/textEditAddProductName"
         android:layout_width="355dp"
         android:layout_height="46dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/rounded_textbox"
         android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="358dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddProductName" />
 
     <TextView
         android:id="@+id/textEditAddProductBrand"
         android:layout_width="358dp"
         android:layout_height="45dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/rounded_textbox"
         android:visibility="visible"
         app:circularflow_defaultRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="478dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textEditAddProductName" />
 
     <Button
         android:id="@+id/buttonDoneAddProduct"
@@ -51,10 +58,12 @@
         android:id="@+id/textEditAddProductPrice"
         android:layout_width="358dp"
         android:layout_height="45dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/rounded_textbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="597dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddProductPrice" />
 
     <ImageView
         android:id="@+id/imageViewProductImage"
@@ -69,28 +78,38 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewAddProductBrand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="339dp" />
+        android:text="Brand*"
+        app:layout_constraintBottom_toTopOf="@+id/textEditAddProductBrand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEditAddProductName"
+        app:layout_constraintVertical_bias="0.729" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewAddProductPhoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add product photo"
-        android:textColor="@color/OwnerOrange"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="207dp" />
+        android:text="Add Product Photo"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAddProductName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProductImage"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewAddProductName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Brand"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="459dp" />
+        android:layout_marginTop="132dp"
+        android:text="Name*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProductImage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
