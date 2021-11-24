@@ -17,3 +17,21 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Time
+
+
+Name: Sauhaard Walia
+
+What have you done since yesterday?
+	- Created 3 complete pages for the front end on Android Studio
+	- Completed Log in for Customer page
+	- Completed Log in for Owner page
+	- Completed Register for Customer page
+	- Familiarized myself with how to use Android studio to develop attributes
+
+What are you planning on doing today?
+   	- Create 3 additional pages on Android Studio
+	- Complete Register for Owner page
+	- Begin to work on elementary backend aspects to create links between attributes
+
+Any impediments or stumbling blocks?
+	- Initially struggled to be able to find buttons and text boxes that matched the shape and design we had wished for it to have in our UI on Figma however was later able to over come this as I found out that we could simply download the button and text boxes shapes and outlines from Figma and import them as backgrounds for our buttons and text boxes on Android studio 
