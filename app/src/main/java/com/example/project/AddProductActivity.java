@@ -81,7 +81,7 @@ public class AddProductActivity extends AppCompatActivity {
                                 Product product = new Product(name, brand, price, products.size());
                                 products.add(product);
                                 store.setProducts(products);
-                                FirebaseDatabase.getInstance().getReference("stores").child(storeId.toString()).setValue(store);
+                                FirebaseDatabase.getInstance().getReference("stores").child(storeId.toString()).child("products").setValue(products);
                             } else {
                                 Log.println(Log.ERROR, "AddProductActivity", "Error while accessing store data.");
                             }
