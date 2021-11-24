@@ -3,7 +3,6 @@ package com.example.project;
 import java.util.ArrayList;
 
 public class Store {
-    private static int NEXT_ID = 1;
     int id;
     String name;
     String hours;
@@ -11,8 +10,11 @@ public class Store {
     User owner;
     ArrayList<Product> products;
 
-    public Store(String name, String hours, String image, User owner) {
-        this.id = Product.getNextId();
+    public Store() {
+    }
+
+    public Store(String name, String hours, String image, User owner, int id) {
+        this.id = id;
         this.name = name;
         this.hours = hours;
         this.image = image;
@@ -65,9 +67,5 @@ public class Store {
 
     public void setProducts(ArrayList<Product> products) {
         this.products = products;
-    }
-
-    public static int getNextId() {
-        return Store.NEXT_ID++;
     }
 }

@@ -34,6 +34,9 @@
             android:name=".RegisterCustomerActivity"
             android:exported="false" />
         <activity
+            android:name=".AddProductActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
