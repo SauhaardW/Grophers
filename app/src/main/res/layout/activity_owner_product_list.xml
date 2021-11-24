@@ -40,7 +40,7 @@
         app:layout_constraintHorizontal_bias="0.315"
         app:layout_constraintStart_toStartOf="@+id/productInfoBox"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.16"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/natrelmilkpic" />
 
     <TextView
@@ -159,33 +159,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/hamburger"
-        android:layout_width="17dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/productInfoBox"
-        app:layout_constraintEnd_toStartOf="@+id/grofersIcon"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/hamburger" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
+        android:layout_marginBottom="8dp"
         android:text="Products"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/ProductName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.024"
-        app:layout_constraintStart_toStartOf="@+id/productInfoBox"
-        app:layout_constraintTop_toBottomOf="@+id/hamburger"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="@+id/productInfoBox" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
