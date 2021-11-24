@@ -34,4 +34,4 @@ What are you planning on doing today?
 	- Begin to work on elementary backend aspects to create links between attributes
 
 Any impediments or stumbling blocks?
-	- Initially struggled to be able to find buttons and text boxes that matched the shape and design we had wished for it to have in our UI on Figma however was later able to over come this as I found out that we could simply download the button and text boxes shapes and outlines from Figma and import them as backgrounds for our buttons and text boxes on Android studio 
+	- Initially struggled to be able to find buttons and text boxes that matched the shape and design we had wished for it to have in our UI on Figma however was later able to over come this as I found out that we could simply download the button and text boxes shapes and outlines from Figma and import them as backgrounds for our buttons and text boxes on Android studio  
