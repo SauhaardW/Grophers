@@ -10,13 +10,15 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="411dp"
-        android:layout_height="63dp"
+        android:layout_height="94dp"
+
         android:background="@drawable/orangebox"
         android:gravity="center"
         android:text="Create profile"
-
         android:textColor="@color/white"
         android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,85 +26,98 @@
         android:id="@+id/storeNameTextBox"
         android:layout_width="358dp"
         android:layout_height="48dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="282dp"
+        android:layout_marginBottom="48dp"
         android:background="@drawable/gettext"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/openHoursTextBox"
+        app:layout_constraintEnd_toEndOf="@+id/openHoursTextBox"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/openHoursTextBox"
+        app:layout_constraintTop_toBottomOf="@+id/addProfilePhoto"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/StoreName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="261dp"
         android:text="Store name*"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/storeNameTextBox"
+        app:layout_constraintEnd_toEndOf="@+id/storeNameTextBox"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/storeNameTextBox"
+        app:layout_constraintTop_toBottomOf="@+id/addProfilePhoto"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/openHoursTextBox"
         android:layout_width="358dp"
         android:layout_height="48dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="393dp"
+        android:layout_marginBottom="300dp"
         android:background="@drawable/gettext"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OpenHours"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/OpenHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="396dp"
         android:text="Open Hours*"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/profileImg"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="99dp"
+        android:layout_width="83dp"
+        android:layout_height="101dp"
         android:contentDescription="testing.com"
+        app:layout_constraintBottom_toTopOf="@+id/addProfilePhoto"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ownerimagecircle" />
 
     <TextView
         android:id="@+id/doneSetUpStore"
-        android:layout_width="122dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="661dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
         android:gravity="center"
         android:text="Done"
         android:textColor="#FF8201"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/openHoursTextBox"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/addProfilePhoto"
-        android:layout_width="122dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="199dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
         android:gravity="center"
         android:text="Add profile photo"
         android:textColor="@color/OwnerOrange"
+        app:layout_constraintBottom_toTopOf="@+id/openHoursTextBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.699" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
