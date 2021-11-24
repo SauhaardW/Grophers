@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerView">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="49dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/customer_grofers_logo" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="71dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/customer_shoppingcart" />
+
+    <TextView
+        android:id="@+id/textViewCustomerViewStores"
+        android:layout_width="62dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="88dp"
+        android:text="Stores"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonCustomerViewStore1"
+        android:layout_width="361dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCustomerViewStores"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageViewCustomerViewStroe1Photo"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonCustomerViewStore1"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonCustomerViewStore1"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonCustomerViewStore1"
+        app:layout_constraintTop_toTopOf="@+id/textViewCustomerViewStoreName"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/store" />
+
+    <TextView
+        android:id="@+id/textViewCustomerViewStoreName"
+        android:layout_width="260dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="40dp"
+        android:text="Timmy's Ol' Reliable"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonCustomerViewStore1"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonCustomerViewStore1"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonCustomerViewStore1" />
+
+    <TextView
+        android:id="@+id/textViewCustomerViewStoreTimings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opens 9:00AM-8:00PM"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonCustomerViewStore1"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonCustomerViewStore1"
+        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonCustomerViewStore1"
+        app:layout_constraintTop_toTopOf="@+id/textViewCustomerViewStoreName"
+        app:layout_constraintVertical_bias="0.729" />
+</androidx.constraintlayout.widget.ConstraintLayout>
