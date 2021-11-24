@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OwnerProductListActivity">
+
+    <ImageView
+        android:id="@+id/grofersIcon"
+        android:layout_width="62dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/grofersicon" />
+
+    <ImageView
+        android:id="@+id/productInfoBox"
+        android:layout_width="345dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="392dp"
+        app:layout_constraintBottom_toTopOf="@+id/createProductButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grofersIcon"
+        app:srcCompat="@drawable/poductinfobox" />
+
+    <ImageView
+        android:id="@+id/ProductPic"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="131dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/natrelmilkpic" />
+
+    <TextView
+        android:id="@+id/ProductName"
+        android:layout_width="106dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="132dp"
+        android:text="Natrel Milk"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/numProducts"
+        android:layout_width="39dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="165dp"
+        android:gravity="right"
+        android:text="x1"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ProductPrice"
+        android:layout_width="61dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="180dp"
+        android:text="$2.97"
+        android:textColor="@color/light_gray"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/productTotal"
+        android:layout_width="104dp"
+        android:layout_height="18dp"
+        android:gravity="right"
+        android:text="$2.97 total"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/numProducts"
+        tools:layout_editor_absoluteX="255dp" />
+
+    <ImageButton
+        android:id="@+id/editButton"
+        android:layout_width="59dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="135dp"
+        android:background="@drawable/editbuttonbackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/editbuttonbackground"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/editLabel"
+        android:layout_width="56dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="317dp"
+        android:layout_marginTop="135dp"
+        android:text="Edit"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/createProductButton"
+        android:layout_width="366dp"
+        android:layout_height="44dp"
+        android:background="@drawable/rounded_corner_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productInfoBox"
+        app:layout_constraintVertical_bias="0.965"
+        app:srcCompat="@drawable/createproductbutton"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/createProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="668dp"
+        android:gravity="center"
+        android:text="Create Product"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
