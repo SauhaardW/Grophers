@@ -10,12 +10,12 @@
         android:id="@+id/imageView"
         android:layout_width="49dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/storeNameDisplay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101"
         app:srcCompat="@drawable/storeprofilepic" />
 
     <TextView
@@ -90,12 +90,10 @@
         android:id="@+id/imageView5"
         android:layout_width="382dp"
         android:layout_height="98dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="@+id/productTextDisplay"
         app:layout_constraintTop_toBottomOf="@+id/productTextDisplay"
-        app:layout_constraintVertical_bias="0.018"
         app:srcCompat="@drawable/boxdisplayforproducts" />
 
     <ImageView
@@ -146,7 +144,7 @@
         app:layout_constraintHorizontal_bias="0.98"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
         app:layout_constraintTop_toBottomOf="@+id/storeHoursDisplay"
-        app:layout_constraintVertical_bias="0.48"
+        app:layout_constraintVertical_bias="0.53"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <Button
