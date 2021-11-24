@@ -76,12 +76,13 @@
         android:layout_height="96dp"
         android:layout_marginStart="158dp"
         android:layout_marginTop="99dp"
+        android:contentDescription="testing.com"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ownerimagecircle" />
 
     <TextView
-        android:id="@+id/done"
+        android:id="@+id/doneSetUpStore"
         android:layout_width="122dp"
         android:layout_height="18dp"
         android:layout_marginStart="145dp"

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Customer extends User{
 
     public Customer(String email, String username) {
-        this.email = email;
-        this.username = username;
+        this.setEmail(email);
+        this.setUsername(username);
     }
 }
