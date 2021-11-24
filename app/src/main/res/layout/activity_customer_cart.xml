@@ -213,7 +213,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:text="Taxes & Fees"
+        android:text="Taxes &amp; Fees"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/taxes_price"
         app:layout_constraintStart_toStartOf="parent" />
