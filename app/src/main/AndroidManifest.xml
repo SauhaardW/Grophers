@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity
+            android:name=".SuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SetUpStoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".OwnerHomeActivity"
             android:exported="false" />
         <activity

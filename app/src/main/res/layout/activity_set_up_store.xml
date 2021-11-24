@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ownerProfileImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetUpStoreActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="411dp"
+        android:layout_height="94dp"
+
+        android:background="@drawable/orangebox"
+        android:gravity="center"
+        android:text="Create profile"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/storeNameTextBox"
+        android:layout_width="358dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/gettext"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/openHoursTextBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/StoreName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Store name*"
+        app:layout_constraintBottom_toTopOf="@+id/storeNameTextBox"
+        app:layout_constraintEnd_toEndOf="@+id/storeNameTextBox"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/storeNameTextBox"
+        app:layout_constraintTop_toBottomOf="@+id/addProfilePhoto"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/openHoursTextBox"
+        android:layout_width="358dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/gettext"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/doneSetUpStore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/OpenHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Open Hours*"
+        app:layout_constraintBottom_toTopOf="@+id/openHoursTextBox"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/profileImg"
+        android:layout_width="83dp"
+        android:layout_height="101dp"
+        android:contentDescription="testing.com"
+        app:layout_constraintBottom_toTopOf="@+id/addProfilePhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ownerimagecircle" />
+
+    <TextView
+        android:id="@+id/doneSetUpStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:gravity="center"
+        android:text="Done"
+        android:textColor="#FF8201"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/addProfilePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="Add profile photo"
+        android:textColor="@color/OwnerOrange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

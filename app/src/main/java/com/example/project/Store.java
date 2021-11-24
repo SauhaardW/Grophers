@@ -9,7 +9,6 @@ public class Store {
     String image;
     User owner;
     ArrayList<Product> products;
-
     public Store() {}
 
     public Store(String name, String hours, String image, User owner, int id) {
@@ -67,4 +66,3 @@ public class Store {
     public void setProducts(ArrayList<Product> products) {
         this.products = products;
     }
-}

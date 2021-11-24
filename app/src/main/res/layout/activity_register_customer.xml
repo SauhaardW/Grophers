@@ -70,7 +70,7 @@
         android:layout_marginStart="152dp"
         android:layout_marginTop="84dp"
         android:layout_marginEnd="153dp"
-        android:backgroundTint="#FF8201"
+        android:backgroundTint="@color/CustomerGreen"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
