@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
         <activity
+            android:name=".SuccessActivity"
+            android:exported="false" />
+        <activity
             android:name=".SetUpStoreActivity"
             android:exported="false" />
         <activity
@@ -29,6 +32,9 @@
             android:exported="false" />
         <activity
             android:name=".RegisterCustomerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddProductActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

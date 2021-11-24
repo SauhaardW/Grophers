@@ -7,6 +7,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="OwnerOrange">#FF8201</color>
     <color name="CustomerGreen">#0AAD0A</color>
+    <color name="OwnerOrange">#FF8201</color>
 </resources>
