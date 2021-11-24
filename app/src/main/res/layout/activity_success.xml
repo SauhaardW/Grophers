@@ -37,5 +37,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/order_success"
-        app:srcCompat="@drawable/Vector" />
+        app:srcCompat="@drawable/vector" />
 </androidx.constraintlayout.widget.ConstraintLayout>
