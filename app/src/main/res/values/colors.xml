@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="OwnerOrange">#FF8201</color>
     <color name="CustomerGreen">#0AAD0A</color>
+    <color name="lightGray">5E5E5E</color>
+    <color name="lightGrayForText">#5E5E5E</color>
 </resources>
