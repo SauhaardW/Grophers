@@ -25,6 +25,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <Button
+            android:id="@+id/tempbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add product (temporary)"
+            tools:layout_editor_absoluteX="79dp"
+            tools:layout_editor_absoluteY="377dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
