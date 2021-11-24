@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button customerButton = (Button) findViewById(R.id.buttonCustomerCase);
+        ImageButton customerButton = (ImageButton) findViewById(R.id.buttonCustomerCase);
         customerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button ownerButton = (Button) findViewById(R.id.buttonOwnerCase);
+        ImageButton ownerButton = (ImageButton) findViewById(R.id.buttonOwnerCase);
         ownerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
