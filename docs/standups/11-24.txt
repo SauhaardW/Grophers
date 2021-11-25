@@ -15,3 +15,16 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Time, had to complete some administrative
       tasks in regards to my Co-op Work Term.
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Fixed a couple UI elements in the owner products page including, the rounded edges of the buttons
+	- Started working on the modal for getting the image url from the user
+	- Created the xml for the modal and implemented what was needed to create interaction with the modal and the activity
+
+What are you planning on doing today?
+   	- Fixing the UI layout for the modal xml
+
+Any impediments or stumbling blocks?
+	- Linear layout of the xml causes the modal to look bunched up and it's not very pleasing. Need to fix that.
