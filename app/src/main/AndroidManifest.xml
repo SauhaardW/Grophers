@@ -16,6 +16,9 @@
             android:name=".SuccessActivity"
             android:exported="false" />
         <activity
+            android:name=".CustomerViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".SetUpStoreActivity"
             android:exported="false" />
         <activity
