@@ -46,15 +46,15 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextStoreProductSearch"
         android:layout_width="361dp"
         android:layout_height="31dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/searchstoreproducts"
         android:ems="10"
+        android:hint="Seach Timmy's Ol' Reliable"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
-        android:text="Seach Timmy's Ol' Reliable"
         android:textColor="@color/lightGrayForText"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +69,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginBottom="42dp"
         android:backgroundTint="@color/CustomerGreen"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextStoreProductSearch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/storeHoursDisplay"
@@ -82,10 +82,10 @@
         android:layout_marginTop="8dp"
         android:text="Products"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextStoreProductSearch"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintStart_toStartOf="@+id/editTextStoreProductSearch"
+        app:layout_constraintTop_toBottomOf="@+id/editTextStoreProductSearch" />
 
     <Button
         android:id="@+id/button"
@@ -95,9 +95,9 @@
         android:background="#00FFFFFF"
         android:backgroundTint="#00FFFFFF"
         android:text="Button"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextStoreProductSearch"
         app:layout_constraintHorizontal_bias="0.98"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextStoreProductSearch"
         app:layout_constraintTop_toBottomOf="@+id/storeHoursDisplay"
         app:strokeColor="#00FFFFFF"
         tools:ignore="TouchTargetSizeCheck" />
@@ -107,9 +107,9 @@
         android:layout_width="14dp"
         android:layout_height="28dp"
         android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextStoreProductSearch"
         app:layout_constraintHorizontal_bias="0.96"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextStoreProductSearch"
         app:layout_constraintTop_toBottomOf="@+id/storeHoursDisplay"
         app:srcCompat="@drawable/searchicon" />
 
@@ -153,7 +153,7 @@
         app:layout_constraintVertical_bias="0.22000003" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recyclerViewProductCustomer"
         android:layout_width="362dp"
         android:layout_height="475dp"
         app:layout_constraintBottom_toBottomOf="parent"

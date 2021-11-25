@@ -14,10 +14,9 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class CustomerView extends AppCompatActivity {
+public class CustomerViewActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     DatabaseReference db;
@@ -38,6 +37,8 @@ public class CustomerView extends AppCompatActivity {
         adapter = new StoreListViewAdapter(this, list);
         recyclerView.setAdapter(adapter);
 
+
+
         db.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
@@ -48,7 +49,7 @@ public class CustomerView extends AppCompatActivity {
                     }
                     adapter.notifyDataSetChanged();
                 } else {
-                    Toast.makeText(CustomerView.this, "Error while getting store data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CustomerViewActivity.this, "Error while getting store data", Toast.LENGTH_SHORT).show();
                 }
             }
         });

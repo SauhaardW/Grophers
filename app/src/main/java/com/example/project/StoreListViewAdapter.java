@@ -1,6 +1,7 @@
 package com.example.project;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -35,6 +37,18 @@ public class StoreListViewAdapter extends RecyclerView.Adapter<StoreListViewAdap
         holder.storeName.setText(store.getName());
         holder.storeHours.setText(store.getHours());
         //implement image setting
+
+        CardView card = (CardView) holder.itemView.findViewById(R.id.cardStore);
+        card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CustomerStoreProductViewActivity.class);
+                intent.putExtra("store_id", ((Integer)store.getId()).toString());
+                intent.putExtra("store_name", store.getName());
+                intent.putExtra("store_hours", store.getHours());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
