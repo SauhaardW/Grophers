@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -17,6 +18,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.List;
+import java.util.Map;
 
 public class SetUpStoreActivity extends AppCompatActivity {
 
@@ -59,13 +63,25 @@ public class SetUpStoreActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 if (task.isSuccessful()) {
                     Owner owner = task.getResult().getValue(Owner.class);
-                    Store newStore = new Store(name, hours, imgURL, owner);
-                    owner.setStoreId(newStore.getId());
 
-                    FirebaseDatabase.getInstance().getReference("stores").child(((Integer)newStore.getId()).toString()).setValue(newStore);
-                    FirebaseDatabase.getInstance().getReference("users").child("owners").child(uid).setValue(owner);
+                    FirebaseDatabase.getInstance().getReference("stores").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DataSnapshot> task) {
+                            if (task.isSuccessful()) {
+                                long count = task.getResult().getChildrenCount();
+                                Store newStore = new Store(name, hours, imgURL, owner, (int)count);
 
-                    startActivity(new Intent(SetUpStoreActivity.this, OwnerHomeActivity.class));
+                                owner.setStoreId((int)count);
+
+                                FirebaseDatabase.getInstance().getReference("stores").child(((Integer)newStore.getId()).toString()).setValue(newStore);
+                                FirebaseDatabase.getInstance().getReference("users").child("owners").child(uid).setValue(owner);
+
+                                startActivity(new Intent(SetUpStoreActivity.this, OwnerHomeActivity.class));
+                            } else {
+                                Log.println(Log.ERROR, "SetUpStoreActivity", "Error while generating store id.");
+                            }
+                        }
+                    });
                 } else {
                     Log.println(Log.ERROR, "SetUpStoreActivity", "Error while accessing user data.");
                 }
