@@ -11,6 +11,7 @@ What have you done since yesterday?
 What are you planning on doing today?
    	- Make include-able topbar that functions for all pages
 	- Implement backend for modals that are made
+	- Update classes for firebase database objects to allow for new activities to be made, e.g. customer, store, order, etc.
 	- Code review PRs, approve and handle merge conflicts
 
 Any impediments or stumbling blocks?
