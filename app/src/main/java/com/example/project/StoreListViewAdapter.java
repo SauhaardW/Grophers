@@ -35,7 +35,7 @@ public class StoreListViewAdapter extends RecyclerView.Adapter<StoreListViewAdap
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Store store = list.get(position);
         holder.storeName.setText(store.getName());
-        holder.storeHours.setText(store.getHours());
+        holder.storeHours.setText("Open: " + store.getHours());
         //implement image setting
 
         CardView card = (CardView) holder.itemView.findViewById(R.id.cardStore);

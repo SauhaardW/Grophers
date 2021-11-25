@@ -33,7 +33,7 @@ public class ProductListViewAdapter extends RecyclerView.Adapter<ProductListView
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Product product = list.get(position);
         holder.productName.setText(product.getBrand() + " " + product.getName());
-        holder.productPrice.setText(((Double)product.getPrice()).toString());
+        holder.productPrice.setText("$" + String.format("%.2f", product.getPrice()));
         //implement image setting
     }
 
