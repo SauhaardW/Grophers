@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".LoginOwnerActivity">
 
+    <include
+        android:id="@+id/include2"
+        layout="@layout/topbar_back_button_owner"
+        android:layout_width="410dp"
+        android:layout_height="78dp" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -20,11 +26,10 @@
         android:id="@+id/storeName7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
         android:layout_marginTop="12dp"
         android:text="Password"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordOwnerLogin"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmailOwnerLogin" />
 
     <TextView
@@ -44,45 +49,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="1dp"
         android:text="*"
         android:textColor="@color/OwnerOrange"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/storeName4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toTopOf="@+id/storeName4" />
 
     <TextView
         android:id="@+id/storeName4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="160dp"
         android:text="Username"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="49dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="16dp"
-        android:tint="@color/OwnerOrange"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grofers_logo_green" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow_to_go_back" />
+        app:layout_constraintStart_toStartOf="@+id/editTextEmailOwnerLogin"
+        app:layout_constraintTop_toBottomOf="@+id/include2" />
 
     <EditText
         android:id="@+id/editTextPasswordOwnerLogin"

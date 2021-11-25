@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".LoginCustomerActivity">
 
+    <include
+        android:id="@+id/include"
+        layout="@layout/topbar_back_button_customer"
+        android:layout_width="411dp"
+        android:layout_height="83dp" />
+
     <Button
         android:id="@+id/registerButton"
         android:layout_width="165dp"
@@ -86,23 +92,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="164dp"
         android:text="*"
         android:textColor="@color/CustomerGreen"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/storeName"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/storeName" />
 
     <TextView
         android:id="@+id/storeName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="156dp"
         android:text="Username"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/editTextEmailCustomerLogin"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
 
     <TextView
         android:id="@+id/storeName6"
@@ -135,32 +139,10 @@
         android:id="@+id/storeName5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
         android:layout_marginTop="12dp"
         android:text="Password"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordCustomerLogin"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmailCustomerLogin" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="49dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grofers_logo_green" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow_to_go_back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
