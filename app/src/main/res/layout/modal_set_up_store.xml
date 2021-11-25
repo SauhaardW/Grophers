@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingHorizontal="10dp"
-        android:text="Image Url*"
+        android:text="Image Url *"
         app:layout_constraintBottom_toTopOf="@+id/imageUrlTextBox"
         app:layout_constraintEnd_toEndOf="@+id/imageUrlTextBox"
         app:layout_constraintHorizontal_bias="0.006"
