@@ -4,8 +4,8 @@
     android:id="@+id/cardStore"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
 
+    android:layout_marginTop="10dp"
     android:backgroundTint="@color/white"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="12dp"
@@ -21,10 +21,10 @@
             android:id="@+id/imageViewCustomerViewStorePhoto"
             android:layout_width="69dp"
             android:layout_height="69dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintHorizontal_bias="0.461"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/store" />

@@ -21,6 +21,11 @@
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/prouct_card.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/store_card.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/menu/nav_menu.xml" value="0.4140625" />
+        <entry key="app/src/main/res/layout/activity_customer_home.xml" value="0.2611111111111111" />
+        <entry key="app/src/main/res/layout/activity_customer_store_product_view.xml" value="0.24859625364232027" />
+        <entry key="app/src/main/res/layout/activity_customer_view.xml" value="0.2611111111111111" />
+        <entry key="app/src/main/res/layout/product_card.xml" value="0.2611111111111111" />
+        <entry key="app/src/main/res/layout/store_card.xml" value="0.2611111111111111" />
       </map>
     </option>
   </component>
