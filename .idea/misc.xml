@@ -4,14 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_customer_home.xml" value="0.5541666666666667" />
-        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_login_customer.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_customer_store_product_view.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_customer_view.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_login_customer.xml" value="0.5" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_login_owner.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_home.xml" value="0.4" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_orders.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_product_list.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_store_setup.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_register_customer.xml" value="0.5385416666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_register_owner.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_set_up_store.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_success.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/prouct_card.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/store_card.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/menu/nav_menu.xml" value="0.4140625" />
         <entry key="app/src/main/res/layout/activity_login_customer.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login_owner.xml" value="0.33" />
@@ -21,6 +28,8 @@
         <entry key="app/src/main/res/layout/activity_register_owner.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/activity_set_up_store.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/activity_success.xml" value="0.37604166666666666" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/menu/nav_menu_customer.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/menu/nav_menu_owner.xml" value="0.5541666666666667" />
       </map>
     </option>
   </component>
