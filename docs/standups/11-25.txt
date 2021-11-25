@@ -1,0 +1,12 @@
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Fixed the UI of the modal for retaining the image url
+	- Changed layout of UI to constraint to make a more pleasing UI
+
+What are you planning on doing today?
+   	- Redo some of the UI's which are based on server data
+	- Make the UI's based on recycler views
+
+Any impediments or stumbling blocks?
+	- To test the UI it takes a lot of time to get to that page. I fixed by making the page a launcher in the manifest for the time being. I removed it once I finished the modal.
