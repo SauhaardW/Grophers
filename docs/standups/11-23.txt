@@ -18,6 +18,8 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Time
 
+<<<<<<< HEAD
+=======
 
 Name: Sauhaard Walia
 
@@ -35,3 +37,22 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Initially struggled to be able to find buttons and text boxes that matched the shape and design we had wished for it to have in our UI on Figma however was later able to over come this as I found out that we could simply download the button and text boxes shapes and outlines from Figma and import them as backgrounds for our buttons and text boxes on Android studio  
+>>>>>>> 6af84e4b1b0faf1db7007f51e959fe42227926a3
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Created three pages for the UI in Android studio
+	- Completed owner set up profile page
+	- Completed owner products list page
+	- Completed customer view of products within a store
+	- Understood and learnt different elements of creating UI on android studio 
+
+What are you planning on doing today?
+   	- Look into modal creation for the UI
+	- Fix up some little UI problems from the already completed pages I have created
+	- Start looking into the backend and trying to understand how to work on it
+
+Any impediments or stumbling blocks?
+	- Constraints within android studio were giving me a lot of issues. I had hard coded at first and then realized the pages wouldn't work for all emulators/phone types. I had to go back and fix all of the constrains which ended up causing me to take twice the amount of time I usually would take.
+
