@@ -87,56 +87,6 @@
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="382dp"
-        android:layout_height="98dp"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="@+id/productTextDisplay"
-        app:layout_constraintTop_toBottomOf="@+id/productTextDisplay"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/boxdisplayforproducts" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="72dp"
-        android:layout_height="78dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.07"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/productTextDisplay"
-        app:layout_constraintVertical_bias="0.571"
-        app:srcCompat="@drawable/imageofproductnatrelmilk" />
-
-    <TextView
-        android:id="@+id/productNameText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
-        android:text="Natrel Milk"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.077"
-        app:layout_constraintStart_toEndOf="@+id/imageView6" />
-
-    <TextView
-        android:id="@+id/costOfProduct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="$2.97"
-        android:textColor="@color/lightGrayForText"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/productNameText"
-        app:layout_constraintVertical_bias="0.136" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="27dp"
@@ -201,5 +151,13 @@
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
         app:layout_constraintVertical_bias="0.22000003" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="362dp"
+        android:layout_height="475dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
