@@ -11,6 +11,8 @@ public class Store {
     User owner;
     ArrayList<Product> products;
 
+    public Store() {}
+
     public Store(String name, String hours, String image, User owner) {
         this.id = Product.getNextId();
         this.name = name;
