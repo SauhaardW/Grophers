@@ -22,8 +22,6 @@
         android:layout_width="345dp"
         android:layout_height="141dp"
         android:layout_marginTop="12dp"
-        android:layout_marginBottom="392dp"
-        app:layout_constraintBottom_toTopOf="@+id/createProductButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +65,7 @@
         app:layout_constraintEnd_toEndOf="@+id/productInfoBox"
         app:layout_constraintHorizontal_bias="0.924"
         app:layout_constraintStart_toEndOf="@+id/ProductPic"
-        app:layout_constraintTop_toBottomOf="@+id/editButtonProduct"
+        app:layout_constraintTop_toBottomOf="@+id/editButtonImageView"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -90,7 +88,6 @@
         android:id="@+id/productTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:gravity="right"
         android:text="$2.97 total"
         android:textColor="@color/light_gray"
@@ -99,65 +96,7 @@
         app:layout_constraintEnd_toEndOf="@+id/productInfoBox"
         app:layout_constraintHorizontal_bias="0.819"
         app:layout_constraintStart_toEndOf="@+id/ProductName"
-        app:layout_constraintTop_toBottomOf="@+id/editButtonProduct"
-        app:layout_constraintVertical_bias="0.048" />
-
-    <ImageButton
-        android:id="@+id/editButtonProduct"
-        android:layout_width="66dp"
-        android:layout_height="18dp"
-        android:background="@drawable/editbuttonbackground"
-        app:layout_constraintBottom_toBottomOf="@+id/productInfoBox"
-        app:layout_constraintEnd_toEndOf="@+id/productInfoBox"
-        app:layout_constraintHorizontal_bias="0.825"
-        app:layout_constraintStart_toEndOf="@+id/ProductName"
-        app:layout_constraintTop_toTopOf="@+id/productInfoBox"
-        app:layout_constraintVertical_bias="0.298"
-        app:srcCompat="@drawable/editbuttonbackground"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-    <TextView
-        android:id="@+id/editLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Edit"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/numProducts"
-        app:layout_constraintEnd_toEndOf="@+id/editButtonProduct"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="@+id/editButtonProduct"
-        app:layout_constraintTop_toTopOf="@+id/productInfoBox"
-        app:layout_constraintVertical_bias="0.076" />
-
-    <ImageButton
-        android:id="@+id/createProductButton"
-        android:layout_width="366dp"
-        android:layout_height="44dp"
-        android:background="@drawable/rounded_corner_view"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/productInfoBox"
-        app:layout_constraintVertical_bias="0.965"
-        app:srcCompat="@drawable/createproductbutton"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-    <TextView
-        android:id="@+id/createProduct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="668dp"
-        android:gravity="center"
-        android:text="Create Product"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editButtonImageView" />
 
     <TextView
         android:id="@+id/textView2"
@@ -171,5 +110,77 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="@+id/productInfoBox" />
+
+    <ImageView
+        android:id="@+id/editButtonImageView"
+        android:layout_width="49dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/productInfoBox"
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toEndOf="@+id/ProductName"
+        app:layout_constraintTop_toTopOf="@+id/productInfoBox"
+        app:srcCompat="@drawable/editbuttonbackground" />
+
+    <TextView
+        android:id="@+id/editLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editButtonImageView"
+        app:layout_constraintEnd_toEndOf="@+id/editButtonImageView"
+        app:layout_constraintStart_toStartOf="@+id/editButtonImageView"
+        app:layout_constraintTop_toTopOf="@+id/editButtonImageView"
+        app:layout_constraintVertical_bias="0.43" />
+
+    <Button
+        android:id="@+id/invisibleEditButton"
+        android:layout_width="48dp"
+        android:layout_height="19dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/editLabel"
+        app:layout_constraintEnd_toEndOf="@+id/editButtonImageView"
+        app:layout_constraintStart_toStartOf="@+id/editButtonImageView"
+        app:layout_constraintTop_toTopOf="@+id/editLabel"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="340dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/productInfoBox"
+        app:layout_constraintStart_toStartOf="@+id/productInfoBox"
+        app:layout_constraintTop_toBottomOf="@+id/productInfoBox"
+        app:layout_constraintVertical_bias="0.972"
+        app:srcCompat="@drawable/createproductbutton" />
+
+    <TextView
+        android:id="@+id/createProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Create Product"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/createProductButtonInvisible"
+        android:layout_width="343dp"
+        android:layout_height="56dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/createProduct"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/createProduct"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
