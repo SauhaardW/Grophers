@@ -15,3 +15,21 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Time, had to complete some administrative
       tasks in regards to my Co-op Work Term.
+
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Started work on product creation
+	- Started work on profile setup
+	- Started work on hamburger menu
+
+What are you planning on doing today?
+   	- Finished Store Profile Setup backend
+	- Finished Product Creation backend
+	- Implemented dynamic store loading from firebase
+	- Implemented dynamic product loading from firebase
+	- Implemented store selection
+	- Remade hamburger modals to work without ActionBar, both customer & owner
+
+Any impediments or stumbling blocks?
+	- None

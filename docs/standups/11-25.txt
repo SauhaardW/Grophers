@@ -1,0 +1,17 @@
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Finished Store Profile Setup backend
+	- Finished Product Creation backend
+	- Implemented dynamic store loading from firebase
+	- Implemented dynamic product loading from firebase
+	- Implemented store selection
+	- Remade hamburger modals to work without ActionBar, both customer & owner
+
+What are you planning on doing today?
+   	- Make include-able topbar that functions for all pages
+	- Implement backend for modals that are made
+	- Code review PRs, approve and handle merge conflicts
+
+Any impediments or stumbling blocks?
+	- None
