@@ -41,101 +41,6 @@
         app:layout_constraintTop_toBottomOf="@+id/customer_logo" />
 
     <ImageView
-        android:id="@+id/rectangle1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/store_cart_text"
-        app:srcCompat="@drawable/rectangle" />
-
-    <ImageView
-        android:id="@+id/product_image1"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle1"
-        app:layout_constraintStart_toStartOf="@+id/rectangle1"
-        app:layout_constraintTop_toTopOf="@+id/rectangle1"
-        app:srcCompat="@drawable/product_image" />
-
-    <ImageView
-        android:id="@+id/remove_button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle1"
-        app:layout_constraintTop_toTopOf="@+id/rectangle1"
-        app:srcCompat="@drawable/red_rectangle" />
-
-    <TextView
-        android:id="@+id/remove_text1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        android:text="Remove"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/remove_button1"
-        app:layout_constraintEnd_toEndOf="@+id/remove_button1"
-        app:layout_constraintStart_toStartOf="@+id/remove_button1"
-        app:layout_constraintTop_toTopOf="@+id/remove_button1" />
-
-    <TextView
-        android:id="@+id/multiplied_product_price1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="$2.97 total"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle1"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle1" />
-
-    <TextView
-        android:id="@+id/quantity_of_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="1dp"
-        android:text="x1"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/multiplied_product_price1"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle1" />
-
-    <TextView
-        android:id="@+id/product_price1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="15dp"
-        android:text="$2.97"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle1"
-        app:layout_constraintStart_toEndOf="@+id/product_image1" />
-
-    <TextView
-        android:id="@+id/product_name1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:text="Natrel Milk"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/product_image1"
-        app:layout_constraintTop_toTopOf="@+id/rectangle1" />
-
-    <ImageView
         android:id="@+id/checkout_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -226,4 +131,14 @@
         android:text="$69.69"
         app:layout_constraintBottom_toTopOf="@+id/taxes_text"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="362dp"
+        android:layout_height="440dp"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toTopOf="@+id/checkout_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
