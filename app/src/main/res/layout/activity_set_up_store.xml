@@ -32,6 +32,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
+        android:paddingHorizontal="15dp"
         app:layout_constraintBottom_toTopOf="@+id/openHoursTextBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
@@ -56,15 +57,17 @@
         android:id="@+id/openHoursTextBox"
         android:layout_width="358dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="150dp"
         android:background="@drawable/gettext"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
+        android:paddingHorizontal="15dp"
         app:layout_constraintBottom_toTopOf="@+id/doneSetUpStore"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/storeNameTextBox"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/storeNameTextBox"
+        app:layout_constraintTop_toBottomOf="@+id/storeNameTextBox"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -72,10 +75,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="50dp"
         android:text="Open Hours*"
         app:layout_constraintBottom_toTopOf="@+id/openHoursTextBox"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/openHoursTextBox"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StoreName"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/profileImg"

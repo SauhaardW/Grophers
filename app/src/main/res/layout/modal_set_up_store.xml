@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -10,26 +11,40 @@
 
     <TextView
         android:id="@+id/imageUrlTitle"
-        android:layout_width="122dp"
-        android:layout_height="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
         android:text="Image Url*"
-        android:paddingHorizontal="10dp"/>
+        app:layout_constraintBottom_toTopOf="@+id/imageUrlTextBox"
+        app:layout_constraintEnd_toEndOf="@+id/imageUrlTextBox"
+        app:layout_constraintHorizontal_bias="0.006"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/imageUrlTextBox"
         android:layout_width="359dp"
         android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="80dp"
         android:background="@drawable/gettext"
         android:ems="10"
+        android:foregroundGravity="center_horizontal"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/doneTextModal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/doneTextModal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Done"
         android:layout_gravity="center_horizontal"
-        android:textColor="@color/OwnerOrange" />
-</LinearLayout>
+        android:layout_marginTop="164dp"
+        android:text="Done"
+        android:textColor="@color/OwnerOrange"
+        app:layout_constraintEnd_toEndOf="@+id/imageUrlTextBox"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/imageUrlTextBox"
+        app:layout_constraintTop_toBottomOf="@id/imageUrlTextBox" />
+</androidx.constraintlayout.widget.ConstraintLayout>

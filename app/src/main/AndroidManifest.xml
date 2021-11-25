@@ -12,9 +12,17 @@
         <activity
             android:name=".SuccessActivity"
             android:exported="false" />
+
         <activity
             android:name=".SetUpStoreActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SetUpStoreActivity" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".OwnerHomeActivity"
             android:exported="false" />
