@@ -6,66 +6,161 @@
     android:layout_height="match_parent"
     tools:context=".LoginCustomerActivity">
 
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="162dp"
+        android:background="@drawable/login_rectangle_green"
+        android:backgroundTint="@color/OwnerOrange"
+        android:insetTop="5dp"
+        android:insetBottom="10dp"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:backgroundTint="@color/CustomerGreen" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Don't have an account?"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarCustomerLogin" />
+
+    <EditText
+        android:id="@+id/editTextEmailCustomerLogin"
+        android:layout_width="268dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="101dp"
+        android:background="@drawable/gettext"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storeName" />
+
+    <Button
+        android:id="@+id/loginSubmitCustomer"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="162dp"
+        android:background="@drawable/login_rectangle_green"
+        android:backgroundTint="@color/CustomerGreen"
+        android:insetTop="5dp"
+        android:insetBottom="10dp"
+        android:text="Log In"
+        app:backgroundTint="@color/CustomerGreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordCustomerLogin" />
+
     <ProgressBar
         android:id="@+id/progressBarCustomerLogin"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="77dp"
+        android:layout_marginTop="64dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerButton"
+        app:layout_constraintTop_toBottomOf="@+id/loginSubmitCustomer"
         tools:visibility="invisible" />
 
-    <Button
-        android:id="@+id/registerButton"
+    <TextView
+        android:id="@+id/storeName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="@color/CustomerGreen"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="164dp"
+        android:text="*"
+        android:textColor="@color/CustomerGreen"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/storeName"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/storeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="164dp"
+        android:text="Username"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginSubmitCustomer" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/storeName6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text="*"
+        android:textColor="@color/CustomerGreen"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/storeName5"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailCustomerLogin" />
 
     <EditText
         android:id="@+id/editTextPasswordCustomerLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_width="268dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="101dp"
+        android:background="@drawable/gettext"
         android:ems="10"
-        android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storeName5" />
+
+    <TextView
+        android:id="@+id/storeName5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="12dp"
+        android:text="Password"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmailCustomerLogin" />
 
-    <Button
-        android:id="@+id/loginSubmitCustomer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="162dp"
-        android:backgroundTint="@color/CustomerGreen"
-        android:text="Log In"
-        app:backgroundTint="#FF8201"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="49dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordCustomerLogin" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/grofers_logo_green" />
 
-    <EditText
-        android:id="@+id/editTextEmailCustomerLogin"
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="206dp"
-        android:layout_marginEnd="101dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_to_go_back" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
