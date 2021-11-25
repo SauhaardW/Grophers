@@ -34,9 +34,10 @@
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/openHoursTextBox"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.086"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -49,13 +50,13 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/storeNameTextBox"
         app:layout_constraintTop_toBottomOf="@+id/addProfilePhoto"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.89" />
 
     <EditText
         android:id="@+id/openHoursTextBox"
         android:layout_width="358dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="112dp"
+        android:layout_marginBottom="160dp"
         android:background="@drawable/gettext"
         android:ems="10"
         android:inputType="textPersonName"
@@ -71,6 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginBottom="5dp"
         android:text="Open Hours*"
         app:layout_constraintBottom_toTopOf="@+id/openHoursTextBox"
         app:layout_constraintStart_toStartOf="parent" />
@@ -104,7 +106,7 @@
         android:id="@+id/addProfilePhoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="136dp"
         android:gravity="center"
         android:text="Add profile photo"
         android:textColor="@color/OwnerOrange"

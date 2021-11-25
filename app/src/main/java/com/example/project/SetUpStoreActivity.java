@@ -29,6 +29,15 @@ public class SetUpStoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_up_store);
 
+        TextView addProfilePicButton = (TextView) findViewById(R.id.addProfilePhoto);
+        addProfilePicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImageUrlModalDialog modal = new ImageUrlModalDialog();
+                modal.show(getSupportFragmentManager(), "setUpStoreModal");
+            }//end onClick
+        });
+
         TextView doneButton = (TextView) findViewById(R.id.doneSetUpStore);
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
