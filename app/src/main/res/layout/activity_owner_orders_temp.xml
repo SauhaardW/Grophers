@@ -7,7 +7,7 @@
     tools:context=".OwnerOrdersActivity">
 
     <TextView
-        android:id="@+id/orders_textView"
+        android:id="@+id/textView_ownerOrders_Order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -16,10 +16,10 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/orange_top_bar" />
+        app:layout_constraintTop_toBottomOf="@+id/ownerOrders_topBar_image" />
 
     <ImageView
-        android:id="@+id/orange_top_bar"
+        android:id="@+id/ownerOrders_topBar_image"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="181dp"
@@ -39,7 +39,7 @@
         android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/orders_textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ownerOrders_Order"
         app:srcCompat="@drawable/rectangle" />
 
     <TextView

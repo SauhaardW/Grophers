@@ -13,12 +13,14 @@
     app:cardElevation="8dp">
 
     <LinearLayout
+        android:id="@+id/ownerOrders_orderButton_linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/ownerOrders_orderNumber_and_username_linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -31,8 +33,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Order #1"
-                android:textSize="18sp"
-                android:textAlignment="textStart"/>
+                android:textAlignment="textStart"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textViewOwnerOrdersUsername"
@@ -41,11 +43,12 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:text="@string/ownerOrders_username"
-                android:textSize="14sp"
-                android:textAlignment="textStart" />
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ownerOrders_orderInfo_and_priceTotal_linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -54,16 +57,16 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/quantity_of_item"
+                android:id="@+id/textViewOwnerOrders_orderInfoButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/order_info"
                 android:layout_marginTop="10dp"
+                android:text="@string/order_info"
                 android:textColor="@color/OwnerOrange"
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/multiplied_product_price1"
+                android:id="@+id/textViewOwnerOrders_priceTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"

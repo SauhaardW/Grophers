@@ -8,7 +8,7 @@
     tools:context=".OwnerOrdersActivity">
 
     <TextView
-        android:id="@+id/orders_textView"
+        android:id="@+id/textView_ownerOrders_Order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -17,10 +17,10 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/orange_top_bar" />
+        app:layout_constraintTop_toBottomOf="@+id/ownerOrders_topBar_image" />
 
     <ImageView
-        android:id="@+id/orange_top_bar"
+        android:id="@+id/ownerOrders_topBar_image"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="181dp"
@@ -32,6 +32,7 @@
         app:srcCompat="@drawable/orange_top_bar" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ownerOrders_recyclerView"
         android:layout_width="362dp"
         android:layout_height="620dp"
         android:layout_marginStart="25dp"
