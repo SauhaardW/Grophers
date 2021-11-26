@@ -1,6 +1,8 @@
 package com.example.project;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -35,6 +39,21 @@ public class ProductListViewAdapter extends RecyclerView.Adapter<ProductListView
         holder.productName.setText(product.getBrand() + " " + product.getName());
         holder.productPrice.setText("$" + String.format("%.2f", product.getPrice()));
         //implement image setting
+
+        CardView card = (CardView) holder.itemView.findViewById(R.id.productCard);
+        card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AddProductModalDialog addProductModalDialog = new AddProductModalDialog();
+                Bundle bundle = new Bundle();
+                bundle.putString("product_name", product.getName());
+                bundle.putString("product_brand", product.getBrand());
+                bundle.putString("product_price", "$" + String.format("%.2f", product.getPrice()));
+                bundle.putString("product_img", product.getImage());
+                addProductModalDialog.setArguments(bundle);
+                addProductModalDialog.show(((AppCompatActivity)context).getSupportFragmentManager(), "addProductModal");
+            }
+        });
     }
 
     @Override

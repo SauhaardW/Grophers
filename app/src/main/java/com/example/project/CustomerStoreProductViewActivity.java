@@ -32,15 +32,6 @@ public class CustomerStoreProductViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_store_product_view);
 
-        ImageView productBackgroundImg = (ImageView) findViewById(R.id.productsBackgroundCustomreStoreProductView);
-        productBackgroundImg.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    AddProductModalDialog addProductModalDialog = new AddProductModalDialog();
-                    addProductModalDialog.show(getSupportFragmentManager(), "addProductModal");
-                }
-            });
-
         Bundle extras = getIntent().getExtras();
         String store_id = extras.getString("store_id");
         String store_name = extras.getString("store_name");
