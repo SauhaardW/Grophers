@@ -13,7 +13,13 @@
             android:name=".CustomerStoreProductViewActivity"
             android:exported="false"/>
         <activity
+            android:name=".CustomerCartActivity"
+            android:exported="false" />
+        <activity
             android:name=".SuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerViewActivity"
             android:exported="false" />
         <activity
             android:name=".SetUpStoreActivity"
