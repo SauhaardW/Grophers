@@ -7,13 +7,12 @@ public class Store {
     String name;
     String hours;
     String image;
-    User owner;
+    Owner owner;
     ArrayList<Product> products;
 
-    public Store() {
-    }
+    public Store() {}
 
-    public Store(String name, String hours, String image, User owner, int id) {
+    public Store(String name, String hours, String image, Owner owner, int id) {
         this.id = id;
         this.name = name;
         this.hours = hours;
@@ -57,7 +56,7 @@ public class Store {
         return owner;
     }
 
-    public void setOwner(User owner) {
+    public void setOwner(Owner owner) {
         this.owner = owner;
     }
 

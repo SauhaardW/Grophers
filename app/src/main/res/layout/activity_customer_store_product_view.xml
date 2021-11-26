@@ -11,8 +11,8 @@
         android:id="@+id/imageView"
         android:layout_width="49dp"
         android:layout_height="49dp"
-        android:layout_marginTop="72dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintBottom_toTopOf="@+id/storeNameDisplay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,15 +46,15 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextStoreProductSearch"
         android:layout_width="361dp"
         android:layout_height="31dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/searchstoreproducts"
         android:ems="10"
+        android:hint="Seach Timmy's Ol' Reliable"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
-        android:text="Seach Timmy's Ol' Reliable"
         android:textColor="@color/lightGrayForText"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +69,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginBottom="42dp"
         android:backgroundTint="@color/CustomerGreen"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextStoreProductSearch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/storeHoursDisplay"
@@ -79,63 +79,14 @@
         android:id="@+id/productTextDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="Products"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editTextStoreProductSearch"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="382dp"
-        android:layout_height="98dp"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="@+id/productTextDisplay"
-        app:layout_constraintTop_toBottomOf="@+id/productTextDisplay"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/boxdisplayforproducts" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="72dp"
-        android:layout_height="78dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.07"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/productTextDisplay"
-        app:layout_constraintVertical_bias="0.571"
-        app:srcCompat="@drawable/imageofproductnatrelmilk" />
-
-    <TextView
-        android:id="@+id/productNameText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
-        android:text="Natrel Milk"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.077"
-        app:layout_constraintStart_toEndOf="@+id/imageView6" />
-
-    <TextView
-        android:id="@+id/costOfProduct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="$2.97"
-        android:textColor="@color/lightGrayForText"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/productNameText"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintStart_toStartOf="@+id/editTextStoreProductSearch"
+        app:layout_constraintTop_toBottomOf="@+id/editTextStoreProductSearch" />
 
     <Button
         android:id="@+id/button"
@@ -145,9 +96,9 @@
         android:background="#00FFFFFF"
         android:backgroundTint="#00FFFFFF"
         android:text="Button"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextStoreProductSearch"
         app:layout_constraintHorizontal_bias="0.98"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextStoreProductSearch"
         app:layout_constraintTop_toBottomOf="@+id/storeHoursDisplay"
         app:strokeColor="#00FFFFFF"
         tools:ignore="TouchTargetSizeCheck" />
@@ -157,9 +108,9 @@
         android:layout_width="14dp"
         android:layout_height="28dp"
         android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextStoreProductSearch"
         app:layout_constraintHorizontal_bias="0.96"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextStoreProductSearch"
         app:layout_constraintTop_toBottomOf="@+id/storeHoursDisplay"
         app:srcCompat="@drawable/searchicon" />
 
@@ -178,15 +129,15 @@
         android:id="@+id/imageView4"
         android:layout_width="71dp"
         android:layout_height="37dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="25dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/carticonbackground" />
+        app:srcCompat="@drawable/cart_background" />
 
     <TextView
         android:id="@+id/numProductsInCart"
@@ -195,11 +146,31 @@
         android:text="0"
         android:textColor="@color/white"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/shoppingCartInvisibleButton"
         app:layout_constraintEnd_toEndOf="@+id/shoppingCartInvisibleButton"
         app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
         app:layout_constraintVertical_bias="0.22000003" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="25dp"
+        android:layout_height="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView4"
+        app:layout_constraintRight_toRightOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:srcCompat="@drawable/cart" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProductCustomer"
+        android:layout_width="371dp"
+        android:layout_height="537dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

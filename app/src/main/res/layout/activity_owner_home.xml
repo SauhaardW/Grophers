@@ -12,7 +12,19 @@
         android:layout_height="match_parent"
         >
 
+        <ImageButton
+            android:id="@+id/imageButtonHamburgerOwnerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/hamburger_vector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="142dp"
@@ -30,16 +42,17 @@
             android:id="@+id/tempbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
             android:text="Add product (temporary)"
-            tools:layout_editor_absoluteX="79dp"
-            tools:layout_editor_absoluteY="377dp" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="79dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/navView"
-        app:menu="@menu/nav_menu"
+        app:menu="@menu/nav_menu_owner"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"/>
 
