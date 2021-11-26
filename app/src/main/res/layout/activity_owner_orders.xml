@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ownerOrders_recycleView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OwnerOrdersActivity">
@@ -31,11 +32,9 @@
         app:srcCompat="@drawable/orange_top_bar" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="409dp"
-        android:layout_height="617dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/orders_textView" />
+        android:layout_width="353dp"
+        android:layout_height="161dp"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="112dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
