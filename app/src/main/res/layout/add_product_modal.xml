@@ -45,10 +45,12 @@
         android:id="@+id/numProductBackground"
         android:layout_width="190dp"
         android:layout_height="48dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/limitForModalInvisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productPriceModalDisplay2"
+        app:layout_constraintVertical_bias="0.031"
         app:srcCompat="@drawable/numberofproductstoaddbackground" />
 
     <TextView
@@ -68,15 +70,17 @@
 
     <ImageView
         android:id="@+id/greenButtonImageForButton"
-        android:layout_width="191dp"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="10dp"
-        android:tint="@color/CustomerGreen"
         app:layout_constraintBottom_toBottomOf="@+id/numProductBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/numProductBackground"
-        app:srcCompat="@drawable/addtocartbackground" />
+        app:layout_constraintTop_toBottomOf="@+id/productPriceModalDisplay2"
+        app:srcCompat="@drawable/addtocartbackground"
+        app:tint="@color/CustomerGreen" />
 
     <Button
         android:id="@+id/addToCartButtonAddProductModal"
@@ -115,11 +119,11 @@
         android:layout_marginStart="43dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="15dp"
-        android:tint="@color/CustomerGreen"
         app:layout_constraintEnd_toEndOf="@+id/numProductBackground"
         app:layout_constraintStart_toEndOf="@+id/numberProductsAddedToCartModal"
         app:layout_constraintTop_toTopOf="@+id/numProductBackground"
-        app:srcCompat="@drawable/plusbuttonimg" />
+        app:srcCompat="@drawable/plusbuttonimg"
+        app:tint="@color/CustomerGreen" />
 
     <Button
         android:id="@+id/plusButtonAddAnotherProductToNumModal"
@@ -150,12 +154,12 @@
         android:layout_marginStart="11dp"
         android:layout_marginEnd="39dp"
         android:layout_marginBottom="20dp"
-        android:tint="@color/CustomerGreen"
         app:layout_constraintBottom_toBottomOf="@+id/numProductBackground"
         app:layout_constraintEnd_toStartOf="@+id/numberProductsAddedToCartModal"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/numProductBackground"
-        app:srcCompat="@drawable/minusbuttonimg" />
+        app:srcCompat="@drawable/minusbuttonimg"
+        app:tint="@color/CustomerGreen" />
 
     <TextView
         android:id="@+id/limitForModalInvisible"
