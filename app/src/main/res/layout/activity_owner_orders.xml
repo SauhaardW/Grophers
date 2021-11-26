@@ -32,9 +32,13 @@
         app:srcCompat="@drawable/orange_top_bar" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="353dp"
-        android:layout_height="161dp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="112dp" />
+        android:layout_width="362dp"
+        android:layout_height="610dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orders_textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
