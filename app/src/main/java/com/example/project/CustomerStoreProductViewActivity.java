@@ -6,8 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -52,7 +50,7 @@ public class CustomerStoreProductViewActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list = new ArrayList<>();
-        adapter = new ProductListViewAdapter(this, list);
+        adapter = new ProductListViewAdapter(this, list, store_id);
         recyclerView.setAdapter(adapter);
 
         db.child(store_id).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {

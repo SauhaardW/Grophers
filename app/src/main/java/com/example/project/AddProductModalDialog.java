@@ -4,13 +4,22 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 public class AddProductModalDialog extends BottomSheetDialogFragment {
 
@@ -27,6 +36,71 @@ public class AddProductModalDialog extends BottomSheetDialogFragment {
         productName.setText(bundle.getString("product_brand", "") + " " + bundle.getString("product_name", ""));
         productPrice.setText(bundle.getString("product_price", ""));
         //implement image setting
+        String storeId = bundle.getString("store_id");
+        String productId = bundle.getString("product_id");
+
+        TextView count = v.findViewById(R.id.numberProductsAddedToCartModal);
+        Button minus = v.findViewById(R.id.minusButtonSubtractProductFromNumModal);
+        Button plus = v.findViewById(R.id.plusButtonAddAnotherProductToNumModal);
+
+        minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Integer currentCount = Integer.parseInt(count.getText().toString());
+                if (currentCount > 1) {
+                    currentCount--;
+                    count.setText(currentCount.toString());
+                }
+            }
+        });
+
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Integer currentCount = Integer.parseInt(count.getText().toString());
+                currentCount++;
+                count.setText((currentCount).toString());
+            }
+        });
+
+        Button addToCart = v.findViewById(R.id.addToCartButtonAddProductModal);
+        addToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                FirebaseDatabase.getInstance().getReference("users").child("customers").child(uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            Customer customer = task.getResult().getValue(Customer.class);
+
+                            FirebaseDatabase.getInstance().getReference("stores").child(storeId).child("products").child(productId).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                    if (task.isSuccessful()) {
+                                        Product product = task.getResult().getValue(Product.class);
+                                        ArrayList<Product> cart = customer.getCart();
+                                        if (cart == null) {
+                                            cart = new ArrayList<Product>();
+                                        }
+                                        for (int i=0; i < Integer.parseInt(count.getText().toString()); i++) {
+                                            cart.add(product);
+                                        }
+                                        customer.setCart(cart);
+                                        FirebaseDatabase.getInstance().getReference("users").child("customers").child(uid).child("cart").setValue(cart);
+                                    } else {
+                                        Toast.makeText(getContext(), "Error while retrieving product info", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                        } else {
+                            Toast.makeText(getContext(), "Error while retrieving cart", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+                dismiss();
+            }
+        });
 
         return v;
     }

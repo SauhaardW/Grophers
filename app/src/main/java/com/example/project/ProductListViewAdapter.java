@@ -20,10 +20,12 @@ public class ProductListViewAdapter extends RecyclerView.Adapter<ProductListView
 
     Context context;
     ArrayList<Product> list;
+    String storeId;
 
-    public ProductListViewAdapter(Context context, ArrayList<Product> list) {
+    public ProductListViewAdapter(Context context, ArrayList<Product> list, String storeId) {
         this.context = context;
         this.list = list;
+        this.storeId = storeId;
     }
 
     @NonNull
@@ -50,6 +52,8 @@ public class ProductListViewAdapter extends RecyclerView.Adapter<ProductListView
                 bundle.putString("product_brand", product.getBrand());
                 bundle.putString("product_price", "$" + String.format("%.2f", product.getPrice()));
                 bundle.putString("product_img", product.getImage());
+                bundle.putString("product_id", ((Integer)product.getId()).toString());
+                bundle.putString("store_id", storeId);
                 addProductModalDialog.setArguments(bundle);
                 addProductModalDialog.show(((AppCompatActivity)context).getSupportFragmentManager(), "addProductModal");
             }
