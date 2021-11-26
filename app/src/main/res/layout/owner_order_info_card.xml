@@ -27,12 +27,19 @@
             android:layout_marginBottom="6dp"
             app:srcCompat="@drawable/imageofproductnatrelmilk" />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp"
-                android:orientation="vertical">
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="0dp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/productNameText"
@@ -43,27 +50,25 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/textViewProductPrice"
+                    android:id="@+id/numProductText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:text="$2.97"
-                    android:textColor="@color/lightGrayForText" />
+                    android:layout_marginLeft="190dp"
+                    android:text="x1"
+                    android:textColor="@color/black" />
+
             </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="195dp" />
+            <TextView
+                android:id="@+id/textViewProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="$2.97"
+                android:textColor="@color/lightGrayForText" />
 
-        <TextView
-            android:layout_width="39dp"
-            android:layout_height="19dp"
-            android:text="x1"
-            android:id="@+id/numberOfProducts"
-            android:textColor="@color/black"
-            android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

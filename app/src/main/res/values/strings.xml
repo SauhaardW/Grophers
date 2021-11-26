@@ -15,4 +15,10 @@
 
     <string name="order_info"><u>Order info</u></string>
 
+    <string-array name="orderInfoModalList">
+        <item>Processing order</item>
+        <item>Order completed</item>
+        <item>Order canceled</item>
+    </string-array>
+
 </resources>

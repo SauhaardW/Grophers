@@ -11,7 +11,13 @@
         android:theme="@style/Theme.Project">
         <activity
             android:name=".OwnerOrdersActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.OwnerOrdersActivity" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".SuccessActivity"
             android:exported="false" />
