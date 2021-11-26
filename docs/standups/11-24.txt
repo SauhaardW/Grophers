@@ -1,0 +1,35 @@
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Created 3 complete pages for the front end on Android Studio
+	- Completed Customer Success Page
+	- Completed Owner Orders Page
+	- Completed Customer Cart Page
+	- Familiarized myself with Android studio to develop attributes
+    - Created file for today's standup.
+
+What are you planning on doing today?
+   	- Learn about how to design "pop-ups" in android studio as
+      to contribute to making the last needed pages for the project.
+
+Any impediments or stumbling blocks?
+	- Time, had to complete some administrative
+      tasks in regards to my Co-op Work Term.
+
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Started work on product creation
+	- Started work on profile setup
+	- Started work on hamburger menu
+
+What are you planning on doing today?
+   	- Finished Store Profile Setup backend
+	- Finished Product Creation backend
+	- Implemented dynamic store loading from firebase
+	- Implemented dynamic product loading from firebase
+	- Implemented store selection
+	- Remade hamburger modals to work without ActionBar, both customer & owner
+
+Any impediments or stumbling blocks?
+	- None
