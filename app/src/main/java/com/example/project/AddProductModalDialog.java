@@ -1,6 +1,7 @@
 package com.example.project;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,14 +80,19 @@ public class AddProductModalDialog extends BottomSheetDialogFragment {
                                 public void onComplete(@NonNull Task<DataSnapshot> task) {
                                     if (task.isSuccessful()) {
                                         Product product = task.getResult().getValue(Product.class);
-                                        ArrayList<Product> cart = customer.getCart();
-                                        if (cart == null) {
+                                        ArrayList<Product> cart;
+                                        if (!customer.getCurCartStoreId().equals(storeId)) {
+                                            //Toast.makeText(CustomerStoreProductViewActivity.this.get, "You had a cart active from another store, we've cleared it for you.", Toast.LENGTH_SHORT).show();
+                                            Log.println(Log.ERROR, "Dialog", "You had a cart active from another store, we've cleared it for you.");
                                             cart = new ArrayList<Product>();
+                                            FirebaseDatabase.getInstance().getReference("users").child("customers").child(uid).child("curCartStoreId").setValue(storeId);
+                                        } else {
+                                            cart = customer.getCart();
                                         }
                                         for (int i=0; i < Integer.parseInt(count.getText().toString()); i++) {
                                             cart.add(product);
                                         }
-                                        customer.setCart(cart);
+
                                         FirebaseDatabase.getInstance().getReference("users").child("customers").child(uid).child("cart").setValue(cart);
                                     } else {
                                         Toast.makeText(getContext(), "Error while retrieving product info", Toast.LENGTH_SHORT).show();
