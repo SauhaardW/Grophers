@@ -15,4 +15,6 @@
 
     <string name="order_info"><u>Order info</u></string>
 
+    <string name="ownerOrders_username">{username} • 11:59PM, Nov 12</string>
+
 </resources>
