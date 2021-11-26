@@ -30,58 +30,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/orange_top_bar" />
 
-    <ImageView
-        android:id="@+id/rectangle1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="409dp"
+        android:layout_height="617dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/orders_textView"
-        app:srcCompat="@drawable/rectangle" />
-
-    <TextView
-        android:id="@+id/order1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:text="Order #1"
-        app:layout_constraintStart_toStartOf="@+id/rectangle1"
-        app:layout_constraintTop_toTopOf="@+id/rectangle1" />
-
-    <TextView
-        android:id="@+id/username1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="15dp"
-        android:text="{username} • 11:59PM, Nov 12"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle1"
-        app:layout_constraintStart_toStartOf="@+id/rectangle1" />
-
-    <TextView
-        android:id="@+id/total1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
-        android:text="$2.97 total"
-        app:layout_constraintBottom_toBottomOf="@+id/rectangle1"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle1" />
-
-    <TextView
-        android:id="@+id/order_info1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="15dp"
-        android:text="@string/order_info"
-        android:textAllCaps="false"
-        android:textColor="@color/OwnerOrange"
-        app:layout_constraintEnd_toEndOf="@+id/rectangle1"
-        app:layout_constraintTop_toTopOf="@+id/rectangle1" />
+        app:layout_constraintTop_toBottomOf="@+id/orders_textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
