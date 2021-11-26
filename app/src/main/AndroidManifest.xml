@@ -11,13 +11,7 @@
         android:theme="@style/Theme.Project">
       <activity
             android:name=".CustomerStoreProductViewActivity"
-          android:exported="true">
-          <intent-filter>
-              <action android:name="android.intent.action.CustomerStoreProductViewActivity" />
-
-              <category android:name="android.intent.category.LAUNCHER" />
-          </intent-filter>
-      </activity>
+            android:exported="false"/>
         <activity
             android:name=".SuccessActivity"
             android:exported="false" />
