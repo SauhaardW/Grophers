@@ -88,7 +88,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/productsBackgroundCustomreStoreProductView"
         android:layout_width="382dp"
         android:layout_height="98dp"
         app:layout_constraintBottom_toTopOf="parent"
@@ -103,10 +103,10 @@
         android:id="@+id/imageView6"
         android:layout_width="72dp"
         android:layout_height="78dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/productsBackgroundCustomreStoreProductView"
+        app:layout_constraintEnd_toEndOf="@+id/productsBackgroundCustomreStoreProductView"
         app:layout_constraintHorizontal_bias="0.07"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/productsBackgroundCustomreStoreProductView"
         app:layout_constraintTop_toBottomOf="@+id/productTextDisplay"
         app:layout_constraintVertical_bias="0.571"
         app:srcCompat="@drawable/imageofproductnatrelmilk" />
@@ -118,8 +118,8 @@
         android:layout_marginBottom="68dp"
         android:text="Natrel Milk"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/productsBackgroundCustomreStoreProductView"
+        app:layout_constraintEnd_toEndOf="@+id/productsBackgroundCustomreStoreProductView"
         app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toEndOf="@+id/imageView6" />
 
@@ -130,10 +130,10 @@
         android:layout_marginTop="28dp"
         android:text="$2.97"
         android:textColor="@color/lightGrayForText"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/productsBackgroundCustomreStoreProductView"
+        app:layout_constraintEnd_toEndOf="@+id/productsBackgroundCustomreStoreProductView"
         app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/productsBackgroundCustomreStoreProductView"
         app:layout_constraintTop_toBottomOf="@+id/productNameText"
         app:layout_constraintVertical_bias="0.136" />
 
