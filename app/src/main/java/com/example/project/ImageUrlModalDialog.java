@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -21,7 +20,7 @@ public class ImageUrlModalDialog extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.modal_set_up_store, container,false);
+        View v = inflater.inflate(R.layout.modal_get_img_url, container,false);
 
         TextView done_modal = (TextView) v.findViewById(R.id.doneTextModal);
         EditText imgUrl = (EditText) v.findViewById(R.id.imageUrlTextBox);

@@ -45,12 +45,12 @@ public class SetUpStoreActivity extends AppCompatActivity implements ImageUrlMod
                 registerStore();
             }
         });
-    }
+    }//end onCreate
 
     @Override
     public void onButtonClicked(String img_url) {
         //set passed img_url here from modal
-    }
+    }//end onButtonClicked
 
     private void registerStore() {
         EditText editTextName = (EditText)findViewById(R.id.storeNameTextBox);

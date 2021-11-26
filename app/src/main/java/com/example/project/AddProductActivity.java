@@ -17,14 +17,25 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
-public class AddProductActivity extends AppCompatActivity {
+public class AddProductActivity extends AppCompatActivity implements ImageUrlModalDialog.ModalListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_product);
+
+        TextView addProductPhoto = (TextView) findViewById(R.id.textViewAddProductPhoto);
+        addProductPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImageUrlModalDialog modal = new ImageUrlModalDialog();
+                modal.show(getSupportFragmentManager(), "addProductImgModal");
+            }//end onClick for addProductPhoto
+        });
 
         Button doneButton = (Button)findViewById(R.id.buttonDoneAddProduct);
         doneButton.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +45,11 @@ public class AddProductActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onButtonClicked(String img_url) {
+        //set passed img_url here from modal
+    }//end onButtonClicked
 
     private void createProduct() {
         EditText editTextName = (EditText)findViewById(R.id.editTextAddProductName);
