@@ -36,7 +36,9 @@
         <entry key="app/src/main/res/layout/order_info_modal.xml" value="0.25" />
         <entry key="app/src/main/res/layout/orderinfo_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/orderinfo_modal_temp.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/owner_order_info_card.xml" value="0.5" />
         <entry key="app/src/main/res/layout/product_card.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/product_order_info_cart.xml" value="0.24322916666666666" />
         <entry key="app/src/main/res/layout/roundedcorner.xml" value="0.1" />
         <entry key="app/src/main/res/layout/setupstore.xml" value="0.24322916666666666" />
         <entry key="app/src/main/res/layout/store_card.xml" value="0.33" />

@@ -37,12 +37,13 @@
         android:layout_marginEnd="252dp"
         android:text="Products ordered"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
-        app:layout_constraintStart_toStartOf="@+id/spinner"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintEnd_toEndOf="@+id/spinnerChoicesOrderInfo"
+        app:layout_constraintStart_toStartOf="@+id/spinnerChoicesOrderInfo"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerChoicesOrderInfo" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerChoicesOrderInfo"
+        android:paddingLeft="15dp"
         android:layout_width="361dp"
         android:layout_height="36dp"
         android:layout_marginTop="16dp"
@@ -53,6 +54,7 @@
         app:layout_constraintHorizontal_bias="0.961"
         app:layout_constraintStart_toStartOf="@+id/datePlacedTextOrderInfoModal"
         app:layout_constraintTop_toBottomOf="@+id/datePlacedTextOrderInfoModal"
+        android:spinnerMode="dropdown"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.recyclerview.widget.RecyclerView

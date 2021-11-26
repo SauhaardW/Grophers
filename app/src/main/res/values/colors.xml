@@ -10,4 +10,5 @@
     <color name="OwnerOrange">#FF8201</color>
     <color name="CustomerGreen">#0AAD0A</color>
     <color name="darkerGray">#494747</color>
+    <color name="lightGrayForText">#5E5E5E</color>
 </resources>
