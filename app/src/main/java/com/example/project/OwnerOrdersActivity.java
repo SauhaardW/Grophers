@@ -13,7 +13,9 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class OwnerOrdersActivity extends AppCompatActivity {
+public class OwnerOrdersActivity extends AppCompatActivity implements CustomSpinner.OnSpinnerEventsListener{
+
+    private CustomSpinner modalSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +35,20 @@ public class OwnerOrdersActivity extends AppCompatActivity {
     }//end onCreate
 
     public void createSpinner(View modalView){
-        Spinner modalSpinner = (Spinner) modalView.findViewById(R.id.spinnerChoicesOrderInfo);
+        modalSpinner = (CustomSpinner) modalView.findViewById(R.id.spinnerChoicesOrderInfo);
+        modalSpinner.setSpinnerEventsListener(this);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(OwnerOrdersActivity.this, android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.orderInfoModalList));
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         modalSpinner.setAdapter(adapter);
     }//end createSpinner
+
+    @Override
+    public void onPopupWindowOpened(Spinner spinner) {
+        modalSpinner.setBackground(getResources().getDrawable(R.drawable.spinnerchoicesdropdown));
+    }//end onPopUpWindowOpened
+
+    @Override
+    public void onPopupWindowClosed(Spinner spinner) {
+        modalSpinner.setBackground(getResources().getDrawable(R.drawable.spinnerchoices));
+    }//end onPopupWondowClosed
 }
