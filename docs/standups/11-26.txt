@@ -1,0 +1,14 @@
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Implemented the already created image url modal to the product creation page
+	- Created customers add to cart modal
+	- Implemented the add to cart modal so when product is clicked the modal will show
+	- Created owners order info modal 
+	- Implemented the owners order info modal so when get info is clicked the modal will show
+
+What are you planning on doing today?
+   	- Fix spinner layout and create custom spinner layout for order info modal, android default spinner does not look nice
+
+Any impediments or stumbling blocks?
+	- Creating the spinner within the modal. Had to change the way I was implementing the modal in order for the spinner to show properly. 
