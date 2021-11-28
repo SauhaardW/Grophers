@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class OwnerOrdersActivity extends AppCompatActivity implements CustomSpinner.OnSpinnerEventsListener{
 
     private CustomSpinner modalSpinner;
@@ -44,11 +41,11 @@ public class OwnerOrdersActivity extends AppCompatActivity implements CustomSpin
 
     @Override
     public void onPopupWindowOpened(Spinner spinner) {
-        modalSpinner.setBackground(getResources().getDrawable(R.drawable.spinnerchoicesdropdown));
+        modalSpinner.setBackground(getResources().getDrawable(R.drawable.spinnerchoicesdropup));
     }//end onPopUpWindowOpened
 
     @Override
     public void onPopupWindowClosed(Spinner spinner) {
-        modalSpinner.setBackground(getResources().getDrawable(R.drawable.spinnerchoices));
+        modalSpinner.setBackground(getResources().getDrawable(R.drawable.spinnerchoicesdropdown));
     }//end onPopupWondowClosed
 }
