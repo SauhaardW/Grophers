@@ -6,6 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".RegisterCustomerActivity">
 
+    <Button
+        android:id="@+id/registerSubmit"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="162dp"
+        android:background="@drawable/login_rectangle_green"
+        android:backgroundTint="@color/CustomerGreen"
+        android:insetTop="5dp"
+        android:insetBottom="10dp"
+        android:text="Register"
+        app:backgroundTint="@color/CustomerGreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
     <include
         android:id="@+id/include3"
         layout="@layout/topbar_back_button_customer"
@@ -109,24 +126,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/editTextUsername"
         app:layout_constraintTop_toBottomOf="@+id/include3" />
-
-    <Button
-        android:id="@+id/registerSubmit"
-        android:layout_width="165dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="162dp"
-        android:background="@drawable/register_rectangle"
-        android:backgroundTint="@color/CustomerGreen"
-        android:insetTop="5dp"
-        android:insetBottom="10dp"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        tools:backgroundTint="@color/CustomerGreen" />
 
     <ProgressBar
         android:id="@+id/progressBar"
