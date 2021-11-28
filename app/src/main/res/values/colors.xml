@@ -12,4 +12,6 @@
     <color name="lightGray">#5E5E5E</color>
     <color name="lightGrayForText">#5E5E5E</color>
     <color name="OwnerOrange">#FF8201</color>
+    <color name="ProcessingGray">#5E5E5E</color>
+    <color name="CanceledGray">#E5E5E5</color>
 </resources>
