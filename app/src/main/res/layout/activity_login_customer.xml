@@ -12,34 +12,16 @@
         android:layout_width="411dp"
         android:layout_height="83dp" />
 
-    <Button
-        android:id="@+id/registerButton"
-        android:layout_width="165dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="162dp"
-        android:background="@drawable/login_rectangle_green"
-        android:backgroundTint="@color/OwnerOrange"
-        android:insetTop="5dp"
-        android:insetBottom="10dp"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:backgroundTint="@color/CustomerGreen" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="172dp"
         android:text="Don't have an account?"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBarCustomerLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/loginSubmitCustomer" />
 
     <EditText
         android:id="@+id/editTextEmailCustomerLogin"
@@ -74,15 +56,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPasswordCustomerLogin" />
 
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/login_rectangle_green"
+        android:backgroundTint="@color/CustomerGreen"
+        android:insetTop="5dp"
+        android:insetBottom="10dp"
+        android:text="Register"
+        app:backgroundTint="@color/CustomerGreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
     <ProgressBar
         android:id="@+id/progressBarCustomerLogin"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="68dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginSubmitCustomer"
         tools:visibility="invisible" />

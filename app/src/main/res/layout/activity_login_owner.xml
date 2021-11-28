@@ -16,11 +16,12 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
         android:text="Don't have an account?"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="634dp" />
+        app:layout_constraintTop_toBottomOf="@+id/loginSubmitOwner" />
 
     <TextView
         android:id="@+id/storeName7"
@@ -82,38 +83,17 @@
         app:layout_constraintTop_toBottomOf="@+id/storeName7"
         tools:ignore="TextContrastCheck" />
 
-    <Button
-        android:id="@+id/registerButton2"
-        android:layout_width="165dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="162dp"
-        android:background="@drawable/login_rectangle_green"
-        android:backgroundTint="@color/OwnerOrange"
-        android:insetTop="5dp"
-        android:insetBottom="10dp"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:backgroundTint="@color/OwnerOrange" />
-
     <ProgressBar
         android:id="@+id/progressBarOwnerLogin"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginTop="68dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginSubmitOwner"
-        app:layout_constraintVertical_bias="0.885"
         tools:visibility="invisible" />
 
     <Button
@@ -128,11 +108,29 @@
         android:insetTop="5dp"
         android:insetBottom="10dp"
         android:text="Log In"
-        app:backgroundTint="#FF8201"
+        app:backgroundTint="@color/OwnerOrange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPasswordOwnerLogin"
+        tools:layout_marginBottom="29dp" />
+
+    <Button
+        android:id="@+id/registerButton2"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/login_rectangle_green"
+        android:backgroundTint="@color/OwnerOrange"
+        android:insetTop="5dp"
+        android:insetBottom="10dp"
+        android:text="Register"
+        app:backgroundTint="@color/OwnerOrange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:layout_marginBottom="29dp" />
 
     <EditText
