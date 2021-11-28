@@ -1,0 +1,33 @@
+<<<<<<< HEAD
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Fixed the UI of the modal for retaining the image url
+	- Changed layout of UI to constraint to make a more pleasing UI
+
+What are you planning on doing today?
+   	- Redo some of the UI's which are based on server data
+	- Make the UI's based on recycler views
+
+Any impediments or stumbling blocks?
+	- To test the UI it takes a lot of time to get to that page. I fixed by making the page a launcher in the manifest for the time being. I removed it once I finished the modal.
+=======
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Finished Store Profile Setup backend
+	- Finished Product Creation backend
+	- Implemented dynamic store loading from firebase
+	- Implemented dynamic product loading from firebase
+	- Implemented store selection
+	- Remade hamburger modals to work without ActionBar, both customer & owner
+
+What are you planning on doing today?
+   	- Make include-able topbar that functions for all pages
+	- Implement backend for modals that are made
+	- Update classes for firebase database objects to allow for new activities to be made, e.g. customer, store, order, etc.
+	- Code review PRs, approve and handle merge conflicts
+
+Any impediments or stumbling blocks?
+	- None
+>>>>>>> 724316aaa78b5d544b68f46fab601a5a74c37177

@@ -56,3 +56,14 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Constraints within android studio were giving me a lot of issues. I had hard coded at first and then realized the pages wouldn't work for all emulators/phone types. I had to go back and fix all of the constrains which ended up causing me to take twice the amount of time I usually would take.
 
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Nothing
+
+What are you planning on doing today?
+   	- Contribute to the project and manually add pages
+	  from figma and redesign them onto android studio.
+
+Any impediments or stumbling blocks?
+	- None
