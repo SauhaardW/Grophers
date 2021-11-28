@@ -12,3 +12,17 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Creating the spinner within the modal. Had to change the way I was implementing the modal in order for the spinner to show properly. 
+
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Made include-able topbar that functions for all pages
+	- Implement backend for modals item view modal
+	- Updated customer class to allow for cart to be stored on firebase DB
+	- Code review PRs, approve and handle merge conflicts
+
+What are you planning on doing today?
+   	- Nothing much, time will be tight since b36 test
+
+Any impediments or stumbling blocks?
+	- Time.
