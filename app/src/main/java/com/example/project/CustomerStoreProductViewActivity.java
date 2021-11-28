@@ -6,7 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -80,13 +83,28 @@ public class CustomerStoreProductViewActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    numProductsInCart.setText(((Long) snapshot.getChildrenCount()).toString());
+                    Integer count = 0;
+                    for (DataSnapshot snap : snapshot.getChildren()) {
+                        count += snap.getValue(CartItem.class).quantity;
+                    }
+                    numProductsInCart.setText(count.toString());
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 numProductsInCart.setText("N/A");
+            }
+        });
+
+        Button cartButton = findViewById(R.id.shoppingCartInvisibleButton);
+        cartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CustomerStoreProductViewActivity.this, CustomerCartActivity.class);
+                intent.putExtra("store_id", store_id);
+                intent.putExtra("store_name", store_name);
+                startActivity(intent);
             }
         });
     }

@@ -5,61 +5,52 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Order {
-    Customer customer;
-    Store store;
-    ArrayList<Product> products;
-    Date date;
-    double total;
+    String customerId;
+    String storeId;
+    ArrayList<CartItem> cart;
+    long timestamp;
     String status;
 
     public Order() {}
 
-    public Order(Customer customer, Store store, ArrayList<Product> products, Date date, String status) {
-        this.customer = customer;
-        this.store = store;
-        this.products = products;
-        this.date = date;
+    public Order(String customerId, String storeId, ArrayList<CartItem> cart, long timestamp, String status) {
+        this.customerId = customerId;
+        this.storeId = storeId;
+        this.cart = cart;
+        this.timestamp = timestamp;
         this.status = status;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public String getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
     }
 
-    public Store getStore() {
-        return store;
+    public String getStoreId() {
+        return storeId;
     }
 
-    public void setStore(Store store) {
-        this.store = store;
+    public void setStoreId(String storeId) {
+        this.storeId = storeId;
     }
 
-    public ArrayList<Product> getProducts() {
-        return products;
+    public ArrayList<CartItem> getCart() {
+        return cart;
     }
 
-    public void setProducts(ArrayList<Product> products) {
-        this.products = products;
+    public void setCart(ArrayList<CartItem> cart) {
+        this.cart = cart;
     }
 
-    public Date getDate() {
-        return date;
+    public long getTimestamp() {
+        return timestamp;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public double getTotal() {
-        return total;
-    }
-
-    public void setTotal(double total) {
-        this.total = total;
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
     }
 
     public String getStatus() {
