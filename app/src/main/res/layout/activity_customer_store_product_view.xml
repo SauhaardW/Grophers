@@ -104,7 +104,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <ImageView
-        android:id="@+id/shoppingCartIcon"
+        android:id="@+id/magnifyingGlassIcon"
         android:layout_width="14dp"
         android:layout_height="28dp"
         android:layout_marginTop="30dp"
