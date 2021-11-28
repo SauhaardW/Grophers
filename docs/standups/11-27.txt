@@ -1,0 +1,14 @@
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Not much, looked at some firebase documentation to see if things could be improved
+	- Discussed with group partners
+	- Created standup file
+
+What are you planning on doing today?
+   	- Implement cart display
+	- Implement order placing
+	- Update classes to store orders
+
+Any impediments or stumbling blocks?
+	- None
