@@ -7,14 +7,18 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -44,6 +48,28 @@ public class CustomerViewActivity extends AppCompatActivity {
                 } else {
                     drawerLayout.openDrawer(Gravity.LEFT);
                 }
+            }
+        });
+
+        NavigationView navView = findViewById(R.id.navView);
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.Item1:
+                        startActivity(new Intent(CustomerViewActivity.this, CustomerViewActivity.class));
+                        break;
+                    case R.id.Item2:
+                        startActivity(new Intent(CustomerViewActivity.this, PastOrdersCustomer.class));
+                        break;
+                    case R.id.Item3:
+                        FirebaseAuth.getInstance().signOut();
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        break;
+                }
+                return true;
             }
         });
 
