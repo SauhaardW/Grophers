@@ -1,24 +1,19 @@
 package com.example.project;
 
 public class Product {
-    private static int NEXT_ID = 1;
-    private int id;
-    private String name;
-    private String brand;
-    private double price;
-    private String image;
+    int id;
+    String name;
+    String brand;
+    double price;
+    String image;
 
     public Product() {}
 
-    public Product(String name, String brand, double price) {
-        this.id = Product.getNextId();
+    public Product(String name, String brand, double price, int id) {
+        this.id = id;
         this.name = name;
         this.brand = brand;
         this.price = price;
-    }
-
-    public static int getNextId() {
-        return Product.NEXT_ID++;
     }
 
     public int getId() {

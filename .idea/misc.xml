@@ -3,57 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../layout/custom_preview.xml" value="0.1111111111111111" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_customer_home.xml" value="0.5541666666666667" />
-        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_login_customer.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_customer_store_product_view.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_customer_view.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_login_customer.xml" value="0.5" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_login_owner.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_home.xml" value="0.4" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_orders.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_product_list.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_store_setup.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_register_customer.xml" value="0.5385416666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_register_owner.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_set_up_store.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_success.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/add_product_modal.xml" value="0.7180616740088106" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/cart_item_card.xml" value="0.33" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/product_card.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/prouct_card.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/store_card.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/topbar_back_button_customer.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/topbar_back_button_owner.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/menu/nav_menu.xml" value="0.4140625" />
-        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19739583333333333" />
-        <entry key="app/src/main/res/drawable/ic_arrow_drop_up_full_triangle.xml" value="0.19739583333333333" />
-        <entry key="app/src/main/res/drawable/ic_arrow_up_spinner_modal.xml" value="0.15" />
-        <entry key="app/src/main/res/drawable/ic_baseline_arrow_drop_up.xml" value="0.15" />
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.21510416666666668" />
-        <entry key="app/src/main/res/drawable/ic_spinner_drop_down_background.xml" value="0.1824074074074074" />
-        <entry key="app/src/main/res/drawable/rounded_corner_view.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/spinnerchoices.xml" value="0.22" />
-        <entry key="app/src/main/res/drawable/spinnerchoicesdropdown.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_add_product.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_customer_cart.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/activity_customer_home.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_customer_store_product_view.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_customer_store_view.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_customer_view.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/activity_login_customer.xml" value="0.21822916666666667" />
-        <entry key="app/src/main/res/layout/activity_login_owner.xml" value="0.21822916666666667" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19270833333333334" />
-        <entry key="app/src/main/res/layout/activity_owner_home.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_owner_orders.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_owner_product_list.xml" value="0.2846097010096459" />
-        <entry key="app/src/main/res/layout/activity_owner_store_view.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_register_customer.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/activity_register_owner.xml" value="0.19270833333333334" />
-        <entry key="app/src/main/res/layout/activity_set_up_store.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/add_product_modal.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/cart_item_card.xml" value="0.24322916666666666" />
-        <entry key="app/src/main/res/layout/content_set_up_store.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/modal_set_up_store.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/order_info_modal.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/orderinfo_modal.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/orderinfo_modal_temp.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/owner_order_info_card.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/product_card.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/product_order_info_cart.xml" value="0.24322916666666666" />
-        <entry key="app/src/main/res/layout/roundedcorner.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/setupstore.xml" value="0.24322916666666666" />
-        <entry key="app/src/main/res/layout/store_card.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
