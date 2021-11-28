@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Customer extends User{
     ArrayList<Order> orders;
     ArrayList<Product> cart;
+    String curCartStoreId;
 
     public Customer() {}
 
@@ -27,5 +28,13 @@ public class Customer extends User{
 
     public void setCart(ArrayList<Product> cart) {
         this.cart = cart;
+    }
+
+    public String getCurCartStoreId() {
+        return curCartStoreId;
+    }
+
+    public void setCurCartStoreId(String curCartStoreId) {
+        this.curCartStoreId = curCartStoreId;
     }
 }

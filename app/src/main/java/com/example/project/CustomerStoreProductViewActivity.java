@@ -1,21 +1,25 @@
 package com.example.project;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -51,7 +55,7 @@ public class CustomerStoreProductViewActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list = new ArrayList<>();
-        adapter = new ProductListViewAdapter(this, list);
+        adapter = new ProductListViewAdapter(this, list, store_id);
         recyclerView.setAdapter(adapter);
 
         db.child(store_id).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
@@ -66,6 +70,23 @@ public class CustomerStoreProductViewActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(CustomerStoreProductViewActivity.this, "Error while getting store data", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        TextView numProductsInCart = findViewById(R.id.numProductsInCart);
+
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        FirebaseDatabase.getInstance().getReference("users").child("customers").child(uid).child("cart").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    numProductsInCart.setText(((Long) snapshot.getChildrenCount()).toString());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                numProductsInCart.setText("N/A");
             }
         });
     }
