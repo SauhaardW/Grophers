@@ -64,7 +64,7 @@ public class StoreListViewAdapter extends RecyclerView.Adapter<StoreListViewAdap
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            this.storeName = itemView.findViewById(R.id.textViewCustomerViewStoreName);
+            this.storeName = itemView.findViewById(R.id.textViewStoreNameCard);
             this.storeHours = itemView.findViewById(R.id.textViewCustomerViewStoreTimings);
             this.storeImg = itemView.findViewById(R.id.imageViewCustomerViewStorePhoto);
         }
