@@ -53,7 +53,7 @@
                 android:id="@+id/textViewCustomerViewStoreTimings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Friday, Nov 20 . CA$20"
+                android:text="Friday, Nov 20 • CA$20"
                 android:textAlignment="textStart" />
         </LinearLayout>
 
