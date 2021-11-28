@@ -56,6 +56,10 @@ public class CustomerCartActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     String store_id = task.getResult().child("curCartStoreId").getValue(String.class);
 
+                    if (store_id == null) {
+                        return;
+                    }
+
                     adapter = new CartListViewAdapter(CustomerCartActivity.this, list, store_id);
                     recyclerView.setAdapter(adapter);
 
