@@ -79,18 +79,30 @@ public class AddProductModalDialog extends BottomSheetDialogFragment {
                                 @Override
                                 public void onComplete(@NonNull Task<DataSnapshot> task) {
                                     if (task.isSuccessful()) {
-                                        Product product = task.getResult().getValue(Product.class);
-                                        ArrayList<Product> cart;
-                                        if (!customer.getCurCartStoreId().equals(storeId)) {
+                                        CartItem cartItem = new CartItem(task.getResult().getValue(Product.class), Integer.parseInt(count.getText().toString()));
+
+                                        ArrayList<CartItem> cart;
+                                        if (customer.getCurCartStoreId() == null || !customer.getCurCartStoreId().equals(storeId)) {
                                             //Toast.makeText(CustomerStoreProductViewActivity.this.get, "You had a cart active from another store, we've cleared it for you.", Toast.LENGTH_SHORT).show();
                                             Log.println(Log.ERROR, "Dialog", "You had a cart active from another store, we've cleared it for you.");
-                                            cart = new ArrayList<Product>();
+                                            cart = new ArrayList<CartItem>();
                                             FirebaseDatabase.getInstance().getReference("users").child("customers").child(uid).child("curCartStoreId").setValue(storeId);
+                                            cart.add(cartItem);
                                         } else {
                                             cart = customer.getCart();
-                                        }
-                                        for (int i=0; i < Integer.parseInt(count.getText().toString()); i++) {
-                                            cart.add(product);
+                                            boolean found = false;
+                                            for (int i = 0; i < cart.size(); i++) {
+                                                CartItem temp = cart.get(i);
+                                                if (temp.getId() == cartItem.getId()) {
+                                                    temp.setQuantity(temp.getQuantity()+(Integer.parseInt(count.getText().toString())));
+                                                    cart.set(i, temp);
+                                                    found = true;
+                                                    break;
+                                                }
+                                            }
+                                            if (!found) {
+                                                cart.add(cartItem);
+                                            }
                                         }
 
                                         FirebaseDatabase.getInstance().getReference("users").child("customers").child(uid).child("cart").setValue(cart);
