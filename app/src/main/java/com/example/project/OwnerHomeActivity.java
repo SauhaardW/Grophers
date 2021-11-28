@@ -58,11 +58,11 @@ public class OwnerHomeActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (toggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        if (toggle.onOptionsItemSelected(item)) {
+//            return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 }
