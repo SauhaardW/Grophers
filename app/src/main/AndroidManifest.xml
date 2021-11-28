@@ -11,9 +11,18 @@
         android:theme="@style/Theme.Project" >
         <activity
             android:name=".PastOrdersCustomer"
+            android:exported="false"/>
+        <activity
+            android:name=".CustomerStoreProductViewActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".CustomerCartActivity"
             android:exported="false" />
         <activity
             android:name=".SuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerViewActivity"
             android:exported="false" />
         <activity
             android:name=".SetUpStoreActivity"
@@ -35,6 +44,9 @@
             android:exported="false" />
         <activity
             android:name=".RegisterCustomerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddProductActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

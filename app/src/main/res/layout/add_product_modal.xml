@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/productImageModalDisplay"
+        android:layout_width="192dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imageofproductnatrelmilk" />
+
+    <TextView
+        android:id="@+id/productNameModalDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Natrel Milk"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/productImageModalDisplay"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productImageModalDisplay" />
+
+    <TextView
+        android:id="@+id/productPriceModalDisplay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="$2.97"
+        android:textColor="@color/lightGrayForText"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/productNameModalDisplay"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/productNameModalDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/productNameModalDisplay" />
+
+    <ImageView
+        android:id="@+id/numProductBackground"
+        android:layout_width="190dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/limitForModalInvisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productPriceModalDisplay2"
+        app:layout_constraintVertical_bias="0.031"
+        app:srcCompat="@drawable/numberofproductstoaddbackground" />
+
+    <TextView
+        android:id="@+id/numberProductsAddedToCartModal"
+        android:layout_width="51dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginEnd="72dp"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="30dp"
+        android:textColor="@color/lightGrayForText"
+        app:layout_constraintBottom_toBottomOf="@+id/numProductBackground"
+        app:layout_constraintEnd_toEndOf="@+id/numProductBackground"
+        app:layout_constraintStart_toStartOf="@+id/numProductBackground"
+        app:layout_constraintTop_toTopOf="@+id/numProductBackground" />
+
+    <ImageView
+        android:id="@+id/greenButtonImageForButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/numProductBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numProductBackground"
+        app:layout_constraintTop_toBottomOf="@+id/productPriceModalDisplay2"
+        app:srcCompat="@drawable/addtocartbackground"
+        app:tint="@color/CustomerGreen" />
+
+    <Button
+        android:id="@+id/addToCartButtonAddProductModal"
+        android:layout_width="192dp"
+        android:layout_height="59dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/greenButtonImageForButton"
+        app:layout_constraintEnd_toEndOf="@+id/greenButtonImageForButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/numProductBackground"
+        app:layout_constraintTop_toTopOf="@+id/greenButtonImageForButton"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/addToCartText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:text="Add to Cart"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/greenButtonImageForButton"
+        app:layout_constraintEnd_toEndOf="@+id/greenButtonImageForButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/greenButtonImageForButton"
+        app:layout_constraintTop_toTopOf="@+id/greenButtonImageForButton"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/plusImageOverlayModal"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/numProductBackground"
+        app:layout_constraintStart_toEndOf="@+id/numberProductsAddedToCartModal"
+        app:layout_constraintTop_toTopOf="@+id/numProductBackground"
+        app:srcCompat="@drawable/plusbuttonimg"
+        app:tint="@color/CustomerGreen" />
+
+    <Button
+        android:id="@+id/plusButtonAddAnotherProductToNumModal"
+        android:layout_width="25dp"
+        android:layout_height="32dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/plusImageOverlayModal"
+        app:layout_constraintEnd_toEndOf="@+id/plusImageOverlayModal"
+        app:layout_constraintStart_toStartOf="@+id/plusImageOverlayModal"
+        app:layout_constraintTop_toTopOf="@+id/plusImageOverlayModal"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/minusButtonSubtractProductFromNumModal"
+        android:layout_width="18dp"
+        android:layout_height="11dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/minusImageModal"
+        app:layout_constraintEnd_toEndOf="@+id/minusImageModal"
+        app:layout_constraintStart_toStartOf="@+id/minusImageModal"
+        app:layout_constraintTop_toTopOf="@+id/minusImageModal"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/minusImageModal"
+        android:layout_width="13dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/numProductBackground"
+        app:layout_constraintEnd_toStartOf="@+id/numberProductsAddedToCartModal"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/numProductBackground"
+        app:srcCompat="@drawable/minusbuttonimg"
+        app:tint="@color/CustomerGreen" />
+
+    <TextView
+        android:id="@+id/limitForModalInvisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
