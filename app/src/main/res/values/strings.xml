@@ -21,4 +21,6 @@
         <item>Order canceled</item>
     </string-array>
 
+    <string name="ownerOrders_username">{username} • 11:59PM, Nov 12</string>
+
 </resources>

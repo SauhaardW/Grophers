@@ -1,51 +1,68 @@
 package com.example.project;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.TextView;
+import android.widget.Toast;
 
-import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class OwnerOrdersActivity extends AppCompatActivity implements CustomSpinner.OnSpinnerEventsListener{
+import java.util.ArrayList;
 
-    private CustomSpinner modalSpinner;
+public class OwnerOrdersActivity extends AppCompatActivity {
+
+    RecyclerView recyclerView;
+    DatabaseReference db;
+    OwnerOrdersListViewAdapter adapter;
+    ArrayList<Order> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_orders);
 
-        TextView orderInfo = (TextView) findViewById(R.id.orderInfoButton);
-        orderInfo.setOnClickListener(view -> {
-            BottomSheetDialog orderInfoModal = new BottomSheetDialog(OwnerOrdersActivity.this);
-            View modalView = getLayoutInflater().inflate(R.layout.order_info_modal, null);
 
-            createSpinner(modalView);
+        recyclerView = findViewById(R.id.ownerOrders_recyclerView);
+        db = FirebaseDatabase.getInstance().getReference("stores");
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-            orderInfoModal.setContentView(modalView);
-            orderInfoModal.show();
+        list = new ArrayList<>();
+        adapter = new OwnerOrdersListViewAdapter(OwnerOrdersActivity.this, list);
+        recyclerView.setAdapter(adapter);
+
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        FirebaseDatabase.getInstance().getReference("users").child("owners").child(uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (task.isSuccessful()) {
+                    Integer store_id = task.getResult().child("storeId").getValue(int.class);
+                    db.child(store_id.toString()).child("orders").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DataSnapshot> task) {
+                            if (task.isSuccessful()) {
+                                for (DataSnapshot dataSnapshot : task.getResult().getChildren()) {
+                                    Order order = dataSnapshot.getValue(Order.class);
+                                    list.add(order);
+                                }
+                                adapter.notifyDataSetChanged();
+                            } else {
+                                Toast.makeText(OwnerOrdersActivity.this, "Error while getting store data", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                } else {
+                    Toast.makeText(OwnerOrdersActivity.this, "Error while getting user data", Toast.LENGTH_SHORT).show();
+                }
+            }
         });
     }//end onCreate
-
-    public void createSpinner(View modalView){
-        modalSpinner = (CustomSpinner) modalView.findViewById(R.id.spinnerChoicesOrderInfo);
-        modalSpinner.setSpinnerEventsListener(this);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(OwnerOrdersActivity.this, android.R.layout.simple_spinner_item,getResources().getStringArray(R.array.orderInfoModalList));
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        modalSpinner.setAdapter(adapter);
-    }//end createSpinner
-
-    @Override
-    public void onPopupWindowOpened(Spinner spinner) {
-        modalSpinner.setBackground(getResources().getDrawable(R.drawable.spinnerchoicesdropup));
-    }//end onPopUpWindowOpened
-
-    @Override
-    public void onPopupWindowClosed(Spinner spinner) {
-        modalSpinner.setBackground(getResources().getDrawable(R.drawable.spinnerchoicesdropdown));
-    }//end onPopupWondowClosed
 }
