@@ -8,19 +8,21 @@ public class Order {
     String customerId;
     String storeId;
     String storeName;
+    String customerName;
     ArrayList<CartItem> cart;
     long timestamp;
     String status;
 
     public Order() {}
 
-    public Order(String customerId, String storeId, ArrayList<CartItem> cart, long timestamp, String status, String storeName) {
+    public Order(String customerId, String storeId, ArrayList<CartItem> cart, long timestamp, String status, String storeName, String customerName) {
         this.customerId = customerId;
         this.storeId = storeId;
         this.cart = cart;
         this.timestamp = timestamp;
         this.status = status;
         this.storeName = storeName;
+        this.customerName = customerName;
     }
 
     public String getCustomerId() {
@@ -45,6 +47,14 @@ public class Order {
 
     public void setStoreName(String storeName) {
         this.storeName = storeName;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
     public ArrayList<CartItem> getCart() {
