@@ -6,80 +6,141 @@
     android:layout_height="match_parent"
     tools:context=".RegisterOwnerActivity">
 
-    <EditText
-        android:id="@+id/editTextConfirmPasswordOwner"
+    <Button
+        android:id="@+id/registerSubmitOwner"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="162dp"
+        android:background="@drawable/login_rectangle_green"
+        android:backgroundTint="@color/OwnerOrange"
+        android:insetTop="5dp"
+        android:insetBottom="10dp"
+        android:text="Register"
+        app:backgroundTint="@color/OwnerOrange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarOwnerRegistration" />
+
+    <TextView
+        android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:text="Confirm Password"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/editTextConfirmPasswordOwner"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordOwner" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Password"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordOwner"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailOwner" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Email"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmailOwner"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsernameOwner" />
+
+    <EditText
+        android:id="@+id/editTextConfirmPasswordOwner"
+        android:layout_width="268dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/gettext"
         android:ems="10"
-        android:hint="Password Confirmation"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordOwner" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <ProgressBar
         android:id="@+id/progressBarOwnerRegistration"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="181dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="182dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerSubmitOwner"
+        app:layout_constraintTop_toBottomOf="@+id/editTextConfirmPasswordOwner"
         tools:visibility="invisible" />
 
     <EditText
         android:id="@+id/editTextUsernameOwner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
+        android:layout_width="268dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/gettext"
         android:ems="10"
-        android:hint="Username"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-    <Button
-        android:id="@+id/registerSubmitOwner"
+    <TextView
+        android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="@color/OwnerOrange"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextConfirmPasswordOwner" />
+        android:layout_marginTop="116dp"
+        android:text="Username"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/editTextUsernameOwner"
+        app:layout_constraintTop_toBottomOf="@+id/include2" />
 
     <EditText
         android:id="@+id/editTextPasswordOwner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="268dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/gettext"
         android:ems="10"
-        android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailOwner" />
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <EditText
         android:id="@+id/editTextEmailOwner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="268dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/gettext"
         android:ems="10"
-        android:hint="Email"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextUsernameOwner" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/topbar_back_button_owner"
+        android:layout_width="410dp"
+        android:layout_height="78dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
