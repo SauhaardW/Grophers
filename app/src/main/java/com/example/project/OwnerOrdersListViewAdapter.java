@@ -11,9 +11,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.Format;
 import java.text.SimpleDateFormat;
@@ -67,6 +69,21 @@ public class OwnerOrdersListViewAdapter extends RecyclerView.Adapter<OwnerOrders
             createSpinner(modalView);
 
             orderInfoModal.setContentView(modalView);
+
+            TextView customerName = orderInfoModal.findViewById(R.id.orderPlacedByTextOrderInfoModal);
+            TextView orderDate = orderInfoModal.findViewById(R.id.datePlacedTextOrderInfoModal);
+            customerName.setText("Order placed by: " + order.getCustomerName());
+            orderDate.setText("Date placed: " + dateFormatted);
+
+            // Handle recyclerview in modal
+            RecyclerView modalRecyclerView = orderInfoModal.findViewById(R.id.recyclerView);
+            modalRecyclerView.setHasFixedSize(true);
+            modalRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+            ArrayList<CartItem> modalList = order.getCart();
+            OwnerOrderProductListViewAdapter modalAdapter= new OwnerOrderProductListViewAdapter(context, modalList);
+            modalRecyclerView.setAdapter(modalAdapter);
+            modalAdapter.notifyDataSetChanged();
+
             orderInfoModal.show();
         });
     }
