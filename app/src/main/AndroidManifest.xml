@@ -19,6 +19,9 @@
             android:name=".CustomerCartActivity"
             android:exported="false" />
         <activity
+            android:name=".OwnerOrdersActivity"
+            android:exported="false" />
+        <activity
             android:name=".SuccessActivity"
             android:exported="false" />
         <activity
