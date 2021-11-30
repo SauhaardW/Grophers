@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".OwnerProductListActivity">
 
+    <TextView
+        android:id="@+id/textView_ownerOrders_Order4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Products"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grofersIcon" />
+
     <ImageView
         android:id="@+id/grofersIcon"
         android:layout_width="62dp"
@@ -18,145 +30,13 @@
         app:srcCompat="@drawable/grofersicon" />
 
     <ImageView
-        android:id="@+id/productInfoBox"
-        android:layout_width="345dp"
-        android:layout_height="141dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grofersIcon"
-        app:srcCompat="@drawable/poductinfobox" />
-
-    <ImageView
-        android:id="@+id/ProductPic"
-        android:layout_width="67dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/productInfoBox"
-        app:layout_constraintEnd_toStartOf="@+id/ProductName"
-        app:layout_constraintHorizontal_bias="0.315"
-        app:layout_constraintStart_toStartOf="@+id/productInfoBox"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/natrelmilkpic" />
-
-    <TextView
-        android:id="@+id/ProductName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Natrel Milk"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/productInfoBox"
-        app:layout_constraintEnd_toEndOf="@+id/productInfoBox"
-        app:layout_constraintHorizontal_bias="0.379"
-        app:layout_constraintStart_toStartOf="@+id/productInfoBox"
-        app:layout_constraintTop_toTopOf="@+id/productInfoBox"
-        app:layout_constraintVertical_bias="0.278" />
-
-    <TextView
-        android:id="@+id/numProducts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="right"
-        android:text="x1"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/productTotal"
-        app:layout_constraintEnd_toEndOf="@+id/productInfoBox"
-        app:layout_constraintHorizontal_bias="0.924"
-        app:layout_constraintStart_toEndOf="@+id/ProductPic"
-        app:layout_constraintTop_toBottomOf="@+id/editButtonImageView"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/ProductPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
-        android:text="$2.97"
-        android:textColor="@color/light_gray"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/productInfoBox"
-        app:layout_constraintEnd_toStartOf="@+id/productTotal"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/ProductPic"
-        app:layout_constraintTop_toTopOf="@+id/ProductName"
-        app:layout_constraintVertical_bias="0.048" />
-
-    <TextView
-        android:id="@+id/productTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="right"
-        android:text="$2.97 total"
-        android:textColor="@color/light_gray"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/productInfoBox"
-        app:layout_constraintEnd_toEndOf="@+id/productInfoBox"
-        app:layout_constraintHorizontal_bias="0.819"
-        app:layout_constraintStart_toEndOf="@+id/ProductName"
-        app:layout_constraintTop_toBottomOf="@+id/editButtonImageView" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Products"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/ProductName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
-        app:layout_constraintStart_toStartOf="@+id/productInfoBox" />
-
-    <ImageView
-        android:id="@+id/editButtonImageView"
-        android:layout_width="49dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/productInfoBox"
-        app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintStart_toEndOf="@+id/ProductName"
-        app:layout_constraintTop_toTopOf="@+id/productInfoBox"
-        app:srcCompat="@drawable/editbuttonbackground" />
-
-    <TextView
-        android:id="@+id/editLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editButtonImageView"
-        app:layout_constraintEnd_toEndOf="@+id/editButtonImageView"
-        app:layout_constraintStart_toStartOf="@+id/editButtonImageView"
-        app:layout_constraintTop_toTopOf="@+id/editButtonImageView"
-        app:layout_constraintVertical_bias="0.43" />
-
-    <Button
-        android:id="@+id/invisibleEditButton"
-        android:layout_width="48dp"
-        android:layout_height="19dp"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/editLabel"
-        app:layout_constraintEnd_toEndOf="@+id/editButtonImageView"
-        app:layout_constraintStart_toStartOf="@+id/editButtonImageView"
-        app:layout_constraintTop_toTopOf="@+id/editLabel"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-    <ImageView
         android:id="@+id/imageView2"
         android:layout_width="340dp"
         android:layout_height="79dp"
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/productInfoBox"
-        app:layout_constraintStart_toStartOf="@+id/productInfoBox"
-        app:layout_constraintTop_toBottomOf="@+id/productInfoBox"
-        app:layout_constraintVertical_bias="0.972"
-        app:srcCompat="@drawable/createproductbutton" />
+        app:srcCompat="@drawable/createproductbutton"
+        tools:layout_editor_absoluteX="35dp" />
 
     <TextView
         android:id="@+id/createProduct"
@@ -182,5 +62,15 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/createProduct"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="362dp"
+        android:layout_height="550dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/createProductButtonInvisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_ownerOrders_Order4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
