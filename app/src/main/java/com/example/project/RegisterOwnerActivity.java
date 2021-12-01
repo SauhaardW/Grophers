@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -31,6 +32,15 @@ public class RegisterOwnerActivity extends AppCompatActivity {
 
         // Create Firebase Auth instance
         mAuth = FirebaseAuth.getInstance();
+
+        // Back Button handling
+        ImageView backButton = (ImageView) findViewById(R.id.backButtonTopBarOwner);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         // Create listener for registration button
         Button registerButton = (Button) findViewById(R.id.registerSubmitOwner);

@@ -12,3 +12,15 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Created custom spinner for owner order info modal
+	- Reworked the spinner to match the figma
+
+What are you planning on doing today?
+   	- Go back look over the UI's I have already created and make sure they look correct
+
+Any impediments or stumbling blocks?
+	- None
