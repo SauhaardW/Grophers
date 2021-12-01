@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentResultListener;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -17,14 +18,27 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
-public class AddProductActivity extends AppCompatActivity {
+public class AddProductActivity extends AppCompatActivity{
+
+    String imgUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_product);
+
+        TextView addProductPhoto = (TextView) findViewById(R.id.textViewAddProductPhoto);
+        addProductPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImageUrlModalDialog modal = new ImageUrlModalDialog();
+                modal.show(getSupportFragmentManager(), "addProductImgModal");
+            }//end onClick for addProductPhoto
+        });
 
         Button doneButton = (Button)findViewById(R.id.buttonDoneAddProduct);
         doneButton.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +48,11 @@ public class AddProductActivity extends AppCompatActivity {
             }
         });
     }
+
+//    @Override
+//    public void onButtonClicked(String img_url) {
+//        //set passed img_url here from modal
+//    }//end onButtonClicked
 
     private void createProduct() {
         EditText editTextName = (EditText)findViewById(R.id.editTextAddProductName);
@@ -78,6 +97,13 @@ public class AddProductActivity extends AppCompatActivity {
                                 }
 
                                 Product product = new Product(name, brand, price, products.size());
+                                getSupportFragmentManager().setFragmentResultListener("imgUrl", AddProductActivity.this, new FragmentResultListener() {
+                                    @Override
+                                    public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                                        imgUrl = result.getString("imgUrl");
+                                    }
+                                });
+                                product.setImage(imgUrl);
                                 products.add(product);
                                 store.setProducts(products);
                                 FirebaseDatabase.getInstance().getReference("stores").child(storeId.toString()).child("products").setValue(products);

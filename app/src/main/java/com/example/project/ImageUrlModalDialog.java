@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -21,7 +22,7 @@ public class ImageUrlModalDialog extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.modal_set_up_store, container,false);
+        View v = inflater.inflate(R.layout.modal_get_img_url, container,false);
 
         TextView done_modal = (TextView) v.findViewById(R.id.doneTextModal);
         EditText imgUrl = (EditText) v.findViewById(R.id.imageUrlTextBox);
@@ -29,30 +30,12 @@ public class ImageUrlModalDialog extends BottomSheetDialogFragment {
         done_modal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                mListener.onButtonClicked(String.valueOf(imgUrl.getText()));
                 Bundle bundle = new Bundle();
                 bundle.putString("imgUrl", imgUrl.getText().toString());
                 getParentFragmentManager().setFragmentResult("imgUrl", bundle);
                 dismiss();
-            }//end onClick
+            }
         });
 
         return v;
-    }//end onCreateView
-
-//    public interface ModalListener{
-//        void onButtonClicked(String img_url);
-//    }//end ModalListener
-//
-//    @Override
-//    public void onAttach(@NonNull Context context) {
-//        super.onAttach(context);
-//
-//        try {
-//            mListener = (ModalListener) context;
-//        }catch (ClassCastException e){
-//            throw new ClassCastException(context.toString() + " must implement ModalListener");
-//        }//end catch
-//
-//    }//end onAttach
-}//end ImageUrlModalDialog
+    }

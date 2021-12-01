@@ -54,7 +54,12 @@ public class SetUpStoreActivity extends AppCompatActivity {
                 registerStore();
             }
         });
-    }
+    }//end onCreate
+
+//    @Override
+//    public void onButtonClicked(String img_url) {
+//        //set passed img_url here from modal
+//    }//end onButtonClicked
 
 //    @Override
 //    public void onButtonClicked(String img_url) {
