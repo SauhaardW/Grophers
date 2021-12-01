@@ -20,7 +20,7 @@
             android:exported="false" />
         <activity
             android:name=".OwnerOrdersActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".SuccessActivity"
             android:exported="false" />
