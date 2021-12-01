@@ -62,6 +62,7 @@ public class SetUpStoreActivity extends AppCompatActivity {
 
         String name = editTextName.getText().toString().trim();
         String hours = editTextHours.getText().toString().trim();
+        String imgURL = "";
 
         if (name.isEmpty()) {
             editTextName.setError("The store name cannot be empty");
@@ -91,9 +92,10 @@ public class SetUpStoreActivity extends AppCompatActivity {
                                     @Override
                                     public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
                                         imgUrl = result.getString("imgUrl");
+                                        owner.setImage(imgUrl);
                                     }
                                 });
-                                owner.setImage(imgUrl);
+
 
                                 owner.setStoreId((int)count);
 
