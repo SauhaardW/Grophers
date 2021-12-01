@@ -52,6 +52,11 @@
         <entry key="app/src/main/res/layout/card_owner_orders.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/card_owner_product.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/cart_item_card.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/add_product_modal.xml" value="0.5249072005122087" />
+        <entry key="app/src/main/res/layout/card_owner_orders.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/card_owner_product.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/cart_item_card.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/edit_product_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/past_orders_card.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/product_card.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/store_card.xml" value="0.28229166666666666" />
