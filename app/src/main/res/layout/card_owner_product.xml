@@ -2,18 +2,18 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/productCardOwner"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginLeft="5dp"
-    android:layout_marginTop="10dp"
     android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
     android:backgroundTint="@color/white"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="12dp"
     app:cardElevation="8dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="5dp"
@@ -30,7 +30,7 @@
             app:srcCompat="@drawable/imageofproductnatrelmilk" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="146dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
@@ -53,31 +53,18 @@
                 android:textColor="@color/lightGrayForText" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="125dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/editButtonProductOwner"
-                android:layout_width="75dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/login_rectangle_green"
-                android:backgroundTint="@color/OwnerOrange"
-                android:text="edit"
-                android:textColor="@color/black"
-                app:backgroundTint="@color/OwnerOrange" />
-
-        </LinearLayout>
-
+        <Button
+            android:id="@+id/editButtonProductOwner"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_rectangle_green"
+            android:backgroundTint="@color/OwnerOrange"
+            android:text="edit"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/OwnerOrange" />
 
     </LinearLayout>
-
-
 
 
 </androidx.cardview.widget.CardView>

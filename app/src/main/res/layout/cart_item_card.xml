@@ -31,7 +31,7 @@
             app:srcCompat="@drawable/product_image" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="161dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
@@ -41,7 +41,7 @@
                 android:id="@+id/textViewCartCardName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
+
                 android:text="Natrel Milk"
                 android:textAlignment="textStart"
                 android:textColor="@color/black"
@@ -51,16 +51,17 @@
                 android:id="@+id/textViewCartCardPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:text="$2.97"
-                android:textSize="18sp"
-                android:textAlignment="textStart" />
+                android:textAlignment="textStart"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="120dp"
+            android:layout_marginLeft="0dp"
             android:orientation="vertical">
 
             <TextView
@@ -88,7 +89,7 @@
                 android:layout_marginBottom="1dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="0dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:text="x1"
                 android:textSize="18sp" />
 
@@ -96,7 +97,6 @@
                 android:id="@+id/multiplied_product_price1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
                 android:layout_marginEnd="10dp"
                 android:text="$2.97 total" />
 
