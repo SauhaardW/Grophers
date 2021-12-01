@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -64,11 +65,11 @@ public class CustomerOrdersListViewAdapter extends RecyclerView.Adapter<Customer
         card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                AddProductModalDialog addProductModalDialog = new AddProductModalDialog();
-//                Bundle bundle = new Bundle();
-//                bundle.putString("order_timestamp", ((Long)order.getTimestamp()).toString());
-//                addProductModalDialog.setArguments(bundle);
-//                addProductModalDialog.show(((AppCompatActivity)context).getSupportFragmentManager(), "addProductModal");
+                CustomerOrderInfoModal customerOrderInfoModal = new CustomerOrderInfoModal();
+                Bundle bundle = new Bundle();
+                bundle.putString("order_timestamp", ((Long)order.getTimestamp()).toString());
+                customerOrderInfoModal.setArguments(bundle);
+                customerOrderInfoModal.show(((AppCompatActivity)context).getSupportFragmentManager(), "addProductModal");
             }
         });
     }

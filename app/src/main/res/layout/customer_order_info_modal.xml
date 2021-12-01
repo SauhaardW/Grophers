@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/orderSubtotalTextCustomerOrderInfoModal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order subtotal"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/orderSubtotalPriceCustomerOrderInfoModal"
+        app:layout_constraintEnd_toEndOf="@+id/orderSubtotalPriceCustomerOrderInfoModal" />
+
+    <TextView
+        android:id="@+id/orderSubtotalPriceCustomerOrderInfoModal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$69.69"
+        android:textColor="@color/OrderTotalGray"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/taxesTextCustomerOrderInfoModal"
+        app:layout_constraintEnd_toEndOf="@+id/taxesTextCustomerOrderInfoModal" />
+
+    <TextView
+        android:id="@+id/taxesTextCustomerOrderInfoModal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Taxes and Fees"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/taxesPriceCustomerOrderInfoModal"
+        app:layout_constraintEnd_toEndOf="@+id/taxesPriceCustomerOrderInfoModal" />
+
+    <TextView
+        android:id="@+id/taxesPriceCustomerOrderInfoModal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$6.96"
+        android:textColor="@color/OrderTotalGray"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/orderTotalTextCustomerOrderInfoModal"
+        app:layout_constraintEnd_toEndOf="@+id/orderTotalTextCustomerOrderInfoModal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCustomerOrderInfoModal"
+        android:layout_width="410dp"
+        android:layout_height="538dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/orderSubtotalTextCustomerOrderInfoModal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/orderTotalPriceCustomerOrderInfoModal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:text="$76.65"
+        android:textColor="@color/OrderTotalGray"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/orderTotalTextCustomerOrderInfoModal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Total"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/orderTotalPriceCustomerOrderInfoModal"
+        app:layout_constraintEnd_toEndOf="@+id/orderTotalPriceCustomerOrderInfoModal" />
+</androidx.constraintlayout.widget.ConstraintLayout>
