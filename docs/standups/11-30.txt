@@ -11,3 +11,17 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Still no wifi at my house
+
+Name: Andres Prada
+
+What have you done since yesterday?
+   	- Reviewed & Merged a ton of PRs
+	- Had meeting to discuss remaining tasks and distribution
+
+What are you planning on doing today?
+   	- Review and merge more PRs
+	- Teach teammates about things I've worked on so they can implement similar ones
+	- Minor bug fixes
+
+Any impediments or stumbling blocks?
+	- None

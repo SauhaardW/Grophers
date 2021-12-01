@@ -9,3 +9,16 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- No wifi at my house, unable to do any work
+
+Name: Andres Prada
+
+What have you done since yesterday?
+   	- Fully implemented past orders for owners
+	- Began base for past orders for customers, left it for someone else to complete once UI is made
+
+What are you planning on doing today?
+   	- Not much, basic work and helping out
+	- Meeting with teammates to discuss remaining part of project and assign new tasks
+
+Any impediments or stumbling blocks?
+	- Blocked by UI not being made for customer past orders
