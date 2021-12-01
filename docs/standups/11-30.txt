@@ -1,0 +1,13 @@
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Looked into MVP architecture
+	- Read some documentation and tutorials for deeper understanding of MVP
+	- Refactored Login for owners according to MVP approach
+	- Refactored Login for customers according to MVP approach
+
+What are you planning on doing today?
+   	- Implement spinner functionality
+
+Any impediments or stumbling blocks?
+	- Still no wifi at my house

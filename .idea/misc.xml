@@ -17,6 +17,15 @@
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_orders_temp.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_product_list.xml" value="0.5" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_store_setup.xml" value="0.5541666666666667" />
+<<<<<<< Updated upstream
+||||||| constructed merge base
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_past_orders_customer.xml" value="0.3281423804226919" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_product_list.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_store_setup.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_past_orders_customer.xml" value="0.3281423804226919" />
+=======
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_past_orders_customer.xml" value="0.3281423804226919" />
+>>>>>>> Stashed changes
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_register_customer.xml" value="0.5385416666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_register_owner.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_set_up_store.xml" value="0.5541666666666667" />
@@ -24,10 +33,18 @@
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/add_product_modal.xml" value="0.7180616740088106" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/card_owner_orders.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/cart_item_card.xml" value="0.33" />
+<<<<<<< Updated upstream
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/edit_product_modal.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/order_info_modal.xml" value="0.9" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/owner_order_info_card.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/past_orders_card.xml" value="0.5" />
+||||||| constructed merge base
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/past_orders_card.xml" value="0.5" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/cart_item_card.xml" value="0.33" />
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/past_orders_card.xml" value="0.5" />
+=======
+        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/past_orders_card.xml" value="0.5" />
+>>>>>>> Stashed changes
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/product_card.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/prouct_card.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/store_card.xml" value="0.5541666666666667" />
@@ -36,6 +53,7 @@
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/menu/nav_menu.xml" value="0.4140625" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/menu/nav_menu_customer.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/menu/nav_menu_owner.xml" value="0.5541666666666667" />
+<<<<<<< Updated upstream
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2984375" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.21510416666666668" />
         <entry key="app/src/main/res/layout/activity_add_product.xml" value="0.24444444444444444" />
@@ -67,10 +85,14 @@
         <entry key="app/src/main/res/layout/customer_order_info_modal.xml" value="0.335" />
         <entry key="app/src/main/res/layout/customer_past_orders.xml" value="0.12916666666666668" />
         <entry key="app/src/main/res/layout/past_orders_card.xml" value="0.2801134036413552" />
+||||||| constructed merge base
+=======
+        <entry key="app/src/main/res/layout/order_info_modal.xml" value="0.23541666666666666" />
+>>>>>>> Stashed changes
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
