@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
-        android:text="Username"
+        android:text="E-mail"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/editTextEmailOwnerLogin"
         app:layout_constraintTop_toBottomOf="@+id/include2" />

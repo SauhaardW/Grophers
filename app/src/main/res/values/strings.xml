@@ -15,6 +15,12 @@
 
     <string name="order_info"><u>Order info</u></string>
 
+    <string-array name="orderInfoModalList">
+        <item>Processing order</item>
+        <item>Order completed</item>
+        <item>Order canceled</item>
+    </string-array>
+
     <string name="ownerOrders_username">{username} • 11:59PM, Nov 12</string>
 
 </resources>

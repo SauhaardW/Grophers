@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,6 +28,7 @@ public class OwnerOrdersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_orders);
+
 
         recyclerView = findViewById(R.id.ownerOrders_recyclerView);
         db = FirebaseDatabase.getInstance().getReference("stores");
@@ -64,5 +64,5 @@ public class OwnerOrdersActivity extends AppCompatActivity {
                 }
             }
         });
-    }
+    }//end onCreate
 }
