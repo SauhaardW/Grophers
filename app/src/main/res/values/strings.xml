@@ -15,6 +15,11 @@
 
     <string name="order_info"><u>Order info</u></string>
 
+    <string name="home">&#127968; Home</string>
+    <string name="products">&#128666; Products</string>
+    <string name="orders">&#128212; Orders</string>
+    <string name="log_out">&#128682; Log out</string>
+
     <string-array name="orderInfoModalList">
         <item>Processing order</item>
         <item>Order completed</item>

@@ -3,14 +3,14 @@
 
     <item
         android:id="@+id/Item1"
-        android:title="Home"/>
+        android:title="@string/home"/>
 
     <item
         android:id="@+id/Item2"
-        android:title="Orders"/>
+        android:title="@string/orders"/>
 
     <item
         android:id="@+id/Item3"
-        android:title="Log out"/>
+        android:title="@string/log_out"/>
 
 </menu>
