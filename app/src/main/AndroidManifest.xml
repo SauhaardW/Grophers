@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project" >
         <activity
+            android:name=".CustomerStoreProductViewActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".PastOrdersCustomer"
+            android:exported="false"/>
+        <activity
             android:name=".OwnerOrdersActivity"
             android:exported="false"/>
         <activity
