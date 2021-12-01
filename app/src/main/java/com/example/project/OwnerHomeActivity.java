@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class OwnerHomeActivity extends AppCompatActivity {
 
@@ -44,7 +45,20 @@ public class OwnerHomeActivity extends AppCompatActivity {
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Toast.makeText(OwnerHomeActivity.this, item.getTitle(), Toast.LENGTH_LONG).show();
+                switch (item.getItemId()) {
+                    case R.id.Item1:
+                        startActivity(new Intent(OwnerHomeActivity.this, OwnerHomeActivity.class));
+                        break;
+                    case R.id.Item2:
+                        startActivity(new Intent(OwnerHomeActivity.this, OwnerOrdersActivity.class));
+                        break;
+                    case R.id.Item3:
+                        FirebaseAuth.getInstance().signOut();
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        break;
+                }
                 return true;
             }
         });
@@ -58,11 +72,11 @@ public class OwnerHomeActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (toggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        if (toggle.onOptionsItemSelected(item)) {
+//            return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 }

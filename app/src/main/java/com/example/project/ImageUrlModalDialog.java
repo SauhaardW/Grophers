@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -29,30 +30,12 @@ public class ImageUrlModalDialog extends BottomSheetDialogFragment {
         done_modal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                mListener.onButtonClicked(String.valueOf(imgUrl.getText()));
                 Bundle bundle = new Bundle();
                 bundle.putString("imgUrl", imgUrl.getText().toString());
                 getParentFragmentManager().setFragmentResult("imgUrl", bundle);
                 dismiss();
-            }//end onClick
+            }
         });
 
         return v;
-    }//end onCreateView
-
-//    public interface ModalListener{
-//        void onButtonClicked(String img_url);
-//    }//end ModalListener
-
-//    @Override
-//    public void onAttach(@NonNull Context context) {
-//        super.onAttach(context);
-//
-//        try {
-//            mListener = (ModalListener) context;
-//        }catch (ClassCastException e){
-//            throw new ClassCastException(context.toString() + " must implement ModalListener");
-//        }//end catch
-//
-//    }//end onAttach
-}//end ImageUrlModalDialog
+    }

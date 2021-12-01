@@ -63,7 +63,6 @@ public class AddProductActivity extends AppCompatActivity{
         String name = editTextName.getText().toString().trim();
         String brand = editTextBrand.getText().toString().trim();
         double price = Double.parseDouble(editTextPrice.getText().toString().trim());
-        String img = profileImg.getContentDescription().toString().trim();
 
         if (name.isEmpty()) {
             editTextName.setError("The product name cannot be empty");

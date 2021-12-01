@@ -88,7 +88,6 @@
         android:id="@+id/profileImg"
         android:layout_width="83dp"
         android:layout_height="101dp"
-        android:contentDescription="testing.com"
         app:layout_constraintBottom_toTopOf="@+id/addProfilePhoto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
