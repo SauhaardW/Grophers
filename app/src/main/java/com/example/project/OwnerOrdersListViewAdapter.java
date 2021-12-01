@@ -51,7 +51,7 @@ public class OwnerOrdersListViewAdapter extends RecyclerView.Adapter<OwnerOrders
 
         double total = 0.0;
         for (CartItem item : order.getCart()) {
-            total += item.getPrice();
+            total += item.getPrice()*item.getQuantity();
         }
 
         holder.orderTitle.setText(String.format("Order #%d", position));
