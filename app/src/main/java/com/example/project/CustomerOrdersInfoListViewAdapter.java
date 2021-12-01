@@ -41,7 +41,7 @@ public class CustomerOrdersInfoListViewAdapter extends RecyclerView.Adapter<Cust
 
         holder.productName.setText(product.getBrand() + " " + product.getName());
         holder.productPrice.setText("$" + String.format("%.2f", product.getPrice()));
-        holder.productQuantity.setText(((Integer)product.getQuantity()).toString());
+        holder.productQuantity.setText("x"+((Integer)product.getQuantity()).toString());
         holder.productTotal.setText("$" + String.format("%.2f", product.getPrice()*product.getQuantity()));
         //implement image setting
     }
