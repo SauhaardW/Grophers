@@ -22,7 +22,7 @@ public class ImageUrlModalDialog extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.modal_get_img_url, container,false);
+        View v = inflater.inflate(R.layout.modal_get_img_url, container, false);
 
         TextView done_modal = (TextView) v.findViewById(R.id.doneTextModal);
         EditText imgUrl = (EditText) v.findViewById(R.id.imageUrlTextBox);
@@ -39,3 +39,4 @@ public class ImageUrlModalDialog extends BottomSheetDialogFragment {
 
         return v;
     }
+}
