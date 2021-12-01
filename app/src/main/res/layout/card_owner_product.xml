@@ -53,16 +53,16 @@
                 android:textColor="@color/lightGrayForText" />
         </LinearLayout>
 
-        <Button
+        <TextView
             android:id="@+id/editButtonProductOwner"
-            android:layout_width="75dp"
-            android:layout_height="40dp"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@drawable/login_rectangle_green"
-            android:backgroundTint="@color/OwnerOrange"
-            android:text="edit"
-            android:textColor="@color/black"
-            app:backgroundTint="@color/OwnerOrange" />
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="@string/edit"
+            android:textAlignment="textEnd"
+            android:textColor="@color/OwnerOrange" />
 
     </LinearLayout>
 
