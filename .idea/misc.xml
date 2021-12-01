@@ -17,17 +17,12 @@
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_product_list.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_store_setup.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_past_orders_customer.xml" value="0.3281423804226919" />
-        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_product_list.xml" value="0.5541666666666667" />
-        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_owner_store_setup.xml" value="0.5541666666666667" />
-        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_past_orders_customer.xml" value="0.3281423804226919" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_register_customer.xml" value="0.5385416666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_register_owner.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_set_up_store.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/activity_success.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/add_product_modal.xml" value="0.7180616740088106" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/card_owner_orders.xml" value="0.5541666666666667" />
-        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/cart_item_card.xml" value="0.33" />
-        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/past_orders_card.xml" value="0.5" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/cart_item_card.xml" value="0.33" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/past_orders_card.xml" value="0.5" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/product_card.xml" value="0.5541666666666667" />
@@ -38,6 +33,10 @@
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/menu/nav_menu.xml" value="0.4140625" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/menu/nav_menu_customer.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/menu/nav_menu_owner.xml" value="0.5541666666666667" />
+        <entry key="app/src/main/res/layout/activity_past_orders_customer.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/add_product_modal.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/card_owner_orders.xml" value="0.13072916666666667" />
+        <entry key="app/src/main/res/layout/past_orders_card.xml" value="0.2801134036413552" />
       </map>
     </option>
   </component>
