@@ -2,9 +2,13 @@ package com.example.project;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentResultListener;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -19,15 +23,29 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 import java.util.Map;
 
 public class SetUpStoreActivity extends AppCompatActivity {
 
+    String imgUrl;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_up_store);
+
+        TextView addProfilePicButton = (TextView) findViewById(R.id.addProfilePhoto);
+        addProfilePicButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImageUrlModalDialog modal = new ImageUrlModalDialog();
+                modal.show(getSupportFragmentManager(), "setUpStoreModal");
+            }//end onClick
+        });
 
         TextView doneButton = (TextView) findViewById(R.id.doneSetUpStore);
         doneButton.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +56,11 @@ public class SetUpStoreActivity extends AppCompatActivity {
         });
     }
 
+//    @Override
+//    public void onButtonClicked(String img_url) {
+//        //set passed img_url here from modal
+//    }//end onButtonClicked
+
     private void registerStore() {
         EditText editTextName = (EditText)findViewById(R.id.storeNameTextBox);
         EditText editTextHours = (EditText)findViewById(R.id.openHoursTextBox);
@@ -45,7 +68,7 @@ public class SetUpStoreActivity extends AppCompatActivity {
 
         String name = editTextName.getText().toString().trim();
         String hours = editTextHours.getText().toString().trim();
-        String imgURL = profileImg.getContentDescription().toString();
+        imgUrl = "";
 
         if (name.isEmpty()) {
             editTextName.setError("The store name cannot be empty");
@@ -69,7 +92,31 @@ public class SetUpStoreActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<DataSnapshot> task) {
                             if (task.isSuccessful()) {
                                 long count = task.getResult().getChildrenCount();
-                                Store newStore = new Store(name, hours, imgURL, owner, (int)count);
+                                Store newStore = new Store(name, hours, imgUrl, owner, (int)count);
+
+                                getSupportFragmentManager().setFragmentResultListener("imgUrl", SetUpStoreActivity.this, new FragmentResultListener() {
+                                    @Override
+                                    public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                                        imgUrl = result.getString("imgUrl");
+//                                        URL newurl = null;
+//                                        try {
+//                                            newurl = new URL(imgUrl);
+//                                        } catch (MalformedURLException e) {
+//                                            e.printStackTrace();
+//                                        }
+//                                        Bitmap mIcon_val = null;
+//                                        try {
+//                                            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+//                                            StrictMode.setThreadPolicy(policy);
+//                                            mIcon_val = BitmapFactory.decodeStream(newurl.openConnection() .getInputStream());
+//                                        } catch (IOException e) {
+//                                            e.printStackTrace();
+//                                        }
+//                                        profileImg.setImageBitmap(mIcon_val);
+                                        newStore.setImage(imgUrl);
+                                    }
+                                });
+
 
                                 owner.setStoreId((int)count);
 
