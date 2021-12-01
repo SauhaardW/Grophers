@@ -87,7 +87,7 @@ public class LoginOwnerActivity extends AppCompatActivity {
                                 if (task.getResult().getValue(Owner.class).getStoreId() == 0) {
                                     startActivity(new Intent(LoginOwnerActivity.this, SetUpStoreActivity.class));
                                 } else {
-                                    startActivity(new Intent(LoginOwnerActivity.this, OwnerHomeActivity.class));
+                                    startActivity(new Intent(LoginOwnerActivity.this, OwnerProductListActivity.class));
                                 }
                             } else {
                                 Toast.makeText(LoginOwnerActivity.this, "Failed to get user data", Toast.LENGTH_LONG).show();

@@ -128,7 +128,7 @@ public class SetUpStoreActivity extends AppCompatActivity {
                                 FirebaseDatabase.getInstance().getReference("stores").child(((Integer)newStore.getId()).toString()).setValue(newStore);
                                 FirebaseDatabase.getInstance().getReference("users").child("owners").child(uid).setValue(owner);
 
-                                startActivity(new Intent(SetUpStoreActivity.this, OwnerHomeActivity.class));
+                                startActivity(new Intent(SetUpStoreActivity.this, OwnerProductListActivity.class));
                             } else {
                                 Log.println(Log.ERROR, "SetUpStoreActivity", "Error while generating store id.");
                             }
