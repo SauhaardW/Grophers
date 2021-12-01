@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project" >
         <activity
+            android:name=".CustomerCartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OwnerProductListActivity"
             android:exported="false" />
         <activity
             android:name=".OwnerHomeActivity"

@@ -45,18 +45,16 @@
         <entry key="app/src/main/res/layout/activity_owner_orders.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_owner_product_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_past_orders_customer.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/activity_register_customer.xml" value="0.2037037037037037" />
         <entry key="app/src/main/res/layout/activity_register_owner.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_set_up_store.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_success.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/add_product_modal.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/card_owner_orders.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/card_owner_product.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/card_owner_product_temp.xml" value="0.2037037037037037" />
         <entry key="app/src/main/res/layout/cart_item_card.xml" value="0.28229166666666666" />
-        <entry key="app/src/main/res/layout/add_product_modal.xml" value="0.5249072005122087" />
-        <entry key="app/src/main/res/layout/card_owner_orders.xml" value="0.28229166666666666" />
-        <entry key="app/src/main/res/layout/card_owner_product.xml" value="0.28229166666666666" />
-        <entry key="app/src/main/res/layout/cart_item_card.xml" value="0.28229166666666666" />
-        <entry key="app/src/main/res/layout/edit_product_modal.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/edit_product_modal.xml" value="0.25" />
         <entry key="app/src/main/res/layout/past_orders_card.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/product_card.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/store_card.xml" value="0.28229166666666666" />

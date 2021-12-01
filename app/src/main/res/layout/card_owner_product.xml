@@ -19,14 +19,14 @@
         android:layout_marginRight="5dp"
         android:orientation="horizontal">
 
-         <ImageView
+        <ImageView
             android:id="@+id/imageViewproductCardOwner"
             android:layout_width="72dp"
             android:layout_height="78dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="6dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="6dp"
-             android:layout_gravity="center_vertical"
             app:srcCompat="@drawable/imageofproductnatrelmilk" />
 
         <LinearLayout
@@ -66,34 +66,16 @@
                 android:layout_width="75dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
-                android:text="edit"
                 android:background="@drawable/login_rectangle_green"
                 android:backgroundTint="@color/OwnerOrange"
-                app:backgroundTint="@color/OwnerOrange"
-                android:textColor="@color/black" />
+                android:text="edit"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/OwnerOrange" />
 
-            <TextView
-                android:id="@+id/amountOfProduct"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:layout_marginStart="45dp"
-                android:text="x1"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/textViewProductPrice3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:layout_marginBottom="5dp"
-                android:text="$2.97 total"
-                android:textColor="@color/lightGrayForText" />
         </LinearLayout>
 
 
     </LinearLayout>
-
 
 
 
