@@ -62,7 +62,6 @@ public class SetUpStoreActivity extends AppCompatActivity {
 
         String name = editTextName.getText().toString().trim();
         String hours = editTextHours.getText().toString().trim();
-        String imgURL = profileImg.getContentDescription().toString();
 
         if (name.isEmpty()) {
             editTextName.setError("The store name cannot be empty");
