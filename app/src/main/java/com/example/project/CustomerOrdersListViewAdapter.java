@@ -7,11 +7,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.text.DateFormat;
 import java.text.Format;
@@ -64,11 +68,32 @@ public class CustomerOrdersListViewAdapter extends RecyclerView.Adapter<Customer
         card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                AddProductModalDialog addProductModalDialog = new AddProductModalDialog();
-//                Bundle bundle = new Bundle();
-//                bundle.putString("order_timestamp", ((Long)order.getTimestamp()).toString());
-//                addProductModalDialog.setArguments(bundle);
-//                addProductModalDialog.show(((AppCompatActivity)context).getSupportFragmentManager(), "addProductModal");
+                BottomSheetDialog orderInfoModal = new BottomSheetDialog(context);
+                LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                View modalView = li.inflate(R.layout.customer_order_info_modal, null);
+
+                orderInfoModal.setContentView(modalView);
+
+                double total = 0.0;
+                for (CartItem item : order.getCart()) {
+                    total += item.getPrice() * item.getQuantity();
+                }
+                double taxes = total * 0.13;
+
+                ((TextView) modalView.findViewById(R.id.orderSubtotalPriceCustomerOrderInfoModal)).setText(String.format("$%.2f", total));
+                ((TextView) modalView.findViewById(R.id.taxesPriceCustomerOrderInfoModal)).setText(String.format("$%.2f", taxes));
+                ((TextView) modalView.findViewById(R.id.orderTotalPriceCustomerOrderInfoModal)).setText(String.format("$%.2f", total + taxes));
+
+                // Handle recyclerview in modal
+                RecyclerView modalRecyclerView = orderInfoModal.findViewById(R.id.recyclerViewCustomerOrderInfoModal);
+                modalRecyclerView.setHasFixedSize(true);
+                modalRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+                ArrayList<CartItem> modalList = order.getCart();
+                CustomerOrdersInfoListViewAdapter modalAdapter= new CustomerOrdersInfoListViewAdapter(context, modalList);
+                modalRecyclerView.setAdapter(modalAdapter);
+                modalAdapter.notifyDataSetChanged();
+
+                orderInfoModal.show();
             }
         });
     }

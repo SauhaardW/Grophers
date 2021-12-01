@@ -36,6 +36,10 @@
         <entry key="app/src/main/res/layout/activity_past_orders_customer.xml" value="0.25" />
         <entry key="app/src/main/res/layout/add_product_modal.xml" value="0.25" />
         <entry key="app/src/main/res/layout/card_owner_orders.xml" value="0.13072916666666667" />
+        <entry key="app/src/main/res/layout/cart_item_card.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/customer_info_product_card.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/customer_order_info_modal.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/customer_past_orders.xml" value="0.12916666666666668" />
         <entry key="app/src/main/res/layout/past_orders_card.xml" value="0.2801134036413552" />
       </map>
     </option>
