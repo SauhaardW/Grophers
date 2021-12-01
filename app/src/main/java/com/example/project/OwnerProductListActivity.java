@@ -2,19 +2,24 @@ package com.example.project;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,8 +41,41 @@ public class OwnerProductListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_product_list);
 
+        // hamburger menu code
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        ImageButton hamburgerButton = (ImageButton) findViewById(R.id.imageButtonHamburgerOwnerView2);
+        hamburgerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (drawerLayout.isOpen()) {
+                    drawerLayout.closeDrawer(Gravity.RIGHT);
+                } else {
+                    drawerLayout.openDrawer(Gravity.LEFT);
+                }
+            }
+        });
 
-
+        NavigationView navView = findViewById(R.id.navView);
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.Item1:
+                        startActivity(new Intent(OwnerProductListActivity.this, OwnerProductListActivity.class));
+                        break;
+                    case R.id.Item2:
+                        startActivity(new Intent(OwnerProductListActivity.this, OwnerOrdersActivity.class));
+                        break;
+                    case R.id.Item3:
+                        FirebaseAuth.getInstance().signOut();
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        break;
+                }
+                return true;
+            }
+        });
 
         recyclerView = findViewById(R.id.recyclerViewProductOwner);
         db = FirebaseDatabase.getInstance().getReference("stores");
@@ -62,7 +100,7 @@ public class OwnerProductListActivity extends AppCompatActivity {
                     createProductButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(OwnerProductListActivity.this, AddProductModalDialog.class);
+                            Intent intent = new Intent(OwnerProductListActivity.this, AddProductActivity.class);
                             intent.putExtra("store_id", store_id);
                             intent.putExtra("store_name", store_name);
                             startActivity(intent);
