@@ -47,12 +47,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewCustomerOrderInfoModal"
-        android:layout_width="410dp"
-        android:layout_height="538dp"
-        android:layout_marginBottom="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/orderSubtotalTextCustomerOrderInfoModal"
+        android:layout_width="412dp"
+        android:layout_height="561dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
