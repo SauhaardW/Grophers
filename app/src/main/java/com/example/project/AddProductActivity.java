@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentResultListener;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -21,7 +22,9 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-public class AddProductActivity extends AppCompatActivity implements ImageUrlModalDialog.ModalListener {
+public class AddProductActivity extends AppCompatActivity{
+
+    String imgUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +49,10 @@ public class AddProductActivity extends AppCompatActivity implements ImageUrlMod
         });
     }
 
-    @Override
-    public void onButtonClicked(String img_url) {
-        //set passed img_url here from modal
-    }//end onButtonClicked
+//    @Override
+//    public void onButtonClicked(String img_url) {
+//        //set passed img_url here from modal
+//    }//end onButtonClicked
 
     private void createProduct() {
         EditText editTextName = (EditText)findViewById(R.id.editTextAddProductName);
@@ -95,6 +98,13 @@ public class AddProductActivity extends AppCompatActivity implements ImageUrlMod
                                 }
 
                                 Product product = new Product(name, brand, price, products.size());
+                                getSupportFragmentManager().setFragmentResultListener("imgUrl", AddProductActivity.this, new FragmentResultListener() {
+                                    @Override
+                                    public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                                        imgUrl = result.getString("imgUrl");
+                                    }
+                                });
+                                product.setImage(imgUrl);
                                 products.add(product);
                                 store.setProducts(products);
                                 FirebaseDatabase.getInstance().getReference("stores").child(storeId.toString()).child("products").setValue(products);

@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.List;
 import java.util.Map;
 
-public class SetUpStoreActivity extends AppCompatActivity implements ImageUrlModalDialog.ModalListener {
+public class SetUpStoreActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +47,10 @@ public class SetUpStoreActivity extends AppCompatActivity implements ImageUrlMod
         });
     }//end onCreate
 
-    @Override
-    public void onButtonClicked(String img_url) {
-        //set passed img_url here from modal
-    }//end onButtonClicked
+//    @Override
+//    public void onButtonClicked(String img_url) {
+//        //set passed img_url here from modal
+//    }//end onButtonClicked
 
     private void registerStore() {
         EditText editTextName = (EditText)findViewById(R.id.storeNameTextBox);
