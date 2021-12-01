@@ -55,6 +55,11 @@ public class CustomerCartActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 if (task.isSuccessful()) {
                     String store_id = task.getResult().child("curCartStoreId").getValue(String.class);
+                    String customerName = task.getResult().child("username").getValue(String.class);
+
+                    if (store_id == null) {
+                        return;
+                    }
 
                     adapter = new CartListViewAdapter(CustomerCartActivity.this, list, store_id);
                     recyclerView.setAdapter(adapter);
@@ -91,7 +96,7 @@ public class CustomerCartActivity extends AppCompatActivity {
                         public void onClick(View v) {
                             long timestamp = new Date().getTime();
                             String timestampString = ((Long)timestamp).toString();
-                            Order order =  new Order(uid, store_id, list, timestamp, "Processing");
+                            Order order =  new Order(uid, store_id, list, timestamp, "Processing", store.getName(), customerName);
 
                             db.child("customers").child(uid).child("orders").child(timestampString).setValue(order);
                             db.child("customers").child(uid).child("cart").setValue(null);

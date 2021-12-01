@@ -1,0 +1,28 @@
+Name: Andres Prada
+
+What have you done since yesterday?
+   	- Implemented cart display
+	- Implemented order placing
+	- Created CartItem class for cart item handling
+	- Reworked adding to cart, now using CartItem instead of Product
+	- Linked hamburger menu for customer to actual pages
+	- Implemented hamburger menu signout for customer
+
+What are you planning on doing today?
+   	- Implement past orders for customer
+	- Implement past orders for owners
+
+Any impediments or stumbling blocks?
+	- None
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Created a pull request for my order info modal
+	- Resolved some merge conflicts with branches I had previously created pull requests for
+
+What are you planning on doing today?
+   	- Not sure as of yet
+
+Any impediments or stumbling blocks?
+	- None (procrastination)
