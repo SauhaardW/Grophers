@@ -2,6 +2,7 @@ package com.example.project;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentResultListener;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,7 +23,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.List;
 import java.util.Map;
 
-public class SetUpStoreActivity extends AppCompatActivity implements ImageUrlModalDialog.ModalListener {
+public class SetUpStoreActivity extends AppCompatActivity {
+
+    String imgUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +50,10 @@ public class SetUpStoreActivity extends AppCompatActivity implements ImageUrlMod
         });
     }
 
-    @Override
-    public void onButtonClicked(String img_url) {
-        //set passed img_url here from modal
-    }
+//    @Override
+//    public void onButtonClicked(String img_url) {
+//        //set passed img_url here from modal
+//    }//end onButtonClicked
 
     private void registerStore() {
         EditText editTextName = (EditText)findViewById(R.id.storeNameTextBox);
@@ -84,6 +87,14 @@ public class SetUpStoreActivity extends AppCompatActivity implements ImageUrlMod
                             if (task.isSuccessful()) {
                                 long count = task.getResult().getChildrenCount();
                                 Store newStore = new Store(name, hours, imgURL, owner, (int)count);
+
+                                getSupportFragmentManager().setFragmentResultListener("imgUrl", SetUpStoreActivity.this, new FragmentResultListener() {
+                                    @Override
+                                    public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                                        imgUrl = result.getString("imgUrl");
+                                    }
+                                });
+                                owner.setImage(imgUrl);
 
                                 owner.setStoreId((int)count);
 

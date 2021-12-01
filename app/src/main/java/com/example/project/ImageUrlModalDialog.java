@@ -16,7 +16,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class ImageUrlModalDialog extends BottomSheetDialogFragment {
 
-    private ModalListener mListener;
+//    private ModalListener mListener;
 
     @Nullable
     @Override
@@ -29,7 +29,10 @@ public class ImageUrlModalDialog extends BottomSheetDialogFragment {
         done_modal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mListener.onButtonClicked(String.valueOf(imgUrl.getText()));
+//                mListener.onButtonClicked(String.valueOf(imgUrl.getText()));
+                Bundle bundle = new Bundle();
+                bundle.putString("imgUrl", imgUrl.getText().toString());
+                getParentFragmentManager().setFragmentResult("imgUrl", bundle);
                 dismiss();
             }//end onClick
         });
@@ -37,19 +40,19 @@ public class ImageUrlModalDialog extends BottomSheetDialogFragment {
         return v;
     }//end onCreateView
 
-    public interface ModalListener{
-        void onButtonClicked(String img_url);
-    }//end ModalListener
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-
-        try {
-            mListener = (ModalListener) context;
-        }catch (ClassCastException e){
-            throw new ClassCastException(context.toString() + " must implement ModalListener");
-        }//end catch
-
-    }//end onAttach
+//    public interface ModalListener{
+//        void onButtonClicked(String img_url);
+//    }//end ModalListener
+//
+//    @Override
+//    public void onAttach(@NonNull Context context) {
+//        super.onAttach(context);
+//
+//        try {
+//            mListener = (ModalListener) context;
+//        }catch (ClassCastException e){
+//            throw new ClassCastException(context.toString() + " must implement ModalListener");
+//        }//end catch
+//
+//    }//end onAttach
 }//end ImageUrlModalDialog
