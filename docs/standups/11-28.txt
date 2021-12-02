@@ -15,18 +15,6 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- None
 
-Name: Nicole Droi
-
-What have you done since yesterday?
-	- Created a pull request for my order info modal
-	- Resolved some merge conflicts with branches I had previously created pull requests for
-
-What are you planning on doing today?
-   	- Not sure as of yet
-
-Any impediments or stumbling blocks?
-	- None (procrastination)
-
 Name: Alejandro Iglesias Llobet
 
 What have you done since yesterday?
@@ -44,3 +32,15 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- MATB41 Assignment
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Created a pull request for my order info modal
+	- Resolved some merge conflicts with branches I had previously created pull requests for
+
+What are you planning on doing today?
+   	- Not sure as of yet
+
+Any impediments or stumbling blocks?
+	- None (procrastination)
