@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Name: Nicole Droi
 
 What have you done since yesterday?
@@ -11,7 +10,6 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- To test the UI it takes a lot of time to get to that page. I fixed by making the page a launcher in the manifest for the time being. I removed it once I finished the modal.
-=======
 Name: Andres Prada
 
 What have you done since yesterday?
@@ -30,4 +28,3 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
->>>>>>> 724316aaa78b5d544b68f46fab601a5a74c37177
