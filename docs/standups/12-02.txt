@@ -8,9 +8,9 @@ What are you planning on doing today?
     both customer and user
     - Fix padding on UIs and ensure that it is perfect
     - Watch the CSCB07 lectures for Android Testing and
-    Software Testing and begin the testing process for
-    the logins of both the customer and owner if I
-    still have some time
+    Software Testing
+    - Start working on the testing process for both of
+    the customer and owner logins if I still have some time
 
 Any impediments or stumbling blocks?
 	- My illness (my headache makes it nearly impossible
