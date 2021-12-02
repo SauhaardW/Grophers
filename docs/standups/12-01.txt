@@ -1,0 +1,23 @@
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+    - Created card for Customer Order Info Modal
+    - Implemented "onClick" property for cards within
+    the recycler view for the Customer Order Info page
+    - Created a new modal for the page and designed the
+    layout (with a recycler view and the pricing text
+    views at the bottom of the modal)
+    - Wrote a small program to always list the proper
+    subtotal, taxes and total pricing for the listed
+    products (and their respective quantities) within
+    the modal.
+    - Sent a pull request for the finished model
+    of the Customer Order Info Modal
+
+What are you planning on doing today?
+   	- Nothing (going to sleep early due to illness)
+
+Any impediments or stumbling blocks?
+	- My illness (my headache makes it nearly impossible
+    for me to properly focus)
+
