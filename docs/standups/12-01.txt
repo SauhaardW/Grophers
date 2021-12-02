@@ -21,3 +21,16 @@ Any impediments or stumbling blocks?
 	- My illness (my headache makes it nearly impossible
     for me to properly focus)
 
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Implemented Spinner in order info modal
+	- Have yet to test it 
+
+What are you planning on doing today?
+   	- Test the spinner and make sure it's properly changing the status of orders within the database
+	- Talk to group members about which tasks are left and figure out which ones I will be doing
+
+Any impediments or stumbling blocks?
+	- Still no wifi
+
