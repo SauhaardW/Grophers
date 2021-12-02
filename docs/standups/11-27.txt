@@ -28,17 +28,13 @@ Any impediments or stumbling blocks?
 Name: Alejandro Iglesias Llobet
 
 What have you done since yesterday?
-	- Created card for Owner Orders Activity
-	- Created Recycler View for Owner Orders Activity layout
-	- Made a few more modifications to Owner Orders Activity
-	(such as properly assigning new ID tags, ensuring the
-	recycler view is properly constrained and functional,
-	ensuring the card is properly designed using a linear
-	layout, etc...)
-	- Finished Owner Orders Activity and made a Pull Request
+	- Nothing
 
 What are you planning on doing today?
-   	- Nothing (need to focus on other courses for today)
+   	- Learn how to use recycler views
+	- Learn how to make cards using a linear layout
+	- Re-design Owner Orders Activity using a
+	recycler view and make it fully functional
 
 Any impediments or stumbling blocks?
-	- Other courses
+	- None
