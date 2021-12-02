@@ -24,3 +24,17 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Nothing
+
+What are you planning on doing today?
+   	- Learn how to use recycler views
+	- Learn how to make cards using a linear layout
+	- Re-design Owner Orders Activity using a
+	recycler view and make it fully functional
+
+Any impediments or stumbling blocks?
+	- None

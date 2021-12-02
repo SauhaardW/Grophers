@@ -1,0 +1,33 @@
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Nothing (Slept 18 hours due to illness)
+
+What are you planning on doing today?
+   	- Make hamburger buttons work everywhere for
+    both customer and user
+    - Fix padding on UIs and ensure that it is perfect
+    - Watch the CSCB07 lectures for Android Testing and
+    Software Testing
+    - Start working on the testing process for both of
+    the customer and owner logins if I still have some time
+
+Any impediments or stumbling blocks?
+	- My illness (my headache makes it nearly impossible
+    for me to properly focus)
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Tested the spinner
+	- Found errors within the implementaion and fixed them
+	- Finished and created a pull request for the implementation of the spinner
+	- Figured out which tasks I will be doing
+
+What are you planning on doing today?
+   	- Ensure all modals pop up at full height
+	- Figure out and implement the edit image button on the owner's edit product modal
+	- Create correct image display based on the url provided by the user
+
+Any impediments or stumbling blocks?
+	- Currently still no wifi but might have it tonight

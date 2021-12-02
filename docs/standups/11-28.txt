@@ -15,6 +15,24 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- None
 
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Created card for Owner Orders Activity
+	- Created Recycler View for Owner Orders Activity layout
+	- Made a few more modifications to Owner Orders Activity
+	(such as properly assigning new ID tags, ensuring the
+	recycler view is properly constrained and functional,
+	ensuring the card is properly designed using a linear
+	layout, etc...)
+	- Finished Owner Orders Activity and made a Pull Request
+
+What are you planning on doing today?
+   	- Nothing (need to focus on MATB41 Assignment due today)
+
+Any impediments or stumbling blocks?
+	- MATB41 Assignment
+
 Name: Nicole Droi
 
 What have you done since yesterday?
