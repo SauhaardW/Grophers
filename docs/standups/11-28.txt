@@ -40,7 +40,7 @@ What have you done since yesterday?
 	- Finished Owner Orders Activity and made a Pull Request
 
 What are you planning on doing today?
-   	- Nothing (need to focus on other courses for today)
+   	- Nothing (need to focus on MATB41 Assignment due today)
 
 Any impediments or stumbling blocks?
-	- Other courses
+	- MATB41 Assignment

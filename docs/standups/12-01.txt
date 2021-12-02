@@ -10,7 +10,7 @@ What have you done since yesterday?
     - Wrote a small program to always list the proper
     subtotal, taxes and total pricing for the listed
     products (and their respective quantities) within
-    the modal.
+    the modal
     - Sent a pull request for the finished model
     of the Customer Order Info Modal
 

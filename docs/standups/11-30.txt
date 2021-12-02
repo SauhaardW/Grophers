@@ -32,7 +32,7 @@ What have you done since yesterday?
 	- Nothing
 
 What are you planning on doing today?
-   	- Nothing due to my illness.
+   	- Nothing due to my illness
 
 Any impediments or stumbling blocks?
 	- My illness (my headache makes it nearly impossible
