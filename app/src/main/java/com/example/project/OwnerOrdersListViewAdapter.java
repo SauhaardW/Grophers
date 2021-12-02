@@ -1,12 +1,14 @@
 package com.example.project;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
@@ -33,9 +36,9 @@ public class OwnerOrdersListViewAdapter extends RecyclerView.Adapter<OwnerOrders
 
     private CustomSpinner modalSpinner;
 
+//    int p;
     Context context;
     ArrayList<Order> list;
-    Order order;
 
     public OwnerOrdersListViewAdapter(Context context, ArrayList<Order> list) {
         this.context = context;
@@ -51,8 +54,8 @@ public class OwnerOrdersListViewAdapter extends RecyclerView.Adapter<OwnerOrders
 
     @Override
     public void onBindViewHolder(@NonNull OwnerOrdersListViewAdapter.ViewHolder holder, int position) {
-//        Order order = list.get(position);
-        order = list.get(position);
+        Order order = list.get(position);
+//        p = holder.getAdapterPosition();
 
         Date date = new Date(order.getTimestamp());
         Format formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -94,6 +97,12 @@ public class OwnerOrdersListViewAdapter extends RecyclerView.Adapter<OwnerOrders
             modalAdapter.notifyDataSetChanged();
 
             orderInfoModal.show();
+            orderInfoModal.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialogInterface) {
+                    spinnerChoiceWrite(modalSpinner.getSelectedItem().toString(), order);
+                }//end on dismiss
+            });
         });
     }
 
@@ -113,11 +122,10 @@ public class OwnerOrdersListViewAdapter extends RecyclerView.Adapter<OwnerOrders
     @Override
     public void onPopupWindowClosed(Spinner spinner) {
         modalSpinner.setBackground(context.getResources().getDrawable(R.drawable.spinnerchoicesdropdown));
-        spinnerChoiceWrite(modalSpinner.getSelectedItem().toString());
     }//end onPopupWondowClosed
 
     //Change so this only happens when modal is closed
-    public void spinnerChoiceWrite(String spinnerChoice){
+    public void spinnerChoiceWrite(String spinnerChoice, Order order){
         String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         FirebaseDatabase.getInstance().getReference("users").child("owners").child(uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
@@ -126,20 +134,7 @@ public class OwnerOrdersListViewAdapter extends RecyclerView.Adapter<OwnerOrders
                     Owner owner = task.getResult().getValue(Owner.class);
                     Integer storeID = owner.getStoreId();
                     String timeStamp = String.valueOf(order.getTimestamp());
-
-                    FirebaseDatabase.getInstance().getReference("stores").child(storeID.toString()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<DataSnapshot> task) {
-                            if(task.isSuccessful()){
-                                Store store = task.getResult().getValue(Store.class);
-                                String timeStamp = String.valueOf(order.getTimestamp());
-                                FirebaseDatabase.getInstance().getReference("orders").child(timeStamp).child("status").setValue(spinnerChoice);
-                            } else {
-                                Toast.makeText(context, "Error while getting store data", Toast.LENGTH_SHORT).show();
-                            }//end else
-
-                        }//end onComplete in stores
-                    });
+                    FirebaseDatabase.getInstance().getReference("stores").child(storeID.toString()).child("orders").child(timeStamp).child("status").setValue(spinnerChoice);
                 } else {
                     Toast.makeText(context, "Error while getting user data", Toast.LENGTH_SHORT).show();
                 }//end else
