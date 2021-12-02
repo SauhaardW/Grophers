@@ -26,3 +26,14 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Time.
+
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Nothing
+
+What are you planning on doing today?
+   	- Nothing due to CSCB36 Test today
+
+Any impediments or stumbling blocks?
+	- CSCB36 Test
