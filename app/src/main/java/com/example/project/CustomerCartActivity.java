@@ -78,12 +78,17 @@ public class CustomerCartActivity extends AppCompatActivity {
 
 
                     Double subtotal = 0.0;
+                    Integer count = 0;
                     for (DataSnapshot dataSnapshot : task.getResult().child("cart").getChildren()) {
                         CartItem cartItem = dataSnapshot.getValue(CartItem.class);
                         subtotal += cartItem.getPrice()*cartItem.getQuantity();
+                        count += cartItem.getQuantity();
                         list.add(cartItem);
                     }
                     adapter.notifyDataSetChanged();
+
+                    TextView cartCount = findViewById(R.id.numProductsInCart3);
+                    cartCount.setText(count.toString());
 
                     Double fees = subtotal*0.13;
                     textViewSubtotal.setText("$" + String.format("%.2f", subtotal));
