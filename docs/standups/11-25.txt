@@ -10,6 +10,18 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- To test the UI it takes a lot of time to get to that page. I fixed by making the page a launcher in the manifest for the time being. I removed it once I finished the modal.
+
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Nothing
+
+What are you planning on doing today?
+   	- Nothing due to other courses and Co-op
+
+Any impediments or stumbling blocks?
+	- Other courses and Co-op Work Term Administrative tasks
+
 Name: Andres Prada
 
 What have you done since yesterday?
