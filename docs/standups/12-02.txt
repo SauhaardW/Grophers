@@ -1,0 +1,17 @@
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Nothing (Slept 18 hours due to illness)
+
+What are you planning on doing today?
+   	- Make hamburger buttons work everywhere for
+    both customer and user
+    - Fix padding on UIs and ensure that it is perfect
+    - Watch the CSCB07 lectures for Android Testing and
+    Software Testing and begin the testing process for
+    the logins of both the customer and owner if I
+    still have some time
+
+Any impediments or stumbling blocks?
+	- My illness (my headache makes it nearly impossible
+    for me to properly focus)
