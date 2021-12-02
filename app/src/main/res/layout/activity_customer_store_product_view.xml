@@ -52,7 +52,7 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/searchstoreproducts"
         android:ems="10"
-        android:hint="Seach Timmy's Ol' Reliable"
+        android:hint="Search Timmy's Ol' Reliable"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:textColor="@color/lightGrayForText"

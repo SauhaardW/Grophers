@@ -34,6 +34,17 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextPasswordOwner" />
 
     <TextView
+        android:id="@+id/ConfirmPasswordAstreix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="*"
+        android:textColor="@color/OwnerOrange"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+    <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,6 +53,18 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/editTextPasswordOwner"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmailOwner" />
+
+
+    <TextView
+        android:id="@+id/PasswordAstreix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="*"
+        android:textColor="@color/OwnerOrange"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toTopOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/textView14"
@@ -52,6 +75,18 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/editTextEmailOwner"
         app:layout_constraintTop_toBottomOf="@+id/editTextUsernameOwner" />
+
+
+    <TextView
+        android:id="@+id/EmailAstreix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="*"
+        android:textColor="@color/OwnerOrange"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toTopOf="@+id/textView15" />
 
     <EditText
         android:id="@+id/editTextConfirmPasswordOwner"
@@ -107,6 +142,18 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/editTextUsernameOwner"
         app:layout_constraintTop_toBottomOf="@+id/include2" />
+
+
+    <TextView
+        android:id="@+id/UsernameAstreix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="*"
+        android:textColor="@color/OwnerOrange"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
 
     <EditText
         android:id="@+id/editTextPasswordOwner"

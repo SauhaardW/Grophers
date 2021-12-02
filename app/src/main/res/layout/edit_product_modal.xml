@@ -41,6 +41,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productBrandInput" />
 
+    <TextView
+        android:id="@+id/ProductPriceAstreix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="*"
+        android:textColor="@color/OwnerOrange"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/productPrice"
+        app:layout_constraintTop_toTopOf="@+id/productPrice" />
+
     <EditText
         android:id="@+id/productNameInput"
         android:layout_width="268dp"
@@ -66,6 +77,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editImageOwner" />
 
+    <TextView
+        android:id="@+id/ProductNameAstreix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="*"
+        android:textColor="@color/OwnerOrange"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/productBrand"
+        app:layout_constraintTop_toTopOf="@+id/productBrand" />
+
     <EditText
         android:id="@+id/productBrandInput"
         android:layout_width="268dp"
@@ -90,6 +112,17 @@
         app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productNameInput" />
+
+    <TextView
+        android:id="@+id/ProductBrandAstreix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="*"
+        android:textColor="@color/OwnerOrange"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/productName"
+        app:layout_constraintTop_toTopOf="@+id/productName" />
 
     <TextView
         android:id="@+id/editImageOwner"
