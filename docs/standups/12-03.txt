@@ -1,0 +1,25 @@
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Created Hamburger Menu for PastOrdersCustomer Page
+    - Created Hamburger Menu for CustomerStoreProductView Page
+    - Created Hamburger Menu for OwnerOrders Page
+    - Added a Back Button to the CustomerCart Activity Page
+    - Created a default "No Items Selected" CustomerCart Page
+    for when a customer decides to view their cart (without
+    having selected any products to purchase yet)
+
+What are you planning on doing today?
+    - Watch the CSCB07 lecture for Android Testing
+    - Start working on the testing process for both of
+    the customer and owner login pages
+    - Watch the CSCB07 lecture for Software Testing and
+    keep working on the testing process for both the 
+    customer and owner login pages
+    - Fix padding on UIs and ensure that it is perfect
+    (If I still have some free time)
+    
+
+Any impediments or stumbling blocks?
+	- My illness (my headache got much better, although
+    I still have a runny nose and coughing a lot)
