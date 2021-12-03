@@ -1,18 +1,23 @@
 package com.example.project;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentResultListener;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +29,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
@@ -44,6 +50,16 @@ public class SetUpStoreActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ImageUrlModalDialog modal = new ImageUrlModalDialog();
                 modal.show(getSupportFragmentManager(), "setUpStoreModal");
+                getSupportFragmentManager().setFragmentResultListener("imgUrl", SetUpStoreActivity.this, new FragmentResultListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.M)
+                    @Override
+                    public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                        imgUrl = result.getString("imgUrl");
+                        Drawable image = LoadImageFromWebOperation(imgUrl);
+                        ImageView profilePic = (ImageView) findViewById(R.id.profileImg);
+                        profilePic.setForeground(image);
+                    }//end onFragmentResult
+                });
             }//end onClick
         });
 
@@ -55,6 +71,16 @@ public class SetUpStoreActivity extends AppCompatActivity {
             }
         });
     }//end onCreate
+
+    public static Drawable LoadImageFromWebOperation(String imgUrl){
+        try{
+            InputStream is = (InputStream) new URL(imgUrl).getContent();
+            Drawable newImg = Drawable.createFromStream(is, "src name");
+            return newImg;
+        } catch (Exception e){
+            return null;
+        }//end catch
+    }//end
 
 //    @Override
 //    public void onButtonClicked(String img_url) {
@@ -103,6 +129,7 @@ public class SetUpStoreActivity extends AppCompatActivity {
                                     @Override
                                     public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
                                         imgUrl = result.getString("imgUrl");
+
 //                                        URL newurl = null;
 //                                        try {
 //                                            newurl = new URL(imgUrl);
@@ -121,7 +148,6 @@ public class SetUpStoreActivity extends AppCompatActivity {
                                         newStore.setImage(imgUrl);
                                     }
                                 });
-
 
                                 owner.setStoreId((int)count);
 
