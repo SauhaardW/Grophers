@@ -49,6 +49,8 @@
         <entry key="app/src/main/res/layout/activity_login_owner.xml" value="0.2328125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_owner_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_owner_orders.xml" value="0.2526041666666667" />
+        <entry key="app/src/main/res/layout/activity_owner_product_list.xml" value="0.2526041666666667" />
         <entry key="app/src/main/res/layout/activity_past_orders_customer.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_past_orders_customer_temp.xml" value="0.24722222222222223" />
         <entry key="app/src/main/res/layout/activity_register_customer.xml" value="0.28229166666666666" />
