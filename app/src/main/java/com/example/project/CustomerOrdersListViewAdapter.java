@@ -15,7 +15,10 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DateFormat;
 import java.text.Format;
@@ -27,6 +30,7 @@ public class CustomerOrdersListViewAdapter extends RecyclerView.Adapter<Customer
 
     Context context;
     ArrayList<Order> list;
+    DatabaseReference db;
 
     public CustomerOrdersListViewAdapter (Context context, ArrayList<Order> list) {
         this.context = context;
@@ -62,7 +66,11 @@ public class CustomerOrdersListViewAdapter extends RecyclerView.Adapter<Customer
             case "Complete": holder.orderStatus.setBackgroundTintList(context.getResources().getColorStateList(R.color.CustomerGreen));
             default: holder.orderStatus.setBackgroundTintList(context.getResources().getColorStateList(R.color.CanceledGray));
         }
-        //implement image setting
+
+        //come back to test
+        db = FirebaseDatabase.getInstance().getReference("stores");
+        String imgUrl = db.child(order.storeId).child("image").get().toString();
+        Glide.with(context).load(imgUrl).into(holder.productImg);
 
         CardView card = (CardView) holder.itemView.findViewById(R.id.cardpastOrders);
         card.setOnClickListener(new View.OnClickListener() {

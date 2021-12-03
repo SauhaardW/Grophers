@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class StoreListViewAdapter extends RecyclerView.Adapter<StoreListViewAdapter.ViewHolder> {
@@ -36,7 +38,8 @@ public class StoreListViewAdapter extends RecyclerView.Adapter<StoreListViewAdap
         Store store = list.get(position);
         holder.storeName.setText(store.getName());
         holder.storeHours.setText("Open: " + store.getHours());
-        //implement image setting
+        //come back to test
+        Glide.with(context).load(store.getImage()).into(holder.storeImg);
 
         CardView card = (CardView) holder.itemView.findViewById(R.id.cardStore);
         card.setOnClickListener(new View.OnClickListener() {

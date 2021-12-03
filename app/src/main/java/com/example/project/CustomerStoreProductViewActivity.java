@@ -1,7 +1,6 @@
 package com.example.project;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,13 +10,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -50,7 +50,11 @@ public class CustomerStoreProductViewActivity extends AppCompatActivity {
         storeName.setText(store_name);
         storeHours.setText("Open: " + store_hours);
         searchBar.setHint("Search " + store_name);
-        // implement image setting
+
+        // needs to be tested
+        String imgUrl = db.child(store_id).child("image").get().toString();
+        ImageView storeProfilePic = findViewById(R.id.imageViewStoreCustomerProductsView);
+        Glide.with(CustomerStoreProductViewActivity.this).load(imgUrl).into(storeProfilePic);
 
         recyclerView = findViewById(R.id.recyclerViewProductCustomer);
         db = FirebaseDatabase.getInstance().getReference("stores");

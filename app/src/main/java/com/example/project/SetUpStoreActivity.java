@@ -21,6 +21,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -50,14 +51,14 @@ public class SetUpStoreActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ImageUrlModalDialog modal = new ImageUrlModalDialog();
                 modal.show(getSupportFragmentManager(), "setUpStoreModal");
+
+                //come back to test from getting url from modal
                 getSupportFragmentManager().setFragmentResultListener("imgUrl", SetUpStoreActivity.this, new FragmentResultListener() {
-                    @RequiresApi(api = Build.VERSION_CODES.M)
                     @Override
                     public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
                         imgUrl = result.getString("imgUrl");
-                        Drawable image = LoadImageFromWebOperation(imgUrl);
-                        ImageView profilePic = (ImageView) findViewById(R.id.profileImg);
-                        profilePic.setForeground(image);
+                        ImageView profilePic = findViewById(R.id.profileImg);
+                        Glide.with(SetUpStoreActivity.this).load(imgUrl).into(profilePic);
                     }//end onFragmentResult
                 });
             }//end onClick
@@ -71,16 +72,6 @@ public class SetUpStoreActivity extends AppCompatActivity {
             }
         });
     }//end onCreate
-
-    public static Drawable LoadImageFromWebOperation(String imgUrl){
-        try{
-            InputStream is = (InputStream) new URL(imgUrl).getContent();
-            Drawable newImg = Drawable.createFromStream(is, "src name");
-            return newImg;
-        } catch (Exception e){
-            return null;
-        }//end catch
-    }//end
 
 //    @Override
 //    public void onButtonClicked(String img_url) {

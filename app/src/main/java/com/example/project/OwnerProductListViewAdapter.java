@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class OwnerProductListViewAdapter extends RecyclerView.Adapter<OwnerProductListViewAdapter.ViewHolder>{
@@ -38,7 +40,8 @@ public class OwnerProductListViewAdapter extends RecyclerView.Adapter<OwnerProdu
         Product product = list.get(position);
         holder.productName.setText(product.getBrand() + " " + product.getName());
         holder.productPrice.setText("$" + String.format("%.2f", product.getPrice()));
-        //implement image setting
+        //come back to test
+        Glide.with(context).load(product.getImage()).into(holder.productImg);
 
         CardView card = (CardView) holder.itemView.findViewById(R.id.productCardOwner);
         card.setOnClickListener(new View.OnClickListener() {
