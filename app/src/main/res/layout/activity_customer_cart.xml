@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
-        android:text="Default Store (No Items Selected)"
+        android:text="No Items Selected"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
