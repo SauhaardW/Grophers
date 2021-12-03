@@ -34,3 +34,19 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Still no wifi
 
+Name: Andres Prada
+
+What have you done since yesterday?
+   	- Code reviewed all of the remaning PRs and merged them into main
+	- Tested out everything to ensure demo goes smoothly
+	- Last minute bug fixes before demo in tutorial today
+
+What are you planning on doing today?
+	- Organize list of remaining tasks for the project
+	- Set up meeting or discuss over chat about distribution of remaining tasks
+	- Fix minor issues
+	- Implement cart counter
+	- Implement cart remove button
+
+Any impediments or stumbling blocks?
+	- None
