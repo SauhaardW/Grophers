@@ -37,7 +37,7 @@ public class PastOrdersCustomer extends AppCompatActivity {
         setContentView(R.layout.activity_past_orders_customer);
 
         // hamburger menu code
-        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutCustomerOrders);
         ImageButton hamburgerButton = (ImageButton) findViewById(R.id.imageButtonHamburgerCustomerOrders);
         hamburgerButton.setOnClickListener(new View.OnClickListener() {
             @Override
