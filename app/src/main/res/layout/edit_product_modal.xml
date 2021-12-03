@@ -119,7 +119,7 @@
         android:insetTop="0dp"
         android:insetBottom="5dp"
         android:text="Done"
-        android:textAllCaps="false"
+        android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         app:backgroundTint="@color/OwnerOrange"
