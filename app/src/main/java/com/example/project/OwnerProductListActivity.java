@@ -42,8 +42,8 @@ public class OwnerProductListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_owner_product_list);
 
         // hamburger menu code
-        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-        ImageButton hamburgerButton = (ImageButton) findViewById(R.id.imageButtonHamburgerOwnerView2);
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutOwnerProducts);
+        ImageButton hamburgerButton = (ImageButton) findViewById(R.id.imageButtonHamburgerOwnerProducts);
         hamburgerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +55,7 @@ public class OwnerProductListActivity extends AppCompatActivity {
             }
         });
 
-        NavigationView navView = findViewById(R.id.navView);
+        NavigationView navView = findViewById(R.id.navViewOwnerProducts);
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
