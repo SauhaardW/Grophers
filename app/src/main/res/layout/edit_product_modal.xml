@@ -10,11 +10,11 @@
         android:id="@+id/limitForModalInvisibleEditProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="580dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/doneEditingProduct" />
 
     <EditText
         android:id="@+id/productPriceInput"
@@ -117,6 +117,7 @@
         android:id="@+id/doneEditingProduct"
         android:layout_width="120dp"
         android:layout_height="40dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/login_rectangle_green"
         android:backgroundTint="@color/OwnerOrange"
         android:insetTop="0dp"
@@ -126,21 +127,20 @@
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         app:backgroundTint="@color/OwnerOrange"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/limitForModalInvisibleEditProduct"
+        app:layout_constraintTop_toBottomOf="@+id/deleteProductOwner"
         tools:layout_marginBottom="29dp" />
 
     <TextView
         android:id="@+id/deleteProductOwner"
         android:layout_width="99dp"
         android:layout_height="22dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="25dp"
         android:backgroundTint="#F63737"
-        android:insetBottom="5dp"
         android:insetTop="0dp"
+        android:insetBottom="5dp"
         android:text="Delete Product"
         android:textAlignment="center"
         android:textAllCaps="false"
