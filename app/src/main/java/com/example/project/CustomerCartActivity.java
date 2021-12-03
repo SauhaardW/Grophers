@@ -36,6 +36,15 @@ public class CustomerCartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_cart);
 
+        // Back Button handling
+        ImageView backButton = (ImageView) findViewById(R.id.backButtonCustomerCart);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         TextView textViewName = findViewById(R.id.store_cart_text);
         TextView textViewSubtotal = findViewById(R.id.order_subtotal_price);
         TextView textViewTotal = findViewById(R.id.order_total_price);
@@ -100,8 +109,8 @@ public class CustomerCartActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             long timestamp = new Date().getTime();
-                            String timestampString = ((Long)timestamp).toString();
-                            Order order =  new Order(uid, store_id, list, timestamp, "Processing", store.getName(), customerName);
+                            String timestampString = ((Long) timestamp).toString();
+                            Order order = new Order(uid, store_id, list, timestamp, "Processing", store.getName(), customerName);
 
                             db.child("customers").child(uid).child("orders").child(timestampString).setValue(order);
                             db.child("customers").child(uid).child("cart").setValue(null);
