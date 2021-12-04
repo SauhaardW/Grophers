@@ -53,6 +53,7 @@
         <entry key="app/src/main/res/layout/customer_order_info_modal.xml" value="0.23541666666666666" />
         <entry key="app/src/main/res/layout/edit_product_modal.xml" value="0.22" />
         <entry key="app/src/main/res/layout/order_info_modal.xml" value="0.23541666666666666" />
+        <entry key="app/src/main/res/layout/owner_order_info_card.xml" value="0.11944444444444445" />
         <entry key="app/src/main/res/layout/past_orders_card.xml" value="0.23541666666666666" />
         <entry key="app/src/main/res/layout/store_card.xml" value="0.25" />
         <entry key="app/src/main/res/layout/topbar_back_button_customer.xml" value="0.18645833333333334" />

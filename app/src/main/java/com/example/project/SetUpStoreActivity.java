@@ -39,7 +39,7 @@ import java.util.Map;
 
 public class SetUpStoreActivity extends AppCompatActivity {
 
-    String imgUrl;
+    public String imgUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +53,6 @@ public class SetUpStoreActivity extends AppCompatActivity {
                 ImageUrlModalDialog modal = new ImageUrlModalDialog();
                 modal.show(getSupportFragmentManager(), "setUpStoreModal");
 
-                //come back to test from getting url from modal
                 getSupportFragmentManager().setFragmentResultListener("imgUrl", SetUpStoreActivity.this, new FragmentResultListener() {
                     @Override
                     public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
@@ -74,16 +73,6 @@ public class SetUpStoreActivity extends AppCompatActivity {
         });
     }//end onCreate
 
-//    @Override
-//    public void onButtonClicked(String img_url) {
-//        //set passed img_url here from modal
-//    }//end onButtonClicked
-
-//    @Override
-//    public void onButtonClicked(String img_url) {
-//        //set passed img_url here from modal
-//    }//end onButtonClicked
-
     private void registerStore() {
         EditText editTextName = (EditText)findViewById(R.id.storeNameTextBox);
         EditText editTextHours = (EditText)findViewById(R.id.openHoursTextBox);
@@ -91,7 +80,6 @@ public class SetUpStoreActivity extends AppCompatActivity {
 
         String name = editTextName.getText().toString().trim();
         String hours = editTextHours.getText().toString().trim();
-        imgUrl = "";
 
         if (name.isEmpty()) {
             editTextName.setError("The store name cannot be empty");
@@ -116,30 +104,6 @@ public class SetUpStoreActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 long count = task.getResult().getChildrenCount();
                                 Store newStore = new Store(name, hours, imgUrl, owner, (int)count);
-
-                                getSupportFragmentManager().setFragmentResultListener("imgUrl", SetUpStoreActivity.this, new FragmentResultListener() {
-                                    @Override
-                                    public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
-                                        imgUrl = result.getString("imgUrl");
-
-//                                        URL newurl = null;
-//                                        try {
-//                                            newurl = new URL(imgUrl);
-//                                        } catch (MalformedURLException e) {
-//                                            e.printStackTrace();
-//                                        }
-//                                        Bitmap mIcon_val = null;
-//                                        try {
-//                                            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-//                                            StrictMode.setThreadPolicy(policy);
-//                                            mIcon_val = BitmapFactory.decodeStream(newurl.openConnection() .getInputStream());
-//                                        } catch (IOException e) {
-//                                            e.printStackTrace();
-//                                        }
-//                                        profileImg.setImageBitmap(mIcon_val);
-                                        newStore.setImage(imgUrl);
-                                    }
-                                });
 
                                 owner.setStoreId((int)count);
 
