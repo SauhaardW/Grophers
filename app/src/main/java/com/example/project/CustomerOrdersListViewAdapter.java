@@ -102,7 +102,7 @@ public class CustomerOrdersListViewAdapter extends RecyclerView.Adapter<Customer
                 modalRecyclerView.setHasFixedSize(true);
                 modalRecyclerView.setLayoutManager(new LinearLayoutManager(context));
                 ArrayList<CartItem> modalList = order.getCart();
-                CustomerOrdersInfoListViewAdapter modalAdapter= new CustomerOrdersInfoListViewAdapter(context, modalList);
+                CustomerOrdersInfoListViewAdapter modalAdapter= new CustomerOrdersInfoListViewAdapter(context, modalList, order);
                 modalRecyclerView.setAdapter(modalAdapter);
                 modalAdapter.notifyDataSetChanged();
 
