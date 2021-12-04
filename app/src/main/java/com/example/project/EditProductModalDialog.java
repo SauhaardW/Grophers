@@ -65,7 +65,7 @@ public class EditProductModalDialog extends BottomSheetDialogFragment{
         TextView delete_product = v.findViewById(R.id.deleteProductOwner);
         Button done = v.findViewById(R.id.doneEditingProduct);
         TextView editImg = v.findViewById(R.id.editImageOwner);
-        
+
         editImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
