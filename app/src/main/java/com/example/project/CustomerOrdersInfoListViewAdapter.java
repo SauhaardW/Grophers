@@ -14,6 +14,10 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.Format;
 import java.text.SimpleDateFormat;
@@ -45,8 +49,8 @@ public class CustomerOrdersInfoListViewAdapter extends RecyclerView.Adapter<Cust
         holder.productPrice.setText("$" + String.format("%.2f", product.getPrice()));
         holder.productQuantity.setText("x"+((Integer)product.getQuantity()).toString());
         holder.productTotal.setText("$" + String.format("%.2f", product.getPrice()*product.getQuantity()));
-        //come back to test
-        Glide.with(context).load(product.getImage()).into(holder.productImg);
+        //ONLY ONE NOT WORKING :/// FIX
+        Glide.with(context).load(product.image).into(holder.productImg);
     }
 
 

@@ -40,7 +40,6 @@ public class OwnerOrderProductListViewAdapter extends RecyclerView.Adapter<Owner
         holder.productName.setText(item.getBrand() + " " + item.getName());
         holder.productQuantity.setText(String.format("x%d", item.getQuantity()));
         holder.productPrice.setText("$" + String.format("%.2f", item.getPrice()));
-        //test if works
         Glide.with(context).load(item.getImage()).into(holder.productImg);
     }
 

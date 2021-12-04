@@ -1,26 +1,25 @@
 package com.example.project;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-import java.text.DateFormat;
 import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -30,7 +29,6 @@ public class CustomerOrdersListViewAdapter extends RecyclerView.Adapter<Customer
 
     Context context;
     ArrayList<Order> list;
-    DatabaseReference db;
 
     public CustomerOrdersListViewAdapter (Context context, ArrayList<Order> list) {
         this.context = context;
@@ -67,10 +65,17 @@ public class CustomerOrdersListViewAdapter extends RecyclerView.Adapter<Customer
             default: holder.orderStatus.setBackgroundTintList(context.getResources().getColorStateList(R.color.CanceledGray));
         }
 
-        //come back to test
-        db = FirebaseDatabase.getInstance().getReference("stores");
-        String imgUrl = db.child(order.storeId).child("image").get().toString();
-        Glide.with(context).load(imgUrl).into(holder.productImg);
+        FirebaseDatabase.getInstance().getReference("stores").child(order.storeId).child("image").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String imgUrl = String.valueOf(snapshot.getValue());
+                Glide.with(context).load(imgUrl).into(holder.storeImg);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
 
         CardView card = (CardView) holder.itemView.findViewById(R.id.cardpastOrders);
         card.setOnClickListener(new View.OnClickListener() {
@@ -115,7 +120,7 @@ public class CustomerOrdersListViewAdapter extends RecyclerView.Adapter<Customer
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView storeName, orderSubtitle, orderStatus;
-        ImageView productImg;
+        ImageView storeImg;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -123,7 +128,7 @@ public class CustomerOrdersListViewAdapter extends RecyclerView.Adapter<Customer
             this.storeName = itemView.findViewById(R.id.pastOrderCardStoreName);
             this.orderSubtitle = itemView.findViewById(R.id.pastOrderCardSubtitle);
             this.orderStatus = itemView.findViewById(R.id.textViewPastOrdersCustomerOrderStatus);
-            this.productImg = itemView.findViewById(R.id.imageViewCustomerViewStorePhoto);
+            this.storeImg = itemView.findViewById(R.id.imageViewCustomerViewStorePhoto);
         }
     }
 }

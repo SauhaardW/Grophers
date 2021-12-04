@@ -42,12 +42,9 @@ public class AddProductModalDialog extends BottomSheetDialogFragment {
         productPrice.setText(bundle.getString("product_price", ""));
         String storeId = bundle.getString("store_id");
         String productId = bundle.getString("product_id");
+        String productImageUrl = bundle.getString("product_img");
 
-        //Come back to test
-        db = FirebaseDatabase.getInstance().getReference("stores");
-        String imgUrl = db.child(storeId).child("products").child(productId).child("image").get().toString();
-        ImageView storeProfilePic = v.findViewById(R.id.productImageModalDisplay);
-        Glide.with(this).load(imgUrl).into(storeProfilePic);
+        Glide.with(this).load(productImageUrl).into(productImg);
 
         TextView count = v.findViewById(R.id.numberProductsAddedToCartModal);
         Button minus = v.findViewById(R.id.minusButtonSubtractProductFromNumModal);

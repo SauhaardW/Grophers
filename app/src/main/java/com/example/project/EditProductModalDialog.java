@@ -1,6 +1,7 @@
 package com.example.project;
 import android.app.Dialog;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,11 +47,8 @@ public class EditProductModalDialog extends BottomSheetDialogFragment{
         Double bundlePriceDouble = bundle.getDouble("product_price_double");
         String bundleImg = bundle.getString("product_img");
 
-        //Come back to test
-        db = FirebaseDatabase.getInstance().getReference("stores");
-        String imgUrl = db.child(storeId).child("products").child(productId).child("image").get().toString();
         ImageView productPic = v.findViewById(R.id.productImageModalDisplay3);
-        Glide.with(this).load(imgUrl).into(productPic);
+        Glide.with(getContext()).load(bundleImg).into(productPic);
 
 
         EditText productName = v.findViewById(R.id.productNameInput);

@@ -42,19 +42,18 @@ public class CustomerStoreProductViewActivity extends AppCompatActivity {
         String store_id = extras.getString("store_id");
         String store_name = extras.getString("store_name");
         String store_hours = extras.getString("store_hours");
+        String store_img = extras.getString("store_img");
 
         TextView storeName = findViewById(R.id.storeNameDisplay);
         TextView storeHours = findViewById(R.id.storeHoursDisplay);
         EditText searchBar = findViewById(R.id.editTextStoreProductSearch);
+        ImageView storeProfilePic = findViewById(R.id.imageViewStoreCustomerProductsView);
 
         storeName.setText(store_name);
         storeHours.setText("Open: " + store_hours);
         searchBar.setHint("Search " + store_name);
 
-        // needs to be tested
-        String imgUrl = db.child(store_id).child("image").get().toString();
-        ImageView storeProfilePic = findViewById(R.id.imageViewStoreCustomerProductsView);
-        Glide.with(CustomerStoreProductViewActivity.this).load(imgUrl).into(storeProfilePic);
+        Glide.with(CustomerStoreProductViewActivity.this).load(store_img).into(storeProfilePic);
 
         recyclerView = findViewById(R.id.recyclerViewProductCustomer);
         db = FirebaseDatabase.getInstance().getReference("stores");

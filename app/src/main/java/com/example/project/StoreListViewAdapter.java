@@ -38,7 +38,6 @@ public class StoreListViewAdapter extends RecyclerView.Adapter<StoreListViewAdap
         Store store = list.get(position);
         holder.storeName.setText(store.getName());
         holder.storeHours.setText("Open: " + store.getHours());
-        //come back to test
         Glide.with(context).load(store.getImage()).into(holder.storeImg);
 
         CardView card = (CardView) holder.itemView.findViewById(R.id.cardStore);
@@ -49,6 +48,7 @@ public class StoreListViewAdapter extends RecyclerView.Adapter<StoreListViewAdap
                 intent.putExtra("store_id", ((Integer)store.getId()).toString());
                 intent.putExtra("store_name", store.getName());
                 intent.putExtra("store_hours", store.getHours());
+                intent.putExtra("store_img", store.getImage());
                 context.startActivity(intent);
             }
         });

@@ -43,9 +43,7 @@ public class CartListViewAdapter extends RecyclerView.Adapter<CartListViewAdapte
         holder.productPrice.setText("$" + String.format("%.2f", product.getPrice()));
         holder.productQuantity.setText("x"+((Integer)product.getQuantity()).toString());
         holder.productTotal.setText("$" + String.format("%.2f", product.getPrice()*product.getQuantity()));
-        //come back to test
         Glide.with(context).load(product.getImage()).into(holder.productImg);
-
 
     }
 
