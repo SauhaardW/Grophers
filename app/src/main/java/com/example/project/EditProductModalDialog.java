@@ -1,5 +1,7 @@
 package com.example.project;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.util.Log;
@@ -15,6 +17,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentResultListener;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,7 +34,7 @@ import java.util.ArrayList;
 
 public class EditProductModalDialog extends BottomSheetDialogFragment{
 
-    DatabaseReference db;
+//    DatabaseReference db;
 
     @Nullable
     @Override
@@ -61,6 +64,26 @@ public class EditProductModalDialog extends BottomSheetDialogFragment{
 
         TextView delete_product = v.findViewById(R.id.deleteProductOwner);
         Button done = v.findViewById(R.id.doneEditingProduct);
+        TextView editImg = v.findViewById(R.id.editImageOwner);
+        
+        editImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImageUrlModalDialog modal = new ImageUrlModalDialog();
+                modal.show(getFragmentManager(), "editProductModalDialog");
+
+                getFragmentManager().setFragmentResultListener("imgUrl", EditProductModalDialog.this, new FragmentResultListener() {
+                    @Override
+                    public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                        String newImgUrl = result.getString("imgUrl");
+                        ImageView profilePic = v.findViewById(R.id.productImageModalDisplay3);
+                        Glide.with(EditProductModalDialog.this).load(newImgUrl).into(profilePic);
+                        FirebaseDatabase.getInstance().getReference("stores").child(storeId).child("products").child(productId).child("image").setValue(newImgUrl);
+                    }//end onFragmentResult
+                });
+            }//end onClick
+        });
+
 
         delete_product.setOnClickListener(new View.OnClickListener() {
             @Override
