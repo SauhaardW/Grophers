@@ -1,0 +1,16 @@
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Watched the Android Testing lecture
+    - Collaborated with Nicole to understand the MVP
+    setup she designed within the mvpOwnerLogin branch
+    - Created the file for today's standup
+
+What are you planning on doing today?
+    - Rewatch critical parts of the Android testing lecture
+    - Focus on designing as much testing as possible throughout
+    the entire day for both the customer and owner login pages
+    
+
+Any impediments or stumbling blocks?
+	- My illness (runny nose and and coughing)
