@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -49,6 +50,8 @@ public class CartListViewAdapter extends RecyclerView.Adapter<CartListViewAdapte
         holder.productPrice.setText("$" + String.format("%.2f", product.getPrice()));
         holder.productQuantity.setText("x"+((Integer)product.getQuantity()).toString());
         holder.productTotal.setText("$" + String.format("%.2f", product.getPrice()*product.getQuantity()));
+        Glide.with(context).load(product.getImage()).into(holder.productImg);
+
         //implement image setting
 
         holder.removeButton.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +76,6 @@ public class CartListViewAdapter extends RecyclerView.Adapter<CartListViewAdapte
                 });
             }
         });
-
     }
 
     @Override

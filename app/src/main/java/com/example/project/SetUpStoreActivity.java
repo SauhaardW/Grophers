@@ -1,21 +1,28 @@
 package com.example.project;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentResultListener;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,6 +31,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
@@ -44,6 +52,16 @@ public class SetUpStoreActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ImageUrlModalDialog modal = new ImageUrlModalDialog();
                 modal.show(getSupportFragmentManager(), "setUpStoreModal");
+
+                //come back to test from getting url from modal
+                getSupportFragmentManager().setFragmentResultListener("imgUrl", SetUpStoreActivity.this, new FragmentResultListener() {
+                    @Override
+                    public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                        imgUrl = result.getString("imgUrl");
+                        ImageView profilePic = findViewById(R.id.profileImg);
+                        Glide.with(SetUpStoreActivity.this).load(imgUrl).into(profilePic);
+                    }//end onFragmentResult
+                });
             }//end onClick
         });
 
@@ -103,6 +121,7 @@ public class SetUpStoreActivity extends AppCompatActivity {
                                     @Override
                                     public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
                                         imgUrl = result.getString("imgUrl");
+
 //                                        URL newurl = null;
 //                                        try {
 //                                            newurl = new URL(imgUrl);
@@ -121,7 +140,6 @@ public class SetUpStoreActivity extends AppCompatActivity {
                                         newStore.setImage(imgUrl);
                                     }
                                 });
-
 
                                 owner.setStoreId((int)count);
 
