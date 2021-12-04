@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class CustomerStoreProductViewActivity extends AppCompatActivity {
 
@@ -105,6 +108,40 @@ public class CustomerStoreProductViewActivity extends AppCompatActivity {
                 intent.putExtra("store_id", store_id);
                 intent.putExtra("store_name", store_name);
                 startActivity(intent);
+            }
+        });
+
+        EditText searchInput = findViewById(R.id.editTextStoreProductSearch);
+        searchInput.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                list.clear();
+                db.child(store_id).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (DataSnapshot dataSnapshot : task.getResult().child("products").getChildren()) {
+                                Product product = dataSnapshot.getValue(Product.class);
+                                if ((product.getName()+" "+product.getBrand()).toLowerCase().contains(s.toString().toLowerCase())) {
+                                    list.add(product);
+                                }
+                            }
+                            adapter.notifyDataSetChanged();
+                        } else {
+                            Toast.makeText(CustomerStoreProductViewActivity.this, "Error while getting store data", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
     }
