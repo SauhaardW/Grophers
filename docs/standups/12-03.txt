@@ -23,3 +23,20 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- My illness (my headache got much better, although
     I still have a runny nose and coughing a lot)
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Figured out how to make an image display from the url
+	- Implemented image display everywhere that images are being displayed (half of 	the UI's)
+	- Tested image display, found a couple errors and fixed them
+	- Implemented the image url modal to the edit image button on the edit product 		modal
+	- Implemented image display for the previously stated modal
+	- Tried to change the height of modals, so they can display their content fully
+
+What are you planning on doing today?
+   	- Still need to figure out how to display the modal at full height
+	- Fix one spot where image display is not working (I think I know what the error 	is)
+
+Any impediments or stumbling blocks?
+	- Having trouble figuring out how to fully display the modals
