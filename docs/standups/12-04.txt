@@ -14,3 +14,16 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- My illness (runny nose and and coughing)
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Fixed image display in customer order info modal
+	- Image display is implemented fully now
+	- Fixed image setting in the set up store activity
+
+What are you planning on doing today?
+   	- Nothing in relation to this class
+
+Any impediments or stumbling blocks?
+	- None
