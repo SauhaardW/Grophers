@@ -135,6 +135,7 @@ public class OwnerOrdersListViewAdapter extends RecyclerView.Adapter<OwnerOrders
                     Integer storeID = owner.getStoreId();
                     String timeStamp = String.valueOf(order.getTimestamp());
                     FirebaseDatabase.getInstance().getReference("stores").child(storeID.toString()).child("orders").child(timeStamp).child("status").setValue(spinnerChoice);
+                    order.setStatus(spinnerChoice);
                 } else {
                     Toast.makeText(context, "Error while getting user data", Toast.LENGTH_SHORT).show();
                 }//end else
