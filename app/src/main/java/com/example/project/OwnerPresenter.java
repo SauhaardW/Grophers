@@ -1,19 +1,43 @@
 // Presenter OWNER
 package com.example.project;
 
+import android.content.Intent;
+
 public class OwnerPresenter implements Contract.Presenter {
-    @Override
-    public void backButtonFunctionality() {
+    private Contract.Model model;
+    private Contract.View view;
 
+    public OwnerPresenter(Contract.View view, Contract.Model model){
+        this.model = model;
+        this.view = view;
     }
 
     @Override
-    public void registerButtonFunctionality() {
-
+    public void backButtonClicked() {
+        ((LoginOwnerActivity) view).finish();
     }
 
     @Override
-    public void submitButtonFunctionality() {
+    public void registerButtonClicked() {
+        ((LoginOwnerActivity) view).startActivity(new Intent((LoginOwnerActivity) view, RegisterOwnerActivity.class));
+    }
 
+    @Override
+    public void submitButtonClicked(String email, String password) {
+        view.showProgressBar();
+
+        model.isLoginSuccessful(new LoginCallBack() {
+            @Override
+            public void loginSuccess(boolean success) {
+                // to do: make logic for opening ownerProducts/newStore
+                if (success) {
+                    view.loginSuccessfulToast();
+                    ((LoginOwnerActivity) view).startActivity(new Intent(((LoginOwnerActivity) view), OwnerProductListActivity.class));
+                } else {
+                    view.loginFailedToast();
+                }
+                view.hideProgressBar();
+            }
+        }, email, password);
     }
 }

@@ -2,23 +2,22 @@ package com.example.project;
 
 public interface Contract {
     public interface View {
-        void backButtonClicked();
-        void registerButtonClicked();
-        void submitButtonClicked();
-        void getEmail();
-        void getPassword();
+        String getEmail();
+        String getPassword();
+        void showProgressBar();
+        void hideProgressBar();
         void loginSuccessfulToast();
         void loginFailedToast();
         void loginUserDataFailedToast();
     }
 
     public interface Presenter {
-        void backButtonFunctionality();
-        void registerButtonFunctionality();
-        void submitButtonFunctionality();
+        void backButtonClicked();
+        void registerButtonClicked();
+        void submitButtonClicked(String email, String password);
     }
 
     public interface Model {
-        void isLoginSuccessful();
+        void isLoginSuccessful(LoginCallBack loginCallBack, String email, String password);
     }
 }
