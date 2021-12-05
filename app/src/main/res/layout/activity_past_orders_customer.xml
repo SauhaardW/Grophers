@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/cartImgView"
         android:layout_width="65dp"
         android:layout_height="37dp"
         android:layout_marginEnd="10dp"
@@ -52,10 +52,10 @@
         android:layout_marginTop="7dp"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/cartImgView"
+        app:layout_constraintEnd_toEndOf="@+id/cartImgView"
+        app:layout_constraintStart_toStartOf="@+id/cartImgView"
+        app:layout_constraintTop_toTopOf="@+id/cartImgView"
         app:srcCompat="@drawable/cart" />
 
     <TextView
@@ -71,9 +71,9 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/cartImgView"
+        app:layout_constraintEnd_toEndOf="@+id/cartImgView"
+        app:layout_constraintStart_toStartOf="@+id/cartImgView"
         app:layout_constraintTop_toTopOf="parent" />
 
 
