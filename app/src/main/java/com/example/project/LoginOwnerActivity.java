@@ -1,3 +1,4 @@
+// View OWNER
 package com.example.project;
 
 import androidx.annotation.NonNull;
@@ -23,7 +24,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class LoginOwnerActivity extends AppCompatActivity {
+public class LoginOwnerActivity extends AppCompatActivity implements Contract.View {
 
     private FirebaseAuth mAuth;
 

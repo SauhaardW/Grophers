@@ -1,3 +1,4 @@
+// View CUSTOMER
 package com.example.project;
 
 import androidx.annotation.NonNull;
@@ -17,7 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class LoginCustomerActivity extends AppCompatActivity {
+public class LoginCustomerActivity extends AppCompatActivity implements Contract.View {
 
     private FirebaseAuth mAuth;
 
