@@ -11,6 +11,7 @@ public class CartItem extends Product{
         this.brand = product.getBrand();
         this.price = product.getPrice();
         this.quantity = quantity;
+        this.image = product.getImage();
     }
 
     public int getQuantity() {

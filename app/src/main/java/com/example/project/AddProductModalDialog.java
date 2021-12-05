@@ -13,16 +13,20 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
 public class AddProductModalDialog extends BottomSheetDialogFragment {
+
+    DatabaseReference db;
 
     @Nullable
     @Override
@@ -36,9 +40,11 @@ public class AddProductModalDialog extends BottomSheetDialogFragment {
         Bundle bundle = getArguments();
         productName.setText(bundle.getString("product_brand", "") + " " + bundle.getString("product_name", ""));
         productPrice.setText(bundle.getString("product_price", ""));
-        //implement image setting
         String storeId = bundle.getString("store_id");
         String productId = bundle.getString("product_id");
+        String productImageUrl = bundle.getString("product_img");
+
+        Glide.with(this).load(productImageUrl).into(productImg);
 
         TextView count = v.findViewById(R.id.numberProductsAddedToCartModal);
         Button minus = v.findViewById(R.id.minusButtonSubtractProductFromNumModal);

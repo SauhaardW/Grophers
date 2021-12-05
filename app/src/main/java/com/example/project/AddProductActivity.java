@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentResultListener;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,6 +38,16 @@ public class AddProductActivity extends AppCompatActivity{
             public void onClick(View view) {
                 ImageUrlModalDialog modal = new ImageUrlModalDialog();
                 modal.show(getSupportFragmentManager(), "addProductImgModal");
+
+                //come back to test from getting url from modal
+                getSupportFragmentManager().setFragmentResultListener("imgUrl", AddProductActivity.this, new FragmentResultListener() {
+                    @Override
+                    public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                        imgUrl = result.getString("imgUrl");
+                        ImageView productPic = findViewById(R.id.imageViewProductImage);
+                        Glide.with(AddProductActivity.this).load(imgUrl).into(productPic);
+                    }//end onFragmentResult
+                });
             }//end onClick for addProductPhoto
         });
 
