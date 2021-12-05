@@ -64,11 +64,10 @@
             android:layout_marginLeft="0dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/rectangle"
-            android:text="PROCESSING"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="11sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
 

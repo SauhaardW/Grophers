@@ -22,9 +22,9 @@
     <string name="log_out">&#128682; Log out</string>
 
     <string-array name="orderInfoModalList">
-        <item>Processing order</item>
-        <item>Order completed</item>
-        <item>Order canceled</item>
+        <item>PROCESSING</item>
+        <item>COMPLETED</item>
+        <item>CANCELED</item>
     </string-array>
 
     <string name="ownerOrders_username">{username} • 11:59PM, Nov 12</string>

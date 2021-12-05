@@ -31,7 +31,7 @@
             app:srcCompat="@drawable/product_image" />
 
         <LinearLayout
-            android:layout_width="200dp"
+            android:layout_width="136dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
@@ -52,15 +52,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="$2.97"
-                android:textSize="18sp"
-                android:textAlignment="textStart" />
+                android:textAlignment="textStart"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="89dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="20dp"
             android:orientation="vertical">
 
             <TextView
@@ -86,10 +86,10 @@
                 android:id="@+id/quantity_of_item"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="1dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="0dp"
+                android:layout_gravity="right"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="1dp"
                 android:text="x1"
                 android:textSize="18sp" />
 
@@ -97,8 +97,9 @@
                 android:id="@+id/multiplied_product_price1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="0dp"
                 android:layout_marginBottom="10dp"
-                android:layout_marginEnd="10dp"
                 android:text="$2.97 total" />
 
         </LinearLayout>
