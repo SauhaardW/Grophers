@@ -99,7 +99,7 @@ public class CustomerStoreProductViewActivity extends AppCompatActivity {
             }
         });
 
-        TextView numProductsInCart = findViewById(R.id.numProductsInCart);
+        TextView numProductsInCart = findViewById(R.id.numProductsInCart2);
 
         String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         FirebaseDatabase.getInstance().getReference("users").child("customers").child(uid).child("cart").addValueEventListener(new ValueEventListener() {
@@ -120,7 +120,7 @@ public class CustomerStoreProductViewActivity extends AppCompatActivity {
             }
         });
 
-        Button cartButton = findViewById(R.id.shoppingCartInvisibleButton);
+        ImageView cartButton = findViewById(R.id.imageView2);
         cartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
