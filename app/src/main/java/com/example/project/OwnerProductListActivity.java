@@ -106,18 +106,25 @@ public class OwnerProductListActivity extends AppCompatActivity {
                             startActivity(intent);
                         }
                     });
-                    db.child(store_id.toString()).child("products").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+
+
+
+
+
+                    db.child(store_id.toString()).child("products").addValueEventListener(new ValueEventListener() {
                         @Override
-                        public void onComplete(@NonNull Task<DataSnapshot> task) {
-                            if (task.isSuccessful()) {
-                                for (DataSnapshot dataSnapshot : task.getResult().getChildren()) {
-                                    Product product = dataSnapshot.getValue(Product.class);
-                                    list.add(product);
-                                }
-                                adapter.notifyDataSetChanged();
-                            } else {
-                                Toast.makeText(OwnerProductListActivity.this, "Error while getting store data", Toast.LENGTH_SHORT).show();
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            list.clear();
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                                Product product = dataSnapshot.getValue(Product.class);
+                                list.add(product);
                             }
+                            adapter.notifyDataSetChanged();
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(OwnerProductListActivity.this, "Error while getting store data", Toast.LENGTH_SHORT).show();
                         }
                     });
                 } else {
