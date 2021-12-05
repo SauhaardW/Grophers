@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class OwnerOrderProductListViewAdapter extends RecyclerView.Adapter<OwnerOrderProductListViewAdapter.ViewHolder> {
@@ -38,7 +40,7 @@ public class OwnerOrderProductListViewAdapter extends RecyclerView.Adapter<Owner
         holder.productName.setText(item.getBrand() + " " + item.getName());
         holder.productQuantity.setText(String.format("x%d", item.getQuantity()));
         holder.productPrice.setText("$" + String.format("%.2f", item.getPrice()));
-        //implement image setting
+        Glide.with(context).load(item.getImage()).into(holder.productImg);
     }
 
     @Override

@@ -31,3 +31,19 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Currently still no wifi but might have it tonight
+
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Organized list of remaining tasks for the project
+	- Discussed over whatsapp about distribution of remaining tasks
+	- Fixed minor issues
+	- Implemented cart counter
+	- Implemented cart remove button
+	- Implemented search bar on product view page
+
+What are you planning on doing today?
+	- Nothing, chilling and helping teammates if requested
+
+Any impediments or stumbling blocks?
+	- None
