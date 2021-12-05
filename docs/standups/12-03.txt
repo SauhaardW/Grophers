@@ -40,3 +40,14 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Having trouble figuring out how to fully display the modals
+
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Helped teammates
+
+What are you planning on doing today?
+	- Nothing, chilling and helping teammates if requested
+
+Any impediments or stumbling blocks?
+	- None

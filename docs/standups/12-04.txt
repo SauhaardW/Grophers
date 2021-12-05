@@ -28,3 +28,16 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Merged PRs
+
+What are you planning on doing today?
+	- Reviewing a ton of PRs and merging everything into main
+	- Smoke screen testing all features to ensure its stable
+	- Helping teammates finish implement their parts
+
+Any impediments or stumbling blocks?
+	- None
