@@ -19,6 +19,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -67,8 +68,6 @@ public class OwnerOrdersListViewAdapter extends RecyclerView.Adapter<OwnerOrders
         holder.orderTitle.setText(String.format("Order #%d", position));
         holder.orderSubtitle.setText(order.getCustomerName() + " • " + dateFormatted);
         holder.orderTotal.setText(String.format("$%.2f", total));
-
-        //implement image setting
 
         CardView card = (CardView) holder.itemView.findViewById(R.id.cardOwnerOrders);
         card.setOnClickListener(view -> {

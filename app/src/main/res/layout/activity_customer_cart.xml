@@ -24,7 +24,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageViewStoreCustomerProductsView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/cart_background" />
@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
-        android:text="Cart from Timmy’s Ol’ Reliable"
+        android:text="No Items Selected"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -110,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="35dp"
-        android:text="$76.65"
+        android:text="$0.00"
         android:textAlignment="textEnd"
         android:textColor="@color/OrderTotalGray"
         android:textSize="18sp"
@@ -147,7 +147,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="24dp"
-        android:text="$6.96"
+        android:text="$0.00"
         app:layout_constraintBottom_toTopOf="@+id/checkout_button"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -166,9 +166,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:text="$69.69"
+        android:text="$0.00"
         app:layout_constraintBottom_toTopOf="@+id/taxes_text"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/backButtonCustomerCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_go_back" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewCart"
