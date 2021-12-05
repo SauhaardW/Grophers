@@ -18,19 +18,17 @@
             android:layout_width="49dp"
             android:layout_height="59dp"
             android:layout_marginTop="9dp"
-            app:layout_constraintBottom_toTopOf="@+id/textViewCustomerViewStores"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/customer_grofers_logo" />
 
         <Button
             android:id="@+id/shoppingCartInvisibleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
             android:background="#00FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.827"
@@ -76,23 +74,25 @@
             android:id="@+id/textViewCustomerViewStores"
             android:layout_width="62dp"
             android:layout_height="24dp"
+            android:layout_marginTop="20dp"
             android:text="Stores"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/customerViewStoresList"
-            app:layout_constraintStart_toStartOf="@+id/customerViewStoresList" />
+            app:layout_constraintStart_toStartOf="@+id/customerViewStoresList"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewCustomerViewCustomerLogo" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/customerViewStoresList"
             android:layout_width="339dp"
-            android:layout_height="593dp"
+            android:layout_height="580dp"
+            android:layout_marginTop="10dp"
             android:background="@color/white"
             android:backgroundTint="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCustomerViewStores" />
 
         <ImageButton
             android:id="@+id/imageButtonHamburgerCustomerView"
