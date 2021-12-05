@@ -34,8 +34,6 @@ import java.util.ArrayList;
 
 public class EditProductModalDialog extends BottomSheetDialogFragment{
 
-//    DatabaseReference db;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
