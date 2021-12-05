@@ -12,7 +12,9 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,8 +22,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -94,6 +98,36 @@ public class CustomerViewActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(CustomerViewActivity.this, "Error while getting store data", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        TextView numProductsInCart = findViewById(R.id.numProductsInCart);
+
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        FirebaseDatabase.getInstance().getReference("users").child("customers").child(uid).child("cart").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    Integer count = 0;
+                    for (DataSnapshot snap : snapshot.getChildren()) {
+                        count += snap.getValue(CartItem.class).quantity;
+                    }
+                    numProductsInCart.setText(count.toString());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                numProductsInCart.setText("N/A");
+            }
+        });
+
+        Button cartButton = findViewById(R.id.shoppingCartInvisibleButton);
+        cartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CustomerViewActivity.this, CustomerCartActivity.class);
+                startActivity(intent);
             }
         });
     }
