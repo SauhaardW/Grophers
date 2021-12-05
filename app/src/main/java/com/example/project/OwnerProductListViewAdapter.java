@@ -2,6 +2,7 @@ package com.example.project;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -38,7 +41,8 @@ public class OwnerProductListViewAdapter extends RecyclerView.Adapter<OwnerProdu
         Product product = list.get(position);
         holder.productName.setText(product.getBrand() + " " + product.getName());
         holder.productPrice.setText("$" + String.format("%.2f", product.getPrice()));
-        //implement image setting
+        //come back to test
+        Glide.with(context).load(product.getImage()).into(holder.productImg);
 
         CardView card = (CardView) holder.itemView.findViewById(R.id.productCardOwner);
         card.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +58,21 @@ public class OwnerProductListViewAdapter extends RecyclerView.Adapter<OwnerProdu
                 bundle.putString("product_id", ((Integer)product.getId()).toString());
                 bundle.putString("store_id", storeId);
                 editProductModalDialog.setArguments(bundle);
+
+//                //
+//                View contentView = View.inflate(context, R.layout.edit_product_modal, null);
+//
+//                DisplayMetrics displayMetrics = editProductModalDialog.getActivity().getResources().getDisplayMetrics();
+//
+//                int width = displayMetrics.widthPixels;
+//                int height = displayMetrics.heightPixels;
+//
+//                int maxHeight = (int) (height*0.88);
+//
+//                BottomSheetBehavior mBehavior = BottomSheetBehavior.from((View) contentView.getParent());
+//                mBehavior.setPeekHeight(maxHeight);
+//                //
+
                 editProductModalDialog.show(((AppCompatActivity)context).getSupportFragmentManager(), "addProductModal");
             }
         });

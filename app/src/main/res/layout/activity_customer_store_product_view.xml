@@ -1,18 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/shoppingCartButton"
+    android:id="@+id/drawerLayoutCustomerStoreProductView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CustomerStoreProductViewActivity">
 
     <ImageView
-        android:id="@+id/cartImgView"
+        android:id="@+id/imageView2"
+        android:layout_width="71dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageViewStoreCustomerProductsView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/cart_background" />
+
+    <TextView
+        android:id="@+id/numProductsInCart2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="2dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="25dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/cart" />
+
+    <ImageView
+        android:id="@+id/imageViewCustomerStoreProductView"
         android:layout_width="49dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/storeNameDisplay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cartImgView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCustomerStoreProductView" />
 
     <TextView
         android:id="@+id/storeHoursDisplay"
@@ -43,7 +87,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cartImgView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCustomerStoreProductView" />
 
     <EditText
         android:id="@+id/editTextStoreProductSearch"
@@ -52,7 +96,7 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/searchstoreproducts"
         android:ems="10"
-        android:hint="Seach Timmy's Ol' Reliable"
+        android:hint="Search Timmy's Ol' Reliable"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:textColor="@color/lightGrayForText"
@@ -114,16 +158,6 @@
         app:layout_constraintTop_toBottomOf="@+id/storeHoursDisplay"
         app:srcCompat="@drawable/searchicon" />
 
-    <Button
-        android:id="@+id/shoppingCartInvisibleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -143,26 +177,11 @@
         android:id="@+id/numProductsInCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/shoppingCartInvisibleButton"
-        app:layout_constraintEnd_toEndOf="@+id/shoppingCartInvisibleButton"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="25dp"
-        android:layout_height="22dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.26"
-        app:layout_constraintLeft_toLeftOf="@+id/imageView4"
-        app:layout_constraintRight_toRightOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:srcCompat="@drawable/cart" />
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewCustomerStoreProductView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewCustomerStoreProductView"
+        app:srcCompat="@drawable/arrow_go_back" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewProductCustomer"

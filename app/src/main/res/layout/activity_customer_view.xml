@@ -3,16 +3,15 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawerLayout"
+    android:id="@+id/drawerLayoutCustomerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OwnerHomeActivity">
+    tools:context=".CustomerViewActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTintMode="add"
-        tools:context=".CustomerViewActivity">
+        android:backgroundTintMode="add">
 
         <ImageView
             android:id="@+id/imageViewCustomerViewCustomerLogo"
@@ -111,7 +110,7 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/navView"
+        android:id="@+id/navViewCustomerView"
         app:menu="@menu/nav_menu_customer"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"/>

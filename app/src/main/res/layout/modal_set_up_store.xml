@@ -13,12 +13,22 @@
         android:id="@+id/imageUrlTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="10dp"
-        android:text="Image Url *"
+        android:text="Image URL"
         app:layout_constraintBottom_toTopOf="@+id/imageUrlTextBox"
         app:layout_constraintEnd_toEndOf="@+id/imageUrlTextBox"
-        app:layout_constraintHorizontal_bias="0.006"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/ConfirmPasswordAstreix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="*"
+        android:textColor="@color/OwnerOrange"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageUrlTitle"
+        app:layout_constraintTop_toTopOf="@+id/imageUrlTitle" />
 
     <EditText
         android:id="@+id/imageUrlTextBox"
@@ -30,6 +40,7 @@
         android:ems="10"
         android:foregroundGravity="center_horizontal"
         android:inputType="textPersonName"
+        android:paddingStart="10dp"
         app:layout_constraintBottom_toTopOf="@+id/doneTextModal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

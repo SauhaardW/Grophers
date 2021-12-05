@@ -16,7 +16,6 @@ Any impediments or stumbling blocks?
 	- Time, had to complete some administrative
       tasks in regards to my Co-op Work Term.
 
-<<<<<<< HEAD
 Name: Nicole Droi
 
 What have you done since yesterday?
@@ -29,7 +28,6 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Linear layout of the xml causes the modal to look bunched up and it's not very pleasing. Need to fix that.
-=======
 Name: Andres Prada
 
 What have you done since yesterday?
@@ -47,4 +45,3 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
->>>>>>> 724316aaa78b5d544b68f46fab601a5a74c37177

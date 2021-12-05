@@ -1,20 +1,31 @@
 package com.example.project;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.Format;
@@ -58,15 +69,13 @@ public class OwnerOrdersListViewAdapter extends RecyclerView.Adapter<OwnerOrders
         holder.orderSubtitle.setText(order.getCustomerName() + " • " + dateFormatted);
         holder.orderTotal.setText(String.format("$%.2f", total));
 
-        //implement image setting
-
         CardView card = (CardView) holder.itemView.findViewById(R.id.cardOwnerOrders);
         card.setOnClickListener(view -> {
             BottomSheetDialog orderInfoModal = new BottomSheetDialog(context);
             LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View modalView = li.inflate(R.layout.order_info_modal, null);
 
-            createSpinner(modalView);
+            createSpinner(modalView, order.getStatus());
 
             orderInfoModal.setContentView(modalView);
 
@@ -85,15 +94,24 @@ public class OwnerOrdersListViewAdapter extends RecyclerView.Adapter<OwnerOrders
             modalAdapter.notifyDataSetChanged();
 
             orderInfoModal.show();
+            orderInfoModal.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialogInterface) {
+                    spinnerChoiceWrite(modalSpinner.getSelectedItem().toString(), order);
+                }//end on dismiss
+            });
         });
     }
 
-    public void createSpinner(View modalView){
+    public void createSpinner(View modalView, String curStatus){
         modalSpinner = (CustomSpinner) modalView.findViewById(R.id.spinnerChoicesOrderInfo);
         modalSpinner.setSpinnerEventsListener(this);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(context, android.R.layout.simple_spinner_item, context.getResources().getStringArray(R.array.orderInfoModalList));
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         modalSpinner.setAdapter(adapter);
+
+        int spinnerPosition = adapter.getPosition(curStatus);
+        modalSpinner.setSelection(spinnerPosition);
     }//end createSpinner
 
     @Override
@@ -105,6 +123,25 @@ public class OwnerOrdersListViewAdapter extends RecyclerView.Adapter<OwnerOrders
     public void onPopupWindowClosed(Spinner spinner) {
         modalSpinner.setBackground(context.getResources().getDrawable(R.drawable.spinnerchoicesdropdown));
     }//end onPopupWondowClosed
+    
+    public void spinnerChoiceWrite(String spinnerChoice, Order order){
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        FirebaseDatabase.getInstance().getReference("users").child("owners").child(uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if(task.isSuccessful()){
+                    Owner owner = task.getResult().getValue(Owner.class);
+                    Integer storeID = owner.getStoreId();
+                    String timeStamp = String.valueOf(order.getTimestamp());
+                    FirebaseDatabase.getInstance().getReference("stores").child(storeID.toString()).child("orders").child(timeStamp).child("status").setValue(spinnerChoice);
+                    FirebaseDatabase.getInstance().getReference("users").child("customers").child(order.getCustomerId()).child("orders").child(timeStamp).child("status").setValue(spinnerChoice);
+                    order.setStatus(spinnerChoice);
+                } else {
+                    Toast.makeText(context, "Error while getting user data", Toast.LENGTH_SHORT).show();
+                }//end else
+            }//end onComplete
+        });
+    }//end spinnerChoiceWrite
 
 
     @Override
