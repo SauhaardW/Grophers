@@ -90,7 +90,7 @@ public class CustomerCartActivity extends AppCompatActivity {
 
                 Double subtotal = 0.0;
                 Integer cartCount = 0;
-                for (DataSnapshot dataSnapshot : task.getResult().child("cart").getChildren()) {
+                for (DataSnapshot dataSnapshot : snapshot.child("cart").getChildren()) {
                     CartItem cartItem = dataSnapshot.getValue(CartItem.class);
                     subtotal += cartItem.getPrice()*cartItem.getQuantity();
                     cartCount += cartItem.getQuantity();
