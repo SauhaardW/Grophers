@@ -27,12 +27,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class EditProductModalDialog extends BottomSheetDialogFragment{
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.edit_product_modal, container, false);
-
-        
 
         ImageView productImg = v.findViewById(R.id.productImageModalDisplay3);
 
