@@ -13,6 +13,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -22,10 +28,12 @@ public class CustomerOrdersInfoListViewAdapter extends RecyclerView.Adapter<Cust
 
     Context context;
     ArrayList<CartItem> list;
+    Order curOrder;
 
-    public CustomerOrdersInfoListViewAdapter(Context context, ArrayList<CartItem> list) {
+    public CustomerOrdersInfoListViewAdapter(Context context, ArrayList<CartItem> list, Order curOrder) {
         this.context = context;
         this.list = list;
+        this.curOrder = curOrder;
     }
 
     @NonNull
@@ -43,7 +51,18 @@ public class CustomerOrdersInfoListViewAdapter extends RecyclerView.Adapter<Cust
         holder.productPrice.setText("$" + String.format("%.2f", product.getPrice()));
         holder.productQuantity.setText("x"+((Integer)product.getQuantity()).toString());
         holder.productTotal.setText("$" + String.format("%.2f", product.getPrice()*product.getQuantity()));
-        //implement image setting
+        //ONLY ONE NOT WORKING :/// FIX
+        FirebaseDatabase.getInstance().getReference("stores").child(curOrder.storeId).child("products").child(String.valueOf(product.id)).child("image").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String imgUrl = String.valueOf(snapshot.getValue());
+                Glide.with(context).load(imgUrl).into(holder.productImg);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
     }
 
 
