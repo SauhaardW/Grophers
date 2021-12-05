@@ -38,6 +38,15 @@ public class CustomerCartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_cart);
 
+        // Back Button handling
+        ImageView backButton = (ImageView) findViewById(R.id.backButtonCustomerCart);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         TextView textViewName = findViewById(R.id.store_cart_text);
         TextView textViewSubtotal = findViewById(R.id.order_subtotal_price);
         TextView textViewTotal = findViewById(R.id.order_total_price);

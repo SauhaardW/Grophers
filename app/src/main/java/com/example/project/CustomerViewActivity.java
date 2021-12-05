@@ -38,7 +38,7 @@ public class CustomerViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_customer_view);
 
         // hamburger menu code
-        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayoutCustomerView);
         ImageButton hamburgerButton = (ImageButton) findViewById(R.id.imageButtonHamburgerCustomerView);
         hamburgerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +51,7 @@ public class CustomerViewActivity extends AppCompatActivity {
             }
         });
 
-        NavigationView navView = findViewById(R.id.navView);
+        NavigationView navView = findViewById(R.id.navViewCustomerView);
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
