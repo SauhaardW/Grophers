@@ -94,7 +94,7 @@ public class CustomerStoreProductViewActivity extends AppCompatActivity {
         TextView storeName = findViewById(R.id.storeNameDisplay);
         TextView storeHours = findViewById(R.id.storeHoursDisplay);
         EditText searchBar = findViewById(R.id.editTextStoreProductSearch);
-        ImageView storeProfilePic = findViewById(R.id.imageViewStoreCustomerProductsView);
+        ImageView storeProfilePic = findViewById(R.id.imageViewCustomerStoreProductView);
 
         storeName.setText(store_name);
         storeHours.setText("Open: " + store_hours);
