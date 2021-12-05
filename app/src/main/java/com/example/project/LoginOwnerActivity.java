@@ -37,7 +37,7 @@ public class LoginOwnerActivity extends AppCompatActivity implements Contract.Vi
 
         progressBar = (ProgressBar) findViewById(R.id.progressBarOwnerLogin);
 
-        presenter = new OwnerPresenter(this, new LoginModel());
+        presenter = new OwnerPresenter(this, new LoginModel("", ""));
 
         ImageView backButton = (ImageView) findViewById(R.id.backButtonTopBarOwner);
         backButton.setOnClickListener(new View.OnClickListener() {

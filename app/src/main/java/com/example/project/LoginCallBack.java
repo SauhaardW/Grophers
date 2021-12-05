@@ -1,5 +1,5 @@
 package com.example.project;
 
-public interface LoginCallBack {
-    void loginSuccess(boolean success);
+public interface LoginCallBack<T> {
+    void loginSuccess(T success);
 }

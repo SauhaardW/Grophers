@@ -18,6 +18,8 @@ public interface Contract {
     }
 
     public interface Model {
-        void isLoginSuccessful(LoginCallBack loginCallBack, String email, String password);
+        void isLoginSuccessful(LoginCallBack loginCallBack);
+        void setEmail(String email);
+        void setPassword(String password);
     }
 }

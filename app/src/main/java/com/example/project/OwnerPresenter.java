@@ -26,9 +26,12 @@ public class OwnerPresenter implements Contract.Presenter {
     public void submitButtonClicked(String email, String password) {
         view.showProgressBar();
 
-        model.isLoginSuccessful(new LoginCallBack() {
+        model.setEmail(email);
+        model.setPassword(password);
+
+        model.isLoginSuccessful(new LoginCallBack<Boolean>() {
             @Override
-            public void loginSuccess(boolean success) {
+            public void loginSuccess(Boolean success) {
                 // to do: make logic for opening ownerProducts/newStore
                 if (success) {
                     view.loginSuccessfulToast();
@@ -38,6 +41,6 @@ public class OwnerPresenter implements Contract.Presenter {
                 }
                 view.hideProgressBar();
             }
-        }, email, password);
+        });
     }
 }

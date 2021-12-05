@@ -30,7 +30,7 @@ public class LoginCustomerActivity extends AppCompatActivity implements Contract
 
         progressBar = (ProgressBar) findViewById(R.id.progressBarCustomerLogin);
 
-        presenter = new CustomerPresenter(this, new LoginModel());
+        presenter = new CustomerPresenter(this, new LoginModel("", ""));
 
         ImageView backButton = (ImageView) findViewById(R.id.backButtonTopBarCustomer);
         backButton.setOnClickListener(new View.OnClickListener() {

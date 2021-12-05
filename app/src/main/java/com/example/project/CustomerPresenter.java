@@ -26,9 +26,12 @@ public class CustomerPresenter implements Contract.Presenter {
     public void submitButtonClicked(String email, String password) {
         view.showProgressBar();
 
-        model.isLoginSuccessful(new LoginCallBack() {
+        model.setEmail(email);
+        model.setPassword(password);
+
+        model.isLoginSuccessful(new LoginCallBack<Boolean>() {
             @Override
-            public void loginSuccess(boolean success) {
+            public void loginSuccess(Boolean success) {
                 if (success) {
                     view.loginSuccessfulToast();
                     ((LoginCustomerActivity) view).startActivity(new Intent(((LoginCustomerActivity) view), CustomerViewActivity.class));
@@ -37,6 +40,6 @@ public class CustomerPresenter implements Contract.Presenter {
                 }
                 view.hideProgressBar();
             }
-        }, email, password);
+        });
     }
 }
