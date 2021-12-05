@@ -46,13 +46,24 @@
         android:id="@+id/StoreName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Store name*"
+        android:text="Store Name"
         app:layout_constraintBottom_toTopOf="@+id/storeNameTextBox"
         app:layout_constraintEnd_toEndOf="@+id/storeNameTextBox"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/storeNameTextBox"
         app:layout_constraintTop_toBottomOf="@+id/addProfilePhoto"
         app:layout_constraintVertical_bias="0.89" />
+
+    <TextView
+        android:id="@+id/StoreNameAstreix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="*"
+        android:textColor="@color/OwnerOrange"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/OpenHours"
+        app:layout_constraintTop_toTopOf="@+id/OpenHours" />
 
     <EditText
         android:id="@+id/openHoursTextBox"
@@ -78,13 +89,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="50dp"
-        android:text="Open Hours*"
+        android:text="Open Hours"
         app:layout_constraintBottom_toTopOf="@+id/openHoursTextBox"
         app:layout_constraintEnd_toEndOf="@+id/openHoursTextBox"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/StoreName"
         app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/OpenHoursAstreix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="*"
+        android:textColor="@color/OwnerOrange"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/StoreName"
+        app:layout_constraintTop_toTopOf="@+id/StoreName" />
 
     <ImageView
         android:id="@+id/profileImg"
