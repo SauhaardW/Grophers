@@ -58,11 +58,12 @@ public class CustomerOrdersListViewAdapter extends RecyclerView.Adapter<Customer
         holder.storeName.setText(order.getStoreName());
         holder.orderSubtitle.setText(dateFormatted + " • " + String.format("$%.2f", total));
         holder.orderStatus.setText(order.getStatus());
-        switch (order.getStatus()) {
-            case "Processing": holder.orderStatus.setBackgroundTintList(context.getResources().getColorStateList(R.color.ProcessingGray));
-            case "Canceled": holder.orderStatus.setBackgroundTintList(context.getResources().getColorStateList(R.color.CanceledGray));
-            case "Complete": holder.orderStatus.setBackgroundTintList(context.getResources().getColorStateList(R.color.CustomerGreen));
-            default: holder.orderStatus.setBackgroundTintList(context.getResources().getColorStateList(R.color.CanceledGray));
+        if (order.getStatus().equals("PROCESSING")) {
+            holder.orderStatus.setBackgroundTintList(context.getResources().getColorStateList(R.color.ProcessingGray));
+        } else if (order.getStatus().equals("CANCELED")) {
+            holder.orderStatus.setBackgroundTintList(context.getResources().getColorStateList(R.color.black));
+        } else if (order.getStatus().equals("COMPLETED")) {
+            holder.orderStatus.setBackgroundTintList(context.getResources().getColorStateList(R.color.CustomerGreen));
         }
 
         FirebaseDatabase.getInstance().getReference("stores").child(order.storeId).child("image").addValueEventListener(new ValueEventListener() {
