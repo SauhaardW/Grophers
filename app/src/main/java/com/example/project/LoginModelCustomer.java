@@ -24,22 +24,26 @@ public class LoginModelCustomer implements Contract.ModelCustomer {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                FirebaseDatabase.getInstance().getReference("users").child("customers").child(uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DataSnapshot> task) {
-                        if (task.isSuccessful()) {
-                            if (task.getResult().exists()) {
-                                loginCallBackCustomer.loginValid();
-                            } else {
-                                loginCallBackCustomer.loginInvalid();
-                            }
+                if (task.isSuccessful()) {
+                    String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                    FirebaseDatabase.getInstance().getReference("users").child("customers").child(uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DataSnapshot> task) {
+                            if (task.isSuccessful()) {
+                                if (task.getResult().exists()) {
+                                    loginCallBackCustomer.loginValid();
+                                } else {
+                                    loginCallBackCustomer.loginInvalid();
+                                }
 
-                        } else {
-                            loginCallBackCustomer.loginDataFailed();
+                            } else {
+                                loginCallBackCustomer.loginDataFailed();
+                            }
                         }
-                    }
-                });
+                    });
+                } else {
+                    loginCallBackCustomer.loginInvalid();
+                }
             }
         });
     }
