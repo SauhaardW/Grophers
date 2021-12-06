@@ -41,10 +41,13 @@ Any impediments or stumbling blocks?
 Name: Sauhaard Walia
 
 What have you done since yesterday?
-	- 
+	- From the beginning started working on the implementation and created the code for enabling the edit product modal to function as desired and also designed in a manner that makes the UI look really good.
+	- Create the code for allowing owners to be able to add products and making sure the backend functionality of that works as desired.
 
 What are you planning on doing today?
-   	- 
+   	- Work on figuring out how it would be possible to add images to any product the owner wishes to create the product
+	- Find out how it can be possible to receive the above information from the owner and then fetch that information and place it into the data backend 
+	- Ensure that the information fetched by the owner for any of the products they create is accurate and well tested.
 
 Any impediments or stumbling blocks?
 	- 
