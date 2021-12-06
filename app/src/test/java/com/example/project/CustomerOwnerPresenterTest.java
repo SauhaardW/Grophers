@@ -17,14 +17,8 @@ import static org.mockito.AdditionalAnswers.returnsFirstArg;
 
 import android.util.Log;
 
-
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
 @RunWith(MockitoJUnitRunner.class)
-public class ExampleUnitTest {
+public class CustomerOwnerPresenterTest {
     private CustomerPresenter customerPresenter;
     private OwnerPresenter ownerPresenter;
 
@@ -48,17 +42,26 @@ public class ExampleUnitTest {
     }
 
     @Test
-    public void testPresenterSubmitButtonCallToModel() {
-        when(customerView.getEmail()).thenReturn("testing2@gmail.com");
-        when(customerView.getPassword()).thenReturn("testing");
+    public void testCustomerPresenterSubmitButtonCallToModel() {
+        String email = "testing2@gmail.com";
+        String password = "testing";
 
-        when(ownerView.getEmail()).thenReturn("aryan@gmail.com");
-        when(ownerView.getPassword()).thenReturn("testing");
-
-        customerPresenter.submitButtonClicked(customerView.getEmail(), customerView.getPassword());
+        customerPresenter.submitButtonClicked(email, password);
         verify(customerView).showProgressBar();
-        verify(model).setEmail(customerView.getEmail());
-        verify(model).setPassword(customerView.getPassword());
+        verify(model).setEmail(email);
+        verify(model).setPassword(password);
+        verify(model).isLoginSuccessful(any(LoginCallBack.class));
+    }
+
+    @Test
+    public void testOwnerPresenterSubmitButtonCallToModel() {
+        String email = "aryan@gmail.com";
+        String password = "testing";
+
+        ownerPresenter.submitButtonClicked(email, password);
+        verify(ownerView).showProgressBar();
+        verify(model).setEmail(email);
+        verify(model).setPassword(password);
         verify(model).isLoginSuccessful(any(LoginCallBack.class));
     }
 }
