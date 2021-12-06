@@ -2,6 +2,7 @@
 package com.example.project;
 
 import android.content.Intent;
+import android.util.Log;
 
 public class CustomerPresenter implements Contract.Presenter {
     private Contract.Model model;
@@ -31,13 +32,27 @@ public class CustomerPresenter implements Contract.Presenter {
 
         model.isLoginSuccessful(new LoginCallBack() {
             @Override
-            public void loginSuccess(Boolean success) {
-                if (success) {
-                    view.loginSuccessfulToast();
-                    ((LoginCustomerActivity) view).startActivity(new Intent(((LoginCustomerActivity) view), CustomerViewActivity.class));
-                } else {
-                    view.loginFailedToast();
-                }
+            public void loginValidStoreCreation() {
+                // Do nothing, we don't reach this case as customers
+                return;
+            }
+
+            @Override
+            public void loginValid() {
+                view.loginSuccessfulToast();
+                view.hideProgressBar();
+                ((LoginCustomerActivity) view).startActivity(new Intent(((LoginCustomerActivity) view), CustomerViewActivity.class));
+            }
+
+            @Override
+            public void loginInvalid() {
+                view.loginFailedToast();
+                view.hideProgressBar();
+            }
+
+            @Override
+            public void loginValidationFailed() {
+                view.loginUserDataFailedToast();
                 view.hideProgressBar();
             }
         });

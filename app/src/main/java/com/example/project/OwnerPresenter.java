@@ -31,14 +31,28 @@ public class OwnerPresenter implements Contract.Presenter {
 
         model.isLoginSuccessful(new LoginCallBack() {
             @Override
-            public void loginSuccess(Boolean success) {
-                // to do: make logic for opening ownerProducts/newStore
-                if (success) {
-                    view.loginSuccessfulToast();
-                    ((LoginOwnerActivity) view).startActivity(new Intent(((LoginOwnerActivity) view), OwnerProductListActivity.class));
-                } else {
-                    view.loginFailedToast();
-                }
+            public void loginValidStoreCreation() {
+                view.loginSuccessfulToast();
+                view.hideProgressBar();
+                ((LoginOwnerActivity) view).startActivity(new Intent(((LoginOwnerActivity) view),  SetUpStoreActivity.class));
+            }
+
+            @Override
+            public void loginValid() {
+                view.loginSuccessfulToast();
+                view.hideProgressBar();
+                ((LoginOwnerActivity) view).startActivity(new Intent(((LoginOwnerActivity) view), OwnerProductListActivity.class));
+            }
+
+            @Override
+            public void loginInvalid() {
+                view.loginFailedToast();
+                view.hideProgressBar();
+            }
+
+            @Override
+            public void loginValidationFailed() {
+                view.loginUserDataFailedToast();
                 view.hideProgressBar();
             }
         });

@@ -7,6 +7,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginModel implements Contract.Model {
     String email;
@@ -22,7 +24,33 @@ public class LoginModel implements Contract.Model {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                loginCallBack.loginSuccess(task.isSuccessful());
+                if (task.isSuccessful()){
+                    String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                    FirebaseDatabase.getInstance().getReference("users").child("owners").child(uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DataSnapshot> task) {
+                            if (task.isSuccessful()) {
+                                if (task.getResult().exists()) {
+                                    // User is an owner
+                                    if (task.getResult().getValue(Owner.class).getStoreId() == 0) {
+                                        loginCallBack.loginValidStoreCreation();
+                                    } else {
+                                        loginCallBack.loginValid();
+                                    }
+                                } else {
+                                    // User is a customer
+                                    loginCallBack.loginValid();
+                                }
+
+                            } else {
+                                loginCallBack.loginValidationFailed();
+                            }
+                        }
+                    });
+                } else {
+                    loginCallBack.loginInvalid();
+                }
+
             }
         });
     }

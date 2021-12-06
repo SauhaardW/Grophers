@@ -1,5 +1,8 @@
 package com.example.project;
 
 public interface LoginCallBack {
-    void loginSuccess(Boolean success);
+    void loginValidStoreCreation();
+    void loginValid();
+    void loginInvalid();
+    void loginValidationFailed();
 }
