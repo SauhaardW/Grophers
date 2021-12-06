@@ -49,26 +49,33 @@
                     android:text="Natrel Milk"
                     android:textColor="@color/black" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:orientation="horizontal">
                 <TextView
                     android:id="@+id/numProductText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="190dp"
-                    android:text="x1"
-                    android:textColor="@color/black" />
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="28dp"
+                    android:text="1x"
+                    android:textColor="@color/lightGrayForText" />
+                <TextView
+                    android:id="@+id/textViewProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="28dp"
+                    android:text="$2.97"
+                    android:textColor="@color/lightGrayForText" />
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textViewProductPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:text="$2.97"
-                android:textColor="@color/lightGrayForText" />
-
         </LinearLayout>
-
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
