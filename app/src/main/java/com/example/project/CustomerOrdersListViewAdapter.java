@@ -52,7 +52,7 @@ public class CustomerOrdersListViewAdapter extends RecyclerView.Adapter<Customer
 
         double total = 0.0;
         for (CartItem item : order.getCart()) {
-            total += item.getPrice()*item.getQuantity();
+            total += item.getPrice()*item.getQuantity()*1.13;
         }
 
         holder.storeName.setText(order.getStoreName());
