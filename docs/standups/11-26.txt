@@ -1,3 +1,17 @@
+Name: Sauhaard Walia
+
+What have you done since yesterday?
+	- Finding that the color of the register button never matched the color it showed to have in its display mode I went and found a new attribute that helped it be the color we desired
+	- Subsequently made similar changes to all of the other files I was working on as I found there to be similar errors made on those pages.
+
+What are you planning on doing today?
+	- I might not be able to work sufficiently on any files today as I have my CSCB36 test today so I would need to dedicate the majority of my time to that.
+
+Any impediments or stumbling blocks?
+	- Time as I had to dedicate today to studying for and sitting the CSCB36 test that I had today to do well on it.
+
+
+
 Name: Nicole Droi
 
 What have you done since yesterday?
