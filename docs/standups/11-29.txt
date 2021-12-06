@@ -33,3 +33,16 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- A feeling of illness (sore throat, small headache and runny nose)
+
+Name: Sauhaard Walia
+
+What have you done since yesterday?
+	- Scanned through our Firebase database and checked all the fields we have for all of our different pages and then altered a few to meet the requirements
+	- created the recycler view on the owner product list page and also created its respective card to increase its functionality while making its appearance still be nice
+
+What are you planning on doing today?
+   	- Create and implement back end code for the functionality of the edit product modal that we will require
+	- Complete the backend code for the dialogue we have created in order to be able to add products as an owner
+
+Any impediments or stumbling blocks?
+	- Got stuck in finding out how exactly a recycler view functions and how to properly be able to set it up for it to be able to fetch the data from the database however after a few tutorials this was made very apparent to me
