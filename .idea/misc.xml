@@ -42,11 +42,11 @@
         <entry key="app/src/main/res/drawable/hamburger_vector.xml" value="0.26564102564102565" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.21510416666666668" />
         <entry key="app/src/main/res/layout/activity_add_product.xml" value="0.37604166666666666" />
-        <entry key="app/src/main/res/layout/activity_customer_cart.xml" value="0.24722222222222223" />
+        <entry key="app/src/main/res/layout/activity_customer_cart.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_customer_cart_temp.xml" value="0.24722222222222223" />
         <entry key="app/src/main/res/layout/activity_customer_home.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/activity_customer_store_product_view.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_customer_view.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_customer_view.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login_customer.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_login_owner.xml" value="0.2328125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
