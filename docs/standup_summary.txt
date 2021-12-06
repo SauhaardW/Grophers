@@ -1,0 +1,35 @@
+Andres Prada
+Things I worked on:
+	- Created GitHub, folder structure, agreement, etc.
+    	- Created Firebase project & set up firebase SDK on project from the project
+	- Largely contributed to design of UI on Figma, including creation of Customer & Owner Hamburger Modals, Past Customer order modals, Past order details modals, customer view, store view, item view modal, cart, success, and more
+	- Implemented customer login backend & customer registration backend
+	- Implemented owner login backend & owner registration backend
+	- Created classes for Product, User, Customer, CartItem
+	- Implemented and designed hamburgermenu for customer and owner
+	- Implemented Store Profile Setup backend
+	- Implemented Product Creation backend
+	- Implemented dynamic store loading into recyclerview from firebase
+	- Implemented dynamic product loading into recyclerview from firebase
+	- Implemented store selection
+	- Implemented backend for modals item view modal
+   	- Implemented cart display
+	- Implemented order placing
+	- Implemented cart product addition
+	- Implemented signout
+   	- Implemented past orders for owners
+	- Made include-able topbar to encourage code reuse
+	- Worked on base for past orders for customers, left it for someone else to complete once UI is made
+	- Tested everything before Demo 1
+	- Last minute bug fixes before Demo 1
+	- Organized list of remaining tasks for the project
+	- Implemented cart counter
+	- Implemented cart remove button
+	- Implemented search bar on product view page
+	- Smoke screen tested all features to ensure its stable before Demo 2
+	- Worked on complete rewrite of MVP
+	- Wrote most of testing for the Login MVP
+	- Smoke tested all features to ensure its stable before submission day
+	- Lots of minor bugfixes, UI and code wise before submission day
+	- Implemented lots of input validation that was missing
+	- Code reviewed ALL PRs, approved and handled merge conflicts
