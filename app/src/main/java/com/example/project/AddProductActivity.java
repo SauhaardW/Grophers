@@ -82,7 +82,13 @@ public class AddProductActivity extends AppCompatActivity{
 
         String name = editTextName.getText().toString().trim();
         String brand = editTextBrand.getText().toString().trim();
-        double price = Double.parseDouble(editTextPrice.getText().toString().trim());
+        try {
+            double price = Double.parseDouble(editTextPrice.getText().toString().trim());
+        } catch (NumberFormatException ex) {
+            editTextPrice.setError("The price has to be a number");
+            editTextPrice.requestFocus();
+            return;
+        }
 
         String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         FirebaseDatabase.getInstance().getReference("users").child("owners").child(uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
