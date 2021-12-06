@@ -4,8 +4,8 @@ package com.example.project;
 import android.content.Intent;
 
 public class OwnerPresenter implements Contract.Presenter {
-    private Contract.Model model;
-    private Contract.View view;
+    Contract.Model model;
+    Contract.View view;
 
     public OwnerPresenter(Contract.View view, Contract.Model model){
         this.model = model;

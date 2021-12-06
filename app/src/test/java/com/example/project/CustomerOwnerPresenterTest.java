@@ -175,7 +175,7 @@ public class CustomerOwnerPresenterTest {
     }
 
     @Test
-    public void testCustomerPresenterSubmitButtonClickedLoginValidationFailed() {
+    public void testCustomerPresenterSubmitButtonClickedLoginDataFailed() {
         String email = "d";
         String password = "d";
 
@@ -204,6 +204,83 @@ public class CustomerOwnerPresenterTest {
     }
 
     /*** All OwnerPresenter Test Cases ***/
+
+    // Constructor test(s)
+    @Test
+    public void testOwnerPresenterConstructor() {
+        assertEquals(ownerPresenter.view, ownerView);
+        assertEquals(ownerPresenter.model, model);
+    }
+
+
+    // backButtonClicked method test(s)
+    @Test
+    public void testOwnerPresenterBackButtonClicked() {
+        ownerPresenter.backButtonClicked();
+        verify((LoginOwnerActivity) ownerView).finish();
+    }
+
+    // registerButtonClicked method test(s)
+    @Test
+    public void testOwnerPresenterRegisterButtonClicked() {
+        ownerPresenter.registerButtonClicked();
+        verify((LoginOwnerActivity) ownerView).startActivity(any(Intent.class));
+        /*
+
+        //Intent intent = mock(Intent.class);
+        //intent.setClass((LoginCustomerActivity) customerView, RegisterCustomerActivity.class);
+        //verify((LoginCustomerActivity) customerView).startActivity(any(Intent.class));
+
+        //Context mockContext = mock(Context.class);
+        ArgumentCaptor<Intent> intentCaptor = ArgumentCaptor.forClass(Intent.class);
+        verify((LoginCustomerActivity) customerView).startActivity(intentCaptor.capture());
+        Intent intent = intentCaptor.getValue();
+        assertNotNull(intent);
+
+        // intent.setClass actually creates a Component object in the intent, so here I'm
+        // making sure that it's the same class
+        assertNotNull(intent.getComponent());
+        ComponentName component = intent.getComponent();
+        //System.out.println();
+        assertEquals(component.getClassName(), RegisterCustomerActivity.class.getSimpleName());
+        //assertThat(component.className).isEqualTo("com.mbcdev.folkets.WordActivity");
+
+         */
+    }
+
+    // submitButtonClicked method test(s)
+    @Test
+    public void testOwnerPresenterSubmitButtonClickedEmptyEmailAndPassword() {
+        String email = "";
+        String password = "";
+
+        ownerPresenter.submitButtonClicked(email, password);
+        verify(ownerView).showProgressBar();
+        verify(ownerView).setEmailEmptyError();
+        verify(ownerView).hideProgressBar();
+    }
+
+    @Test
+    public void testOwnerPresenterSubmitButtonClickedEmptyEmail() {
+        String email = "";
+        String password = "testing";
+
+        ownerPresenter.submitButtonClicked(email, password);
+        verify(ownerView).showProgressBar();
+        verify(ownerView).setEmailEmptyError();
+        verify(ownerView).hideProgressBar();
+    }
+
+    @Test
+    public void testOwnerPresenterSubmitButtonClickedEmptyPassword() {
+        String email = "testing2@gmail.com";
+        String password = "";
+
+        ownerPresenter.submitButtonClicked(email, password);
+        verify(ownerView).showProgressBar();
+        verify(ownerView).setPasswordEmptyError();
+        verify(ownerView).hideProgressBar();
+    }
 
     @Test
     public void testOwnerPresenterSubmitButtonCallToModel() {
