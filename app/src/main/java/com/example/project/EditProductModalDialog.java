@@ -51,7 +51,6 @@ public class EditProductModalDialog extends BottomSheetDialogFragment{
         ImageView productPic = v.findViewById(R.id.productImageModalDisplay3);
         Glide.with(getContext()).load(bundleImg).into(productPic);
 
-
         EditText productName = v.findViewById(R.id.productNameInput);
         EditText productBrand = v.findViewById(R.id.productBrandInput);
         EditText productPrice = v.findViewById(R.id.productPriceInput);
@@ -94,6 +93,28 @@ public class EditProductModalDialog extends BottomSheetDialogFragment{
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (productName.getText().toString().isEmpty()) {
+                    productName.setError("The product name cannot be empty");
+                    productName.requestFocus();
+                    return;
+                } else if (productBrand.getText().toString().isEmpty()) {
+                    productBrand.setError("The brand cannot be empty");
+                    productBrand.requestFocus();
+                    return;
+                } else if (productPrice.getText().toString().isEmpty()) {
+                    productPrice.setError("The price cannot be empty");
+                    productPrice.requestFocus();
+                    return;
+                }
+
+                try {
+                    Double.parseDouble(productPrice.getText().toString().trim());
+                } catch (NumberFormatException ex) {
+                    productPrice.setError("The price has to be a number");
+                    productPrice.requestFocus();
+                    return;
+                }
+
                 FirebaseDatabase.getInstance().getReference("stores").child(storeId).child("products").child(productId).child("name").setValue(productName.getText().toString().trim());
                 FirebaseDatabase.getInstance().getReference("stores").child(storeId).child("products").child(productId).child("brand").setValue(productBrand.getText().toString().trim());
                 FirebaseDatabase.getInstance().getReference("stores").child(storeId).child("products").child(productId).child("price").setValue(Double.parseDouble(productPrice.getText().toString().trim()));
