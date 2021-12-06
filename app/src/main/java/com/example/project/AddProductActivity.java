@@ -82,8 +82,9 @@ public class AddProductActivity extends AppCompatActivity{
 
         String name = editTextName.getText().toString().trim();
         String brand = editTextBrand.getText().toString().trim();
+        double price;
         try {
-            double price = Double.parseDouble(editTextPrice.getText().toString().trim());
+             price = Double.parseDouble(editTextPrice.getText().toString().trim());
         } catch (NumberFormatException ex) {
             editTextPrice.setError("The price has to be a number");
             editTextPrice.requestFocus();
