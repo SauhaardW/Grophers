@@ -41,7 +41,6 @@ public class OwnerProductListViewAdapter extends RecyclerView.Adapter<OwnerProdu
         Product product = list.get(position);
         holder.productName.setText(product.getBrand() + " " + product.getName());
         holder.productPrice.setText("$" + String.format("%.2f", product.getPrice()));
-        //come back to test
         Glide.with(context).load(product.getImage()).into(holder.productImg);
 
         CardView card = (CardView) holder.itemView.findViewById(R.id.productCardOwner);
@@ -58,20 +57,6 @@ public class OwnerProductListViewAdapter extends RecyclerView.Adapter<OwnerProdu
                 bundle.putString("product_id", ((Integer)product.getId()).toString());
                 bundle.putString("store_id", storeId);
                 editProductModalDialog.setArguments(bundle);
-
-//                //
-//                View contentView = View.inflate(context, R.layout.edit_product_modal, null);
-//
-//                DisplayMetrics displayMetrics = editProductModalDialog.getActivity().getResources().getDisplayMetrics();
-//
-//                int width = displayMetrics.widthPixels;
-//                int height = displayMetrics.heightPixels;
-//
-//                int maxHeight = (int) (height*0.88);
-//
-//                BottomSheetBehavior mBehavior = BottomSheetBehavior.from((View) contentView.getParent());
-//                mBehavior.setPeekHeight(maxHeight);
-//                //
 
                 editProductModalDialog.show(((AppCompatActivity)context).getSupportFragmentManager(), "addProductModal");
             }
