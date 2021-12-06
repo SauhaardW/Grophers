@@ -33,6 +33,19 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- MATB41 Assignment
 
+Name: Sauhaard Walia
+
+What have you done since yesterday?
+   	- assorted the pages on our figma website to be able to see clearly which pages are implemented and which ones are not yet in implemented
+	- met with our team regarding what tasks we each have to take for our project going forward to make sure we complete it on time
+
+What are you planning on doing today?
+   	- Make a few edits on the Firebase to make sure the formatting of each of our fields and subfields is correct
+	- Add recycler view on the owner product list page and make the card for its functionality and make its appearance properly too
+
+Any impediments or stumbling blocks?
+	- Struggled to be able to identify the areas I can be most helpful to the team for in the project however was able to overcome this pretty quickly and find a good balance with my team on what we each are the most strong at.
+
 Name: Nicole Droi
 
 What have you done since yesterday?
