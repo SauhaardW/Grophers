@@ -75,8 +75,8 @@ public class AddProductActivity extends AppCompatActivity{
             editTextBrand.requestFocus();
             return;
         } else if (editTextPrice.getText().toString().isEmpty()) {
-            editTextBrand.setError("The price cannot be 0");
-            editTextBrand.requestFocus();
+            editTextPrice.setError("The price cannot be 0");
+            editTextPrice.requestFocus();
             return;
         }
 
