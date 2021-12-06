@@ -61,10 +61,10 @@ public class RegisterCustomerActivity extends AppCompatActivity {
 
     private void registerCustomer() {
         // Declare views by ID
-        EditText editTextUsername = (EditText)findViewById(R.id.editTextUsername);
-        EditText editTextEmail = (EditText)findViewById(R.id.editTextEmail);
-        EditText editTextPassword = (EditText)findViewById(R.id.editTextPassword);
-        EditText editTextConfirmPassword = (EditText)findViewById(R.id.editTextConfirmPassword);
+        EditText editTextUsername = (EditText) findViewById(R.id.editTextUsername);
+        EditText editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        EditText editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        EditText editTextConfirmPassword = (EditText) findViewById(R.id.editTextConfirmPassword);
 
         // Grab text from views
         String username = editTextUsername.getText().toString().trim();
@@ -76,6 +76,10 @@ public class RegisterCustomerActivity extends AppCompatActivity {
         if (!password.equals(passwordConfirmation)) {
             editTextConfirmPassword.setError("The passwords do not match.");
             editTextConfirmPassword.requestFocus();
+            return;
+        } else if (password.length() < 6) {
+            editTextPassword.setError("The password must be at least 6 characters long.");
+            editTextPassword.requestFocus();
             return;
         // Validate username
         } else if (username.isEmpty()) {

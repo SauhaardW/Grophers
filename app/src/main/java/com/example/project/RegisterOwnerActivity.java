@@ -77,6 +77,10 @@ public class RegisterOwnerActivity extends AppCompatActivity {
             editTextConfirmPassword.setError("The passwords do not match.");
             editTextConfirmPassword.requestFocus();
             return;
+        } else if (password.length() < 6) {
+            editTextPassword.setError("The password must be at least 6 characters long.");
+            editTextPassword.requestFocus();
+            return;
             // Validate username
         } else if (username.isEmpty()) {
             editTextUsername.setError("The username field is empty.");

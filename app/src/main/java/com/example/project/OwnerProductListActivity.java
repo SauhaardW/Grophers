@@ -107,10 +107,6 @@ public class OwnerProductListActivity extends AppCompatActivity {
                         }
                     });
 
-
-
-
-
                     db.child(store_id.toString()).child("products").addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
