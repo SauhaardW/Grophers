@@ -1,0 +1,13 @@
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Reviewed a ton of PRs and merged everything into main
+	- Smoke screen tested all features to ensure its stable
+	- Helped teammates finish implement their parts
+
+What are you planning on doing today?
+	- Help Alejandro with testing
+	- Help work on MVP to make things work better
+
+Any impediments or stumbling blocks?
+	- None
