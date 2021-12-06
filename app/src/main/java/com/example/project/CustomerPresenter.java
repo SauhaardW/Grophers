@@ -29,7 +29,7 @@ public class CustomerPresenter implements Contract.Presenter {
         model.setEmail(email);
         model.setPassword(password);
 
-        model.isLoginSuccessful(new LoginCallBack<Boolean>() {
+        model.isLoginSuccessful(new LoginCallBack() {
             @Override
             public void loginSuccess(Boolean success) {
                 if (success) {

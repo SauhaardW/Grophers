@@ -7,11 +7,15 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.invocation.InvocationOnMock;
 import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.stubbing.Answer;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 import static org.mockito.AdditionalAnswers.returnsFirstArg;
+
+import android.util.Log;
 
 
 /**
@@ -34,7 +38,7 @@ public class ExampleUnitTest {
     LoginModel model;
 
     @Captor
-    private ArgumentCaptor<LoginCallBack<Boolean>> callbackCaptor;
+    private ArgumentCaptor<LoginCallBack> callbackCaptor;
 
     @Before
     public void setUp() {
@@ -44,19 +48,15 @@ public class ExampleUnitTest {
     }
 
     @Test
-    public void testPresenter1() {
+    public void testPresenterSubmitButtonCallToModel() {
         when(customerView.getEmail()).thenReturn("testing2@gmail.com");
         when(customerView.getPassword()).thenReturn("testing");
 
         when(ownerView.getEmail()).thenReturn("aryan@gmail.com");
         when(ownerView.getPassword()).thenReturn("testing");
 
-        customerPresenter.submitButtonClicked(customerView.getEmail(), customerView.getPassword());
-
-        verify(model).isLoginSuccessful(callbackCaptor.capture());
-
-        doAnswer(returnsFirstArg()).when(callbackCaptor.getValue()).loginSuccess(true);
-
-        verify(customerView).loginSuccessfulToast();
+        verify(customerView).showProgressBar();
+        verify(model).setEmail(customerView.getEmail());
+        verify(model).setPassword(customerView.getPassword());
     }
 }

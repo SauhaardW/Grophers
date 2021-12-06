@@ -29,7 +29,7 @@ public class OwnerPresenter implements Contract.Presenter {
         model.setEmail(email);
         model.setPassword(password);
 
-        model.isLoginSuccessful(new LoginCallBack<Boolean>() {
+        model.isLoginSuccessful(new LoginCallBack() {
             @Override
             public void loginSuccess(Boolean success) {
                 // to do: make logic for opening ownerProducts/newStore
