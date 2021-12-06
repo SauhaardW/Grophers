@@ -50,9 +50,11 @@
         android:layout_width="387dp"
         android:layout_height="519dp"
         android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/orderSubtotalTextCustomerOrderInfoModal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.129" />
 
     <TextView
         android:id="@+id/orderTotalPriceCustomerOrderInfoModal"
