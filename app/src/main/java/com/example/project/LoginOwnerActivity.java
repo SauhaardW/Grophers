@@ -100,4 +100,18 @@ public class LoginOwnerActivity extends AppCompatActivity implements Contract.Vi
     public void loginUserDataFailedToast() {
         Toast.makeText(LoginOwnerActivity.this, "Failed to get User Data", Toast.LENGTH_LONG).show();
     }//end loginUserDataFailedToast
+
+    @Override
+    public void setEmailEmptyError() {
+        EditText editTextEmail = (EditText) findViewById(R.id.editTextEmailOwnerLogin);
+        editTextEmail.setError("The email field is empty");
+        editTextEmail.requestFocus();
+    }
+
+    @Override
+    public void setPasswordEmptyError() {
+        EditText editTextEmail = (EditText) findViewById(R.id.editTextPasswordOwnerLogin);
+        editTextEmail.setError("The password field is empty");
+        editTextEmail.requestFocus();
+    }
 }

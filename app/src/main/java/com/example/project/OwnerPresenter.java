@@ -26,6 +26,16 @@ public class OwnerPresenter implements Contract.Presenter {
     public void submitButtonClicked(String email, String password) {
         view.showProgressBar();
 
+        if (email.isEmpty()) {
+            view.setEmailEmptyError();
+            view.hideProgressBar();
+            return;
+        } else if (password.isEmpty()) {
+            view.setPasswordEmptyError();
+            view.hideProgressBar();
+            return;
+        }
+
         model.setEmail(email);
         model.setPassword(password);
 

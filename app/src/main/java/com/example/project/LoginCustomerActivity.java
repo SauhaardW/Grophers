@@ -93,4 +93,18 @@ public class LoginCustomerActivity extends AppCompatActivity implements Contract
     public void loginUserDataFailedToast() {
         Toast.makeText(LoginCustomerActivity.this, "Failed to get User Data", Toast.LENGTH_LONG).show();
     }//end loginUserDataFailedToast
+
+    @Override
+    public void setEmailEmptyError() {
+        EditText editTextEmail = (EditText) findViewById(R.id.editTextEmailCustomerLogin);
+        editTextEmail.setError("The email field is empty");
+        editTextEmail.requestFocus();
+    }
+
+    @Override
+    public void setPasswordEmptyError() {
+        EditText editTextEmail = (EditText) findViewById(R.id.editTextPasswordCustomerLogin);
+        editTextEmail.setError("The password field is empty");
+        editTextEmail.requestFocus();
+    }
 }

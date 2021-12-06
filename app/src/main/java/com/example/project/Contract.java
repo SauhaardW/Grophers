@@ -9,6 +9,8 @@ public interface Contract {
         void loginSuccessfulToast();
         void loginFailedToast();
         void loginUserDataFailedToast();
+        void setEmailEmptyError();
+        void setPasswordEmptyError();
     }
 
     public interface Presenter {
