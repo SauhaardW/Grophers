@@ -112,7 +112,7 @@ public class CustomerCartActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         long timestamp = new Date().getTime();
                         String timestampString = ((Long)timestamp).toString();
-                        Order order =  new Order(uid, store_id, list, timestamp, "Processing", store.getName(), customerName);
+                        Order order =  new Order(uid, store_id, list, timestamp, "PROCESSING", store.getName(), customerName);
 
                         db.child("customers").child(uid).child("orders").child(timestampString).setValue(order);
                         db.child("customers").child(uid).child("cart").setValue(null);
