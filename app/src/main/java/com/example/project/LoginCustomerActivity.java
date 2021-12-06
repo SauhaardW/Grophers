@@ -1,6 +1,8 @@
+// View CUSTOMER
 package com.example.project;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -17,33 +19,32 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class LoginCustomerActivity extends AppCompatActivity {
-
-    private FirebaseAuth mAuth;
+public class LoginCustomerActivity extends AppCompatActivity implements Contract.View {
+    private Contract.Presenter presenter;
+    private ProgressBar progressBar;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_customer);
 
-        // Back Button handling
+        progressBar = (ProgressBar) findViewById(R.id.progressBarCustomerLogin);
+
+        presenter = new CustomerPresenter(this, new LoginModel("", ""));
+
         ImageView backButton = (ImageView) findViewById(R.id.backButtonTopBarCustomer);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                presenter.backButtonClicked();
             }
         });
-
-        // Create Firebase Auth instance
-        mAuth = FirebaseAuth.getInstance();
 
         Button submitButton = (Button) findViewById(R.id.loginSubmitCustomer);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Call function that handles log-ins
-                logInCustomer();
+                presenter.submitButtonClicked(getEmail(), getPassword());
             }
         });
 
@@ -51,35 +52,59 @@ public class LoginCustomerActivity extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginCustomerActivity.this, RegisterCustomerActivity.class));
+                presenter.registerButtonClicked();
             }
         });
+    }//end onCreate
+
+    @Override
+    public String getEmail(){
+        EditText editTextEmail = (EditText) findViewById(R.id.editTextEmailCustomerLogin);
+        return editTextEmail.getText().toString().trim();
+    }//end getEmail
+
+    @Override
+    public String getPassword(){
+        EditText editTextPassword = (EditText) findViewById(R.id.editTextPasswordCustomerLogin);
+        return editTextPassword.getText().toString().trim();
+    }//end getEmail
+
+    @Override
+    public void showProgressBar() {
+        progressBar.setVisibility(View.VISIBLE);
+    }//end showProgressBar
+
+    @Override
+    public void hideProgressBar() {
+        progressBar.setVisibility(View.INVISIBLE);
+    }//end hideProgressBar
+
+    @Override
+    public void loginSuccessfulToast() {
+        Toast.makeText(LoginCustomerActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
+    }//end loginSuccessfulToast
+
+    @Override
+    public void loginFailedToast() {
+        Toast.makeText(LoginCustomerActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
+    }//end loginFailedToast
+
+    @Override
+    public void loginUserDataFailedToast() {
+        Toast.makeText(LoginCustomerActivity.this, "Failed to get User Data", Toast.LENGTH_LONG).show();
+    }//end loginUserDataFailedToast
+
+    @Override
+    public void setEmailEmptyError() {
+        EditText editTextEmail = (EditText) findViewById(R.id.editTextEmailCustomerLogin);
+        editTextEmail.setError("The email field is empty");
+        editTextEmail.requestFocus();
     }
 
-    private void logInCustomer() {
-        // Declare Views
-        EditText editTextEmail = (EditText) findViewById(R.id.editTextEmailCustomerLogin);
-        EditText editTextPassword = (EditText) findViewById(R.id.editTextPasswordCustomerLogin);
-
-        // Get text from views
-        String email = editTextEmail.getText().toString().trim();
-        String password = editTextPassword.getText().toString().trim();
-
-        // Set progress bar to visible, we are processing
-        ProgressBar pb = (ProgressBar) findViewById(R.id.progressBarCustomerLogin);
-        pb.setVisibility(View.VISIBLE);
-
-        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Toast.makeText(LoginCustomerActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(LoginCustomerActivity.this, CustomerViewActivity.class));
-                } else {
-                    Toast.makeText(LoginCustomerActivity.this, "Login Failed", Toast.LENGTH_LONG).show();
-                }
-                pb.setVisibility(View.INVISIBLE);
-            }
-        });
+    @Override
+    public void setPasswordEmptyError() {
+        EditText editTextEmail = (EditText) findViewById(R.id.editTextPasswordCustomerLogin);
+        editTextEmail.setError("The password field is empty");
+        editTextEmail.requestFocus();
     }
 }
