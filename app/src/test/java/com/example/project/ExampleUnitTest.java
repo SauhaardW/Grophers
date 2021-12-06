@@ -55,8 +55,10 @@ public class ExampleUnitTest {
         when(ownerView.getEmail()).thenReturn("aryan@gmail.com");
         when(ownerView.getPassword()).thenReturn("testing");
 
+        customerPresenter.submitButtonClicked(customerView.getEmail(), customerView.getPassword());
         verify(customerView).showProgressBar();
         verify(model).setEmail(customerView.getEmail());
         verify(model).setPassword(customerView.getPassword());
+        verify(model).isLoginSuccessful(any(LoginCallBack.class));
     }
 }
