@@ -11,3 +11,15 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Added writing to db on the customers side when the owner updates the order 		status
+	- Changed what the spinner displays on the order info modal depending on the 		status of the order
+
+What are you planning on doing today?
+   	- Try one more time to make the modals pop up to its last element
+
+Any impediments or stumbling blocks?
+	- None
