@@ -26,7 +26,6 @@
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/card_owner_orders.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/card_owner_product.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/cart_item_card.xml" value="0.9" />
-        <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/customer_order_info_modal.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/edit_product_modal.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/order_info_modal.xml" value="0.9" />
         <entry key="..\:/Users/User/Documents/b07project/app/src/main/res/layout/owner_order_info_card.xml" value="0.5541666666666667" />
@@ -42,7 +41,7 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2984375" />
         <entry key="app/src/main/res/drawable/hamburger_vector.xml" value="0.26564102564102565" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.21510416666666668" />
-        <entry key="app/src/main/res/layout/activity_add_product.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_add_product.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_customer_cart.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_customer_cart_temp.xml" value="0.24722222222222223" />
         <entry key="app/src/main/res/layout/activity_customer_home.xml" value="0.37604166666666666" />

@@ -32,6 +32,15 @@ public class AddProductActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_product);
 
+        // Back Button handling
+        ImageView backButton = (ImageView) findViewById(R.id.backButtonAddProductActivity);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         TextView addProductPhoto = (TextView) findViewById(R.id.textViewAddProductPhoto);
         addProductPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
