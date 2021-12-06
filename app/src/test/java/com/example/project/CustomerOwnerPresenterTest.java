@@ -174,11 +174,8 @@ public class CustomerOwnerPresenterTest {
         verify(model).setPassword(password);
     }
 
-    /*** All OwnerPresenter Test Cases ***/
-
-    // Constructor test(s)
     @Test
-    public void testCustomerPresenterSubmitButtonClickedLoginValidationFailed() {
+    public void testCustomerPresenterSubmitButtonClickedLoginDataFailed() {
         String email = "d";
         String password = "d";
 
@@ -205,6 +202,10 @@ public class CustomerOwnerPresenterTest {
         verify(model).setEmail(email);
         verify(model).setPassword(password);
     }
+
+    /*** All OwnerPresenter Test Cases ***/
+
+    // Constructor test(s)
 
     // backButtonClicked method test(s)
     @Test
