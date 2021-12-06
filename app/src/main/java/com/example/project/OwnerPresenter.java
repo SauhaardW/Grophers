@@ -4,10 +4,10 @@ package com.example.project;
 import android.content.Intent;
 
 public class OwnerPresenter implements Contract.Presenter {
-    Contract.Model model;
+    Contract.ModelOwner model;
     Contract.View view;
 
-    public OwnerPresenter(Contract.View view, Contract.Model model){
+    public OwnerPresenter(Contract.View view, Contract.ModelOwner model){
         this.model = model;
         this.view = view;
     }

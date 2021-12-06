@@ -4,10 +4,10 @@ package com.example.project;
 import android.content.Intent;
 
 public class CustomerPresenter implements Contract.Presenter {
-    Contract.Model model;
+    Contract.ModelCustomer model;
     Contract.View view;
 
-    public CustomerPresenter(Contract.View view, Contract.Model model){
+    public CustomerPresenter(Contract.View view, Contract.ModelCustomer model){
         this.model = model;
         this.view = view;
     }
@@ -39,7 +39,7 @@ public class CustomerPresenter implements Contract.Presenter {
         model.setEmail(email);
         model.setPassword(password);
 
-        model.isLoginSuccessful(new LoginCallBack() {
+        model.isLoginSuccessful(new LoginCallBackCustomer() {
             @Override
             public void loginValid() {
                 view.loginSuccessfulToast();

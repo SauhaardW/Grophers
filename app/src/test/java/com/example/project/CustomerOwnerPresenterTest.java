@@ -26,13 +26,16 @@ public class CustomerOwnerPresenterTest {
     LoginOwnerActivity ownerView;
 
     @Mock
-    LoginModel model;
+    LoginModelCustomer customerModel;
+
+    @Mock
+    LoginModelOwner ownerModel;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        customerPresenter = new CustomerPresenter(customerView, model);
-        ownerPresenter = new OwnerPresenter(ownerView, model);
+        customerPresenter = new CustomerPresenter(customerView, customerModel);
+        ownerPresenter = new OwnerPresenter(ownerView, ownerModel);
     }
 
     /*** All CustomerPresenter Test Cases ***/
@@ -41,7 +44,7 @@ public class CustomerOwnerPresenterTest {
     @Test
     public void testCustomerPresenterConstructor() {
         assertEquals(customerPresenter.view, customerView);
-        assertEquals(customerPresenter.model, model);
+        assertEquals(customerPresenter.model, customerModel);
     }
 
     // backButtonClicked method test(s)
@@ -104,7 +107,7 @@ public class CustomerOwnerPresenterTest {
         doAnswer(new Answer() {
             @Override
             public Object answer(InvocationOnMock invocation) throws Throwable {
-                LoginCallBack callback = (LoginCallBack) invocation.getArguments()[0];
+                LoginCallBackCustomer callback = (LoginCallBackCustomer) invocation.getArguments()[0];
                 callback.loginValid();
                 // Verify that once the callback has been called to be loginValid,
                 // we have done the correct calls to the view.
@@ -113,14 +116,14 @@ public class CustomerOwnerPresenterTest {
                 verify((LoginCustomerActivity) customerView).startActivity(any(Intent.class));
                 return null;
             }
-        }).when(model).isLoginSuccessful(any(LoginCallBack.class));
+        }).when(customerModel).isLoginSuccessful(any(LoginCallBackCustomer.class));
 
         // After stubbing, we call the submitButtonClicked method to have the presenter do its thing.
         customerPresenter.submitButtonClicked(email, password);
 
         // Verify that the miscellaneous calls within submitButtonClicked have run.
-        verify(model).setEmail(email);
-        verify(model).setPassword(password);
+        verify(customerModel).setEmail(email);
+        verify(customerModel).setPassword(password);
     }
 
     @Test
@@ -134,7 +137,7 @@ public class CustomerOwnerPresenterTest {
         doAnswer(new Answer() {
             @Override
             public Object answer(InvocationOnMock invocation) throws Throwable {
-                LoginCallBack callback = (LoginCallBack) invocation.getArguments()[0];
+                LoginCallBackCustomer callback = (LoginCallBackCustomer) invocation.getArguments()[0];
                 callback.loginInvalid();
                 // Verify that once the callback has been called to be invalid,
                 // we have done the correct calls to the view.
@@ -142,14 +145,14 @@ public class CustomerOwnerPresenterTest {
                 verify(customerView).hideProgressBar();
                 return null;
             }
-        }).when(model).isLoginSuccessful(any(LoginCallBack.class));
+        }).when(customerModel).isLoginSuccessful(any(LoginCallBackCustomer.class));
 
         // After stubbing, we call the submitButtonClicked method to have the presenter do its thing.
         customerPresenter.submitButtonClicked(email, password);
 
         // Verify that the miscellaneous calls within submitButtonClicked have run.
-        verify(model).setEmail(email);
-        verify(model).setPassword(password);
+        verify(customerModel).setEmail(email);
+        verify(customerModel).setPassword(password);
     }
 
     @Test
@@ -163,7 +166,7 @@ public class CustomerOwnerPresenterTest {
         doAnswer(new Answer() {
             @Override
             public Object answer(InvocationOnMock invocation) throws Throwable {
-                LoginCallBack callback = (LoginCallBack) invocation.getArguments()[0];
+                LoginCallBackCustomer callback = (LoginCallBackCustomer) invocation.getArguments()[0];
                 callback.loginDataFailed();
                 // Verify that once the callback has been called to be loginDataFailed,
                 // we have done the correct calls to the view.
@@ -171,14 +174,14 @@ public class CustomerOwnerPresenterTest {
                 verify(customerView).hideProgressBar();
                 return null;
             }
-        }).when(model).isLoginSuccessful(any(LoginCallBack.class));
+        }).when(customerModel).isLoginSuccessful(any(LoginCallBackCustomer.class));
 
         // After stubbing, we call the submitButtonClicked method to have the presenter do its thing.
         customerPresenter.submitButtonClicked(email, password);
 
         // Verify that the miscellaneous calls within submitButtonClicked have run.
-        verify(model).setEmail(email);
-        verify(model).setPassword(password);
+        verify(customerModel).setEmail(email);
+        verify(customerModel).setPassword(password);
     }
 
     /*** All OwnerPresenter Test Cases ***/
@@ -187,7 +190,7 @@ public class CustomerOwnerPresenterTest {
     @Test
     public void testOwnerPresenterConstructor() {
         assertEquals(ownerPresenter.view, ownerView);
-        assertEquals(ownerPresenter.model, model);
+        assertEquals(ownerPresenter.model, ownerModel);
     }
 
 
@@ -260,14 +263,14 @@ public class CustomerOwnerPresenterTest {
                 verify((LoginOwnerActivity) ownerView).startActivity(any(Intent.class));
                 return null;
             }
-        }).when(model).isLoginSuccessful(any(LoginCallBackOwner.class));
+        }).when(ownerModel).isLoginSuccessful(any(LoginCallBackOwner.class));
 
         // After stubbing, we call the submitButtonClicked method to have the presenter do its thing.
         ownerPresenter.submitButtonClicked(email, password);
 
         // Verify that the miscellaneous calls within submitButtonClicked have run.
-        verify(model).setEmail(email);
-        verify(model).setPassword(password);
+        verify(ownerModel).setEmail(email);
+        verify(ownerModel).setPassword(password);
     }
 
     @Test
@@ -289,14 +292,14 @@ public class CustomerOwnerPresenterTest {
                 verify(ownerView).hideProgressBar();
                 return null;
             }
-        }).when(model).isLoginSuccessful(any(LoginCallBackOwner.class));
+        }).when(ownerModel).isLoginSuccessful(any(LoginCallBackOwner.class));
 
         // After stubbing, we call the submitButtonClicked method to have the presenter do its thing.
         ownerPresenter.submitButtonClicked(email, password);
 
         // Verify that the miscellaneous calls within submitButtonClicked have run.
-        verify(model).setEmail(email);
-        verify(model).setPassword(password);
+        verify(ownerModel).setEmail(email);
+        verify(ownerModel).setPassword(password);
     }
 
     @Test
@@ -318,14 +321,14 @@ public class CustomerOwnerPresenterTest {
                 verify(ownerView).hideProgressBar();
                 return null;
             }
-        }).when(model).isLoginSuccessful(any(LoginCallBackOwner.class));
+        }).when(ownerModel).isLoginSuccessful(any(LoginCallBackOwner.class));
 
         // After stubbing, we call the submitButtonClicked method to have the presenter do its thing.
         ownerPresenter.submitButtonClicked(email, password);
 
         // Verify that the miscellaneous calls within submitButtonClicked have run.
-        verify(model).setEmail(email);
-        verify(model).setPassword(password);
+        verify(ownerModel).setEmail(email);
+        verify(ownerModel).setPassword(password);
     }
 
     @Test
@@ -348,13 +351,13 @@ public class CustomerOwnerPresenterTest {
                 verify((LoginOwnerActivity) ownerView).startActivity(any(Intent.class));
                 return null;
             }
-        }).when(model).isLoginSuccessful(any(LoginCallBackOwner.class));
+        }).when(ownerModel).isLoginSuccessful(any(LoginCallBackOwner.class));
 
         // After stubbing, we call the submitButtonClicked method to have the presenter do its thing.
         ownerPresenter.submitButtonClicked(email, password);
 
         // Verify that the miscellaneous calls within submitButtonClicked have run.
-        verify(model).setEmail(email);
-        verify(model).setPassword(password);
+        verify(ownerModel).setEmail(email);
+        verify(ownerModel).setPassword(password);
     }
 }

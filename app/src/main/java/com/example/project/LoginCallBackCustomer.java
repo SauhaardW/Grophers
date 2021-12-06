@@ -1,6 +1,6 @@
 package com.example.project;
 
-public interface LoginCallBack {
+public interface LoginCallBackCustomer {
     void loginValid();
     void loginInvalid();
     void loginDataFailed();

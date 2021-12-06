@@ -1,5 +1,5 @@
 package com.example.project;
 
-public interface LoginCallBackOwner extends LoginCallBack{
+public interface LoginCallBackOwner extends LoginCallBackCustomer {
     void loginValidStoreCreation();
 }

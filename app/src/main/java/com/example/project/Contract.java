@@ -19,8 +19,14 @@ public interface Contract {
         void submitButtonClicked(String email, String password);
     }
 
-    public interface Model {
-        void isLoginSuccessful(LoginCallBack loginCallBack);
+    public interface ModelOwner {
+        void isLoginSuccessful(LoginCallBackOwner loginCallBackOwner);
+        void setEmail(String email);
+        void setPassword(String password);
+    }
+
+    public interface ModelCustomer {
+        void isLoginSuccessful(LoginCallBackCustomer loginCallBackCustomer);
         void setEmail(String email);
         void setPassword(String password);
     }
