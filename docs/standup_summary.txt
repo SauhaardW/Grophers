@@ -39,7 +39,7 @@ Things I worked on:
 	- Created the original UI for the set up store/create profile page on android studio 
 	- Created the original UI for the owners product list view page on android studio 
 	- Created the original UI for the customers product list view of a certain store on android studio 
-	- Added recycler view to some pages
+	- Added recycler view to the UI of some pages
 	- Created the owners order info card
 	- Created the xml for the image url modal and implemented what was needed to create interaction with the modal and the activity within the set up store page
 	- Reused the xml I created for the image url modal and implemented what was needed to create interaction with the modal and the activity within the product creation page
