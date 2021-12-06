@@ -15,3 +15,41 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+Name: Alejandro Iglesias Llobet
+
+What have you done since yesterday?
+	- Collaborated live with Andres throughout the day to find
+	and fix bugs (i.e. ensuring a customer nor owner can ever
+	input an empty string inside any EditText Views)
+	- Thoroughly tested the Customer side of the application
+	- Thoroughly tested the Owner side of the application
+	- Wiped all existing data from Firebase and began adding
+	new stores (to make the app more visually appealing)
+	- Created Toyota Canada store
+	- Created Apple store
+	- Created Nike store
+	- Created Dick's Sporting Goods store
+	- Created GameStop store
+	- Fixed back button on CustomerStoreProductViewActivity
+	not showing properly
+	- Fixed several UI issues
+
+
+What are you planning on doing today?
+   	- Manually testing the app to see if I can catch any more bugs
+	- Fix the UI in places where needed (such as cards and recyclerViews
+	with improperly placed constraints)
+	- Add my standup summary to standup_summary.txt for Andres to
+	be able to send when submitting the project
+
+Any impediments or stumbling blocks?
+	- None
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Tried another method of increasing the modals height, didn't work
+
+What are you planning on doing today?
+   	- Look over the project
