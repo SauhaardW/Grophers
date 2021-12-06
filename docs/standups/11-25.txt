@@ -40,3 +40,16 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+Name: Sauhaard Walia
+
+What have you done since yesterday?
+	- Got rid of the bug on the owner log in page to make sure that the grophers icon image appears properly in the center
+	- Flattened out a few constraint errors on the log in page for the owner and make sure that they function properly for different sized devices
+
+What are you planning on doing today?
+   	- After running both log in and register pages for both owner and user found that the color of the register button never matched the color it showed to have in its properties hence need to figure out what characteristics to add to it to make it be the color desired
+	- Make the above changes to all remaining pages I have implemented as the color not matching error had appeared on multiple other pages too
+
+Any impediments or stumbling blocks?
+	- No I do not believe I faced any stumbling blocks in my work today and feel like it went very smoothly until I discovered the new bugs for the buttons color not being as wanted
