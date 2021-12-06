@@ -50,5 +50,5 @@ What are you planning on doing today?
 	- Ensure that the information fetched by the owner for any of the products they create is accurate and well tested.
 
 Any impediments or stumbling blocks?
-	- 
+	- Initially to figure out how to add images to this code was very difficult and to find out how we can get a user to input a url and how we can then fetch the image for it was initially very challenging
 
