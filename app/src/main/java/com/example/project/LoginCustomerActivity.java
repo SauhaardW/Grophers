@@ -1,11 +1,9 @@
 // View CUSTOMER
 package com.example.project;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,11 +11,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginCustomerActivity extends AppCompatActivity implements Contract.View {
     private Contract.Presenter presenter;
@@ -30,7 +23,7 @@ public class LoginCustomerActivity extends AppCompatActivity implements Contract
 
         progressBar = (ProgressBar) findViewById(R.id.progressBarCustomerLogin);
 
-        presenter = new CustomerPresenter(this, new LoginModel("", ""));
+        presenter = new CustomerPresenter(this, new LoginModelCustomer("", ""));
 
         ImageView backButton = (ImageView) findViewById(R.id.backButtonTopBarCustomer);
         backButton.setOnClickListener(new View.OnClickListener() {

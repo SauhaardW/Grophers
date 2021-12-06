@@ -10,17 +10,17 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class LoginModel implements Contract.Model {
+public class LoginModelOwner implements Contract.ModelOwner {
     String email;
     String password;
 
-    protected LoginModel(String email, String password) {
+    protected LoginModelOwner(String email, String password) {
         this.email = email;
         this.password = password;
     }
 
     @Override
-    public void isLoginSuccessful(LoginCallBack loginCallBack) {
+    public void isLoginSuccessful(LoginCallBackOwner loginCallBackOwner) {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -32,7 +32,6 @@ public class LoginModel implements Contract.Model {
                             if (task.isSuccessful()) {
                                 if (task.getResult().exists()) {
                                     // User is an owner
-                                    LoginCallBackOwner loginCallBackOwner = (LoginCallBackOwner) loginCallBack;
                                     if (task.getResult().getValue(Owner.class).getStoreId() == 0) {
                                         loginCallBackOwner.loginValidStoreCreation();
                                     } else {
@@ -40,16 +39,16 @@ public class LoginModel implements Contract.Model {
                                     }
                                 } else {
                                     // User is a customer
-                                    loginCallBack.loginValid();
+                                    loginCallBackOwner.loginInvalid();
                                 }
 
                             } else {
-                                loginCallBack.loginDataFailed();
+                                loginCallBackOwner.loginDataFailed();
                             }
                         }
                     });
                 } else {
-                    loginCallBack.loginInvalid();
+                    loginCallBackOwner.loginInvalid();
                 }
 
             }

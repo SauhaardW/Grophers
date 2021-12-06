@@ -1,29 +1,16 @@
 // View OWNER
 package com.example.project;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginOwnerActivity extends AppCompatActivity implements Contract.View {
 
@@ -37,7 +24,7 @@ public class LoginOwnerActivity extends AppCompatActivity implements Contract.Vi
 
         progressBar = (ProgressBar) findViewById(R.id.progressBarOwnerLogin);
 
-        presenter = new OwnerPresenter(this, new LoginModel("", ""));
+        presenter = new OwnerPresenter(this, new LoginModelOwner("", ""));
 
         ImageView backButton = (ImageView) findViewById(R.id.backButtonTopBarOwner);
         backButton.setOnClickListener(new View.OnClickListener() {
