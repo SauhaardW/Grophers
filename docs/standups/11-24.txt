@@ -16,6 +16,20 @@ Any impediments or stumbling blocks?
 	- Time, had to complete some administrative
       tasks in regards to my Co-op Work Term.
 
+Name: Sauhaard Walia
+
+What have you done since yesterday?
+	- Completed the Register for Owner page for the interface
+	- Implemented the code for a further 3 pages
+	- Began creating links between attributes enabling the functionality of the buttons to work with the other page
+
+What are you planning on doing today?
+   	- Fix a small bug on the owner log in page
+	- Fix a few constraint errors on log in owner page and make sure that the buttons are properly aligned 
+
+Any impediments or stumbling blocks?
+	- Found that changing the button color for the log in and register buttons for both owner and customer was very challenging so had to do a lot of research on how to change that.
+
 Name: Nicole Droi
 
 What have you done since yesterday?
