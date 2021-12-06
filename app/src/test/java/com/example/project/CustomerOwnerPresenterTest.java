@@ -206,6 +206,12 @@ public class CustomerOwnerPresenterTest {
     /*** All OwnerPresenter Test Cases ***/
 
     // Constructor test(s)
+    @Test
+    public void testOwnerPresenterConstructor() {
+        assertEquals(ownerPresenter.view, ownerView);
+        assertEquals(ownerPresenter.model, model);
+    }
+
 
     // backButtonClicked method test(s)
     @Test
