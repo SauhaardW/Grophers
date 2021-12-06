@@ -24,13 +24,13 @@ What have you done since yesterday?
 	input an empty string inside any EditText Views)
 	- Thoroughly tested the Customer side of the application
 	- Thoroughly tested the Owner side of the application
-	- Wiped all existing data from Firebase and began implementing
+	- Wiped all existing data from Firebase and began adding
 	new stores (to make the app more visually appealing)
-	- Implemented Toyota Canada store
-	- Implemented Apple store
-	- Implemented Nike store
-	- Implemented Dick's Sporting Goods store
-	- Implemented GameStop store
+	- Created Toyota Canada store
+	- Created Apple store
+	- Created Nike store
+	- Created Dick's Sporting Goods store
+	- Created GameStop store
 	- Fixed back button on CustomerStoreProductViewActivity
 	not showing properly
 	- Fixed several UI issues
