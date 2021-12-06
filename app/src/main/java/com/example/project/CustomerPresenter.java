@@ -2,7 +2,6 @@
 package com.example.project;
 
 import android.content.Intent;
-import android.util.Log;
 
 public class CustomerPresenter implements Contract.Presenter {
     Contract.Model model;
@@ -42,12 +41,6 @@ public class CustomerPresenter implements Contract.Presenter {
 
         model.isLoginSuccessful(new LoginCallBack() {
             @Override
-            public void loginValidStoreCreation() {
-                // Do nothing, we don't reach this case as customers
-                return;
-            }
-
-            @Override
             public void loginValid() {
                 view.loginSuccessfulToast();
                 view.hideProgressBar();
@@ -61,7 +54,7 @@ public class CustomerPresenter implements Contract.Presenter {
             }
 
             @Override
-            public void loginValidationFailed() {
+            public void loginDataFailed() {
                 view.loginUserDataFailedToast();
                 view.hideProgressBar();
             }

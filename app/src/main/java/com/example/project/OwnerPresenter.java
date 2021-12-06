@@ -39,7 +39,7 @@ public class OwnerPresenter implements Contract.Presenter {
         model.setEmail(email);
         model.setPassword(password);
 
-        model.isLoginSuccessful(new LoginCallBack() {
+        model.isLoginSuccessful(new LoginCallBackOwner() {
             @Override
             public void loginValidStoreCreation() {
                 view.loginSuccessfulToast();
@@ -61,7 +61,7 @@ public class OwnerPresenter implements Contract.Presenter {
             }
 
             @Override
-            public void loginValidationFailed() {
+            public void loginDataFailed() {
                 view.loginUserDataFailedToast();
                 view.hideProgressBar();
             }

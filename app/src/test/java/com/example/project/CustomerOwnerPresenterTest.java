@@ -3,8 +3,6 @@ package com.example.project;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.invocation.InvocationOnMock;
@@ -13,16 +11,8 @@ import org.mockito.stubbing.Answer;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
-import static org.mockito.AdditionalAnswers.returnsFirstArg;
 
-import android.app.ActivityManager;
-import android.app.Instrumentation;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
-
-import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CustomerOwnerPresenterTest {
@@ -65,6 +55,7 @@ public class CustomerOwnerPresenterTest {
     @Test
     public void testCustomerPresenterRegisterButtonClicked() {
         customerPresenter.registerButtonClicked();
+        // TODO: Verify started activity is the correct one.
         verify((LoginCustomerActivity) customerView).startActivity(any(Intent.class));
         /*
 
@@ -124,38 +115,95 @@ public class CustomerOwnerPresenterTest {
     }
 
     @Test
-    public void testCustomerPresenterSubmitButtonClickedCallToModelValid() {
+    public void testCustomerPresenterSubmitButtonClickedLoginValid() {
         String email = "testing2@gmail.com";
         String password = "testing";
 
+        // This test case depends on the Model, so we will assume it calls back on the intended output.
+        // We will stub model.isLoginSuccessful so that it calls back on the correct method,
+        // i.e. assuming the output from the dependency is always correct.
+        doAnswer(new Answer() {
+            @Override
+            public Object answer(InvocationOnMock invocation) throws Throwable {
+                LoginCallBack callback = (LoginCallBack) invocation.getArguments()[0];
+                callback.loginValid();
+                // Verify that once the callback has been called to be loginValid,
+                // we have done the correct calls to the view.
+                verify(customerView).loginSuccessfulToast();
+                verify(customerView).hideProgressBar();
+                // TODO: Verify started activity is the correct one.
+                verify((LoginCustomerActivity) customerView).startActivity(any(Intent.class));
+                return null;
+            }
+        }).when(model).isLoginSuccessful(any(LoginCallBack.class));
+
+        // After stubbing, we call the submitButtonClicked method to have the presenter do its thing.
         customerPresenter.submitButtonClicked(email, password);
-        verify(customerView).showProgressBar();
+
+        // Verify that the miscellaneous calls within submitButtonClicked have run.
         verify(model).setEmail(email);
         verify(model).setPassword(password);
-        verify(model).isLoginSuccessful(any(LoginCallBack.class));
-
-        //verify(model).
     }
 
     @Test
-    public void testCustomerPresenterSubmitButtonClickedCallToModelFailed() {
-        String email = "testing2@gmail.com";
+    public void testCustomerPresenterSubmitButtonClickedInvalidLogin() {
+        String email = "asd@gmail.com";
         String password = "wrongPassword";
 
+        // This test case depends on the Model, so we will assume it calls back on the intended output.
+        // We will stub model.isLoginSuccessful so that it calls back on the correct method,
+        // i.e. assuming the output from the dependency is always correct.
+        doAnswer(new Answer() {
+            @Override
+            public Object answer(InvocationOnMock invocation) throws Throwable {
+                LoginCallBack callback = (LoginCallBack) invocation.getArguments()[0];
+                callback.loginInvalid();
+                // Verify that once the callback has been called to be invalid,
+                // we have done the correct calls to the view.
+                verify(customerView).loginFailedToast();
+                verify(customerView).hideProgressBar();
+                return null;
+            }
+        }).when(model).isLoginSuccessful(any(LoginCallBack.class));
+
+        // After stubbing, we call the submitButtonClicked method to have the presenter do its thing.
         customerPresenter.submitButtonClicked(email, password);
-        verify(customerView).showProgressBar();
+
+        // Verify that the miscellaneous calls within submitButtonClicked have run.
         verify(model).setEmail(email);
         verify(model).setPassword(password);
-        verify(model).isLoginSuccessful(any(LoginCallBack.class));
     }
 
     /*** All OwnerPresenter Test Cases ***/
 
     // Constructor test(s)
     @Test
-    public void testOwnerPresenterConstructor() {
-        assertEquals(ownerPresenter.view, ownerView);
-        assertEquals(ownerPresenter.model, model);
+    public void testCustomerPresenterSubmitButtonClickedLoginValidationFailed() {
+        String email = "d";
+        String password = "d";
+
+        // This test case depends on the Model, so we will assume it calls back on the intended output.
+        // We will stub model.isLoginSuccessful so that it calls back on the correct method,
+        // i.e. assuming the output from the dependency is always correct.
+        doAnswer(new Answer() {
+            @Override
+            public Object answer(InvocationOnMock invocation) throws Throwable {
+                LoginCallBack callback = (LoginCallBack) invocation.getArguments()[0];
+                callback.loginDataFailed();
+                // Verify that once the callback has been called to be loginDataFailed,
+                // we have done the correct calls to the view.
+                verify(customerView).loginUserDataFailedToast();
+                verify(customerView).hideProgressBar();
+                return null;
+            }
+        }).when(model).isLoginSuccessful(any(LoginCallBack.class));
+
+        // After stubbing, we call the submitButtonClicked method to have the presenter do its thing.
+        customerPresenter.submitButtonClicked(email, password);
+
+        // Verify that the miscellaneous calls within submitButtonClicked have run.
+        verify(model).setEmail(email);
+        verify(model).setPassword(password);
     }
 
     // backButtonClicked method test(s)
