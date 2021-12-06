@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.util.Log;
 
 public class CustomerPresenter implements Contract.Presenter {
-    protected Contract.Model model;
-    protected Contract.View view;
+    Contract.Model model;
+    Contract.View view;
 
     public CustomerPresenter(Contract.View view, Contract.Model model){
         this.model = model;
