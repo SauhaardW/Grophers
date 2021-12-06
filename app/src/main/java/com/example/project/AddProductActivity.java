@@ -60,34 +60,29 @@ public class AddProductActivity extends AppCompatActivity{
         });
     }
 
-//    @Override
-//    public void onButtonClicked(String img_url) {
-//        //set passed img_url here from modal
-//    }//end onButtonClicked
-
     private void createProduct() {
         EditText editTextName = (EditText)findViewById(R.id.editTextAddProductName);
         EditText editTextBrand = (EditText)findViewById(R.id.editTextAddProductBrand);
         EditText editTextPrice = (EditText)findViewById(R.id.editTextAddProductPrice);
         ImageView profileImg = (ImageView)findViewById(R.id.imageViewProductImage);
 
-        String name = editTextName.getText().toString().trim();
-        String brand = editTextBrand.getText().toString().trim();
-        double price = Double.parseDouble(editTextPrice.getText().toString().trim());
-
-        if (name.isEmpty()) {
+        if (editTextName.getText().toString().isEmpty()) {
             editTextName.setError("The product name cannot be empty");
             editTextName.requestFocus();
             return;
-        } else if (brand.isEmpty()) {
+        } else if (editTextBrand.getText().toString().isEmpty()) {
             editTextBrand.setError("The brand cannot be empty");
             editTextBrand.requestFocus();
             return;
-        } else if (price == 0.0) {
+        } else if (editTextPrice.getText().toString().isEmpty()) {
             editTextBrand.setError("The price cannot be 0");
             editTextBrand.requestFocus();
             return;
         }
+
+        String name = editTextName.getText().toString().trim();
+        String brand = editTextBrand.getText().toString().trim();
+        double price = Double.parseDouble(editTextPrice.getText().toString().trim());
 
         String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         FirebaseDatabase.getInstance().getReference("users").child("owners").child(uid).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {

@@ -34,9 +34,6 @@
             android:name=".SetUpStoreActivity"
             android:exported="false"/>
         <activity
-            android:name=".OwnerHomeActivity"
-            android:exported="false" />
-        <activity
             android:name=".RegisterOwnerActivity"
             android:exported="false" />
         <activity
