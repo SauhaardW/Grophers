@@ -72,17 +72,9 @@ public class RegisterCustomerActivity extends AppCompatActivity {
         String password = editTextPassword.getText().toString().trim();
         String passwordConfirmation = editTextConfirmPassword.getText().toString().trim();
 
-        // Validate password
-        if (!password.equals(passwordConfirmation)) {
-            editTextConfirmPassword.setError("The passwords do not match.");
-            editTextConfirmPassword.requestFocus();
-            return;
-        } else if (password.length() < 6) {
-            editTextPassword.setError("The password must be at least 6 characters long.");
-            editTextPassword.requestFocus();
-            return;
+
         // Validate username
-        } else if (username.isEmpty()) {
+        if (username.isEmpty()) {
             editTextUsername.setError("The username field is empty.");
             editTextUsername.requestFocus();
             return;
@@ -94,6 +86,15 @@ public class RegisterCustomerActivity extends AppCompatActivity {
         } else if (!validateEmail(email)) {
             editTextEmail.setError("The email field is invalid.");
             editTextEmail.requestFocus();
+            return;
+            // Validate password
+        } else if (!password.equals(passwordConfirmation)) {
+            editTextConfirmPassword.setError("The passwords do not match.");
+            editTextConfirmPassword.requestFocus();
+            return;
+        } else if (password.length() < 6) {
+            editTextPassword.setError("The password must be at least 6 characters long.");
+            editTextPassword.requestFocus();
             return;
         }
 
