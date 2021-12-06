@@ -1,0 +1,17 @@
+Name: Andres Prada
+
+What have you done since yesterday?
+	- Researched how to do tests on callbacks
+	- Investigated how mockito works
+	- Wrote most of testing
+	- Worked on complete rewrite of MVP
+
+What are you planning on doing today?
+	- Smoke testing everything
+	- Dropping database, remaking stores to look pretty
+	- Removing test stores/users
+	- Lots of minor bugfixes, UI and code wise
+	- Lots of input validation that was missing
+
+Any impediments or stumbling blocks?
+	- None
