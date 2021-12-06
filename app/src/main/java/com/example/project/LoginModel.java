@@ -32,10 +32,11 @@ public class LoginModel implements Contract.Model {
                             if (task.isSuccessful()) {
                                 if (task.getResult().exists()) {
                                     // User is an owner
+                                    LoginCallBackOwner loginCallBackOwner = (LoginCallBackOwner) loginCallBack;
                                     if (task.getResult().getValue(Owner.class).getStoreId() == 0) {
-                                        loginCallBack.loginValidStoreCreation();
+                                        loginCallBackOwner.loginValidStoreCreation();
                                     } else {
-                                        loginCallBack.loginValid();
+                                        loginCallBackOwner.loginValid();
                                     }
                                 } else {
                                     // User is a customer
@@ -43,7 +44,7 @@ public class LoginModel implements Contract.Model {
                                 }
 
                             } else {
-                                loginCallBack.loginValidationFailed();
+                                loginCallBack.loginDataFailed();
                             }
                         }
                     });
