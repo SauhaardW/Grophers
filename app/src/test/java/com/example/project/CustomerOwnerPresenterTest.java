@@ -55,29 +55,8 @@ public class CustomerOwnerPresenterTest {
     @Test
     public void testCustomerPresenterRegisterButtonClicked() {
         customerPresenter.registerButtonClicked();
-        // TODO: Verify started activity is the correct one.
+
         verify((LoginCustomerActivity) customerView).startActivity(any(Intent.class));
-        /*
-
-        //Intent intent = mock(Intent.class);
-        //intent.setClass((LoginCustomerActivity) customerView, RegisterCustomerActivity.class);
-        //verify((LoginCustomerActivity) customerView).startActivity(any(Intent.class));
-
-        //Context mockContext = mock(Context.class);
-        ArgumentCaptor<Intent> intentCaptor = ArgumentCaptor.forClass(Intent.class);
-        verify((LoginCustomerActivity) customerView).startActivity(intentCaptor.capture());
-        Intent intent = intentCaptor.getValue();
-        assertNotNull(intent);
-
-        // intent.setClass actually creates a Component object in the intent, so here I'm
-        // making sure that it's the same class
-        assertNotNull(intent.getComponent());
-        ComponentName component = intent.getComponent();
-        //System.out.println();
-        assertEquals(component.getClassName(), RegisterCustomerActivity.class.getSimpleName());
-        //assertThat(component.className).isEqualTo("com.mbcdev.folkets.WordActivity");
-
-         */
     }
 
     // submitButtonClicked method test(s)
@@ -131,7 +110,6 @@ public class CustomerOwnerPresenterTest {
                 // we have done the correct calls to the view.
                 verify(customerView).loginSuccessfulToast();
                 verify(customerView).hideProgressBar();
-                // TODO: Verify started activity is the correct one.
                 verify((LoginCustomerActivity) customerView).startActivity(any(Intent.class));
                 return null;
             }
@@ -224,28 +202,8 @@ public class CustomerOwnerPresenterTest {
     @Test
     public void testOwnerPresenterRegisterButtonClicked() {
         ownerPresenter.registerButtonClicked();
+
         verify((LoginOwnerActivity) ownerView).startActivity(any(Intent.class));
-        /*
-
-        //Intent intent = mock(Intent.class);
-        //intent.setClass((LoginCustomerActivity) customerView, RegisterCustomerActivity.class);
-        //verify((LoginCustomerActivity) customerView).startActivity(any(Intent.class));
-
-        //Context mockContext = mock(Context.class);
-        ArgumentCaptor<Intent> intentCaptor = ArgumentCaptor.forClass(Intent.class);
-        verify((LoginCustomerActivity) customerView).startActivity(intentCaptor.capture());
-        Intent intent = intentCaptor.getValue();
-        assertNotNull(intent);
-
-        // intent.setClass actually creates a Component object in the intent, so here I'm
-        // making sure that it's the same class
-        assertNotNull(intent.getComponent());
-        ComponentName component = intent.getComponent();
-        //System.out.println();
-        assertEquals(component.getClassName(), RegisterCustomerActivity.class.getSimpleName());
-        //assertThat(component.className).isEqualTo("com.mbcdev.folkets.WordActivity");
-
-         */
     }
 
     // submitButtonClicked method test(s)
@@ -299,7 +257,6 @@ public class CustomerOwnerPresenterTest {
                 // we have done the correct calls to the view.
                 verify(ownerView).loginSuccessfulToast();
                 verify(ownerView).hideProgressBar();
-                // TODO: Verify started activity is the correct one.
                 verify((LoginOwnerActivity) ownerView).startActivity(any(Intent.class));
                 return null;
             }
@@ -388,7 +345,6 @@ public class CustomerOwnerPresenterTest {
                 // we have done the correct calls to the view.
                 verify(ownerView).loginSuccessfulToast();
                 verify(ownerView).hideProgressBar();
-                // TODO: Verify started activity is the correct one.
                 verify((LoginOwnerActivity) ownerView).startActivity(any(Intent.class));
                 return null;
             }
