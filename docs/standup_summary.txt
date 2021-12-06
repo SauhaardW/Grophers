@@ -33,3 +33,29 @@ Things I worked on:
 	- Lots of minor bugfixes, UI and code wise before submission day
 	- Implemented lots of input validation that was missing
 	- Code reviewed ALL PRs, approved and handled merge conflicts
+Nicole Droi
+Things I worked on:
+	- Contributed to the design of the UI on Figma
+	- Created the original UI for the set up store/create profile page on android studio 
+	- Created the original UI for the owners product list view page on android studio 
+	- Created the original UI for the customers product list view of a certain store on android studio 
+	- Added recycler view to some pages
+	- Created the owners order info card
+	- Created the xml for the image url modal and implemented what was needed to create interaction with the modal and the activity within the set up store page
+	- Reused the xml I created for the image url modal and implemented what was needed to create interaction with the modal and the activity within the product creation page
+	- Created the xml for the add to cart modal and implemented what was needed to create interaction with the modal and the activity within the product view page
+	- Created the xml for the order info modal and implemented what was needed to create interaction with the modal and the activity within the past orders page
+	- Created a custom spinner to match the design created on Figma for the order info modal
+	- Refactored the login code and created the original Login MVP
+	- Implemented the spinner within the order info modal
+	- Made sure the spinner displays the current status of the order
+	- Learnt how to display an image from a given url
+	- Implemented image display in ALL pages where images are being displayed
+	- Reused the xml I created for the image url modal and implemented what was needed to create interaction with the modal and the activity within the edit product modal
+	- Implemented changing a products photo
+	- Fixed image implementation within set up store
+	- Attempted to change the height of the modals depending on their last elements (was not successful)
+ 
+
+
+

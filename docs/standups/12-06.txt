@@ -15,3 +15,14 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+Name: Nicole Droi
+
+What have you done since yesterday?
+	- Tried another method of increasing the modals height, didn't work
+
+What are you planning on doing today?
+   	- Look over the project
+
+Any impediments or stumbling blocks?
+	- None
