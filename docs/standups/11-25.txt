@@ -54,7 +54,7 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- No I do not believe I faced any stumbling blocks in my work today and feel like it went very smoothly until I discovered the new bugs for the buttons color not being as wanted
 
-	Name: Sayed Mojtaba Hosseini
+Name: Sayed Mojtaba Hosseini
 
 What have you done since yesterday?
 	- Completed RecyclerView implementation for activity_customer_view, activity_customer_store_product_view

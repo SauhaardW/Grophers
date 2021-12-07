@@ -65,18 +65,18 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- None
 
-	Name: Sayed Mojtaba Hosseini
+Name: Sayed Mojtaba Hosseini
 
-	What have you done since yesterday?
-		- Understood bravo studio won't be helpful in transferring code from Figma to Android Studio
-		- Updated the UI design of the landing page on Android Studio to match our Design on Figma (Added the bottom and top panels to the page to match the color scheme)
-		- Redesigned the Logos for Customers and Owners on the landing page
-		- Created the add products to store page on android studio
+What have you done since yesterday?
+	- Understood bravo studio won't be helpful in transferring code from Figma to Android Studio
+	- Updated the UI design of the landing page on Android Studio to match our Design on Figma (Added the bottom and top panels to the page to match the color scheme)
+	- Redesigned the Logos for Customers and Owners on the landing page
+	- Created the add products to store page on android studio
 
-	What are you planning on doing today?
-	   	- Fix minor UI design problems to (activity_add_products) i.e. replace the textViews with editText and vice e versa
-			- Start creating the Customer View Page (activity_customer_view) and made the layout match that of figma
-			- Start creating a template for the store cards on (activity_customer_view) so that this template can be used to create all the remaining stores in the future
+What are you planning on doing today?
+   	- Fix minor UI design problems to (activity_add_products) i.e. replace the textViews with editText and vice e versa
+		- Start creating the Customer View Page (activity_customer_view) and made the layout match that of figma
+		- Start creating a template for the store cards on (activity_customer_view) so that this template can be used to create all the remaining stores in the future
 
-	Any impediments or stumbling blocks?
-		- Constraints within android studio were giving me a lot of issues.
+Any impediments or stumbling blocks?
+	- Constraints within android studio were giving me a lot of issues.

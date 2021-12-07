@@ -52,15 +52,15 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Initially to figure out how to add images to this code was very difficult and to find out how we can get a user to input a url and how we can then fetch the image for it was initially very challenging
 
-	Name: Sayed Mojtaba Hosseini
+Name: Sayed Mojtaba Hosseini
 
-	What have you done since yesterday?
-		- Understood MVP architecture from class notes
-		- Understood Firebase components to understand the product and user classes for backend
-		- Well versed with backend programming in android studio
+What have you done since yesterday?
+	- Understood MVP architecture from class notes
+	- Understood Firebase components to understand the product and user classes for backend
+	- Well versed with backend programming in android studio
 
-	What are you planning on doing today?
-	   	- Start backend work for customer_cart_items page
+What are you planning on doing today?
+   	- Start backend work for customer_cart_items page
 
-	Any impediments or stumbling blocks?
-		- None
+Any impediments or stumbling blocks?
+	- None

@@ -43,7 +43,7 @@ Any impediments or stumbling blocks?
 	- Initial Model-View Presenter wasn't properly designed
 	- MATB41 Assignment
 
-	Name: Sayed Mojtaba Hosseini
+Name: Sayed Mojtaba Hosseini
 
 What have you done since yesterday?
 	- Nothing, busy with preparations for the finals

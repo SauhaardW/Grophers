@@ -52,7 +52,7 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- CSCB36 Test
 
-	Name: Sayed Mojtaba Hosseini
+Name: Sayed Mojtaba Hosseini
 
 What have you done since yesterday?
 - Completed RecyclerView implementation for past_orders_customer_page, activity_customer_cart

@@ -44,14 +44,14 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Time, other classes
 
-	Name: Sayed Mojtaba Hosseini
+Name: Sayed Mojtaba Hosseini
 
-	What have you done since yesterday?
-		- Nothing
+What have you done since yesterday?
+	- Nothing
 
-	What are you planning on doing today?
-	   	- Watch videos on Firebase and how to link one's android application to firebase.
-			- Familiarize myself with the basics of UI design on Android Studio for UI design this week.
+What are you planning on doing today?
+   	- Watch videos on Firebase and how to link one's android application to firebase.
+		- Familiarize myself with the basics of UI design on Android Studio for UI design this week.
 
-	Any impediments or stumbling blocks?
-		- Time, busy with completing the take home quiz for STAB52H3
+Any impediments or stumbling blocks?
+	- Time, busy with completing the take home quiz for STAB52H3
