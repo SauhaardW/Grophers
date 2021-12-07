@@ -29,7 +29,7 @@ Name: Alejandro Iglesias Llobet
 What have you done since yesterday?
 	- Redesigned the entire Model-View Presenter design pattern
 	for both the Customer and Owner login
-	- Thoroughly tested every method in both the CustomerPresenter and 
+	- Thoroughly tested every method in both the CustomerPresenter and
 	and OwnerPresenter classes using JUnit and Mockito
 	- Collaborated with Andres to engineer a plan for testing the callback
 	implementation of the login button (due to an asynchronous Firebase method)
@@ -42,3 +42,15 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Initial Model-View Presenter wasn't properly designed
 	- MATB41 Assignment
+
+	Name: Sayed Mojtaba Hosseini
+
+What have you done since yesterday?
+	- Nothing, busy with preparations for the finals
+
+What are you planning on doing today?
+   	- Try different ways so that our modal bottom sheet for all our modals pops up at full height
+		- Identified minor bugs in the application and relayed the information to the scrum master
+
+Any impediments or stumbling blocks?
+	- Unable to pop up modal bottom sheet at full height despite of the help from youtube videos

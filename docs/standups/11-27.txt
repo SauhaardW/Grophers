@@ -51,3 +51,16 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+	Name: Sayed Mojtaba Hosseini
+
+What have you done since yesterday?
+	- Not much, as I had B36 Midterm yesterday
+
+What are you planning on doing today?
+  - Host a session for my peers to teach them Recycler View implementation so that the remaining three pages can be implemented in the same format
+	- Host a group meeting to allocate responsibilities for the remaining pages
+	- Small UI changes to activity_add_products and activity_past_orders_customer
+
+Any impediments or stumbling blocks?
+	- None

@@ -18,14 +18,14 @@ What have you done since yesterday?
 	- Implemented the already created image url modal to the product creation page
 	- Created customers add to cart modal
 	- Implemented the add to cart modal so when product is clicked the modal will show
-	- Created owners order info modal 
+	- Created owners order info modal
 	- Implemented the owners order info modal so when get info is clicked the modal will show
 
 What are you planning on doing today?
    	- Fix spinner layout and create custom spinner layout for order info modal, android default spinner does not look nice
 
 Any impediments or stumbling blocks?
-	- Creating the spinner within the modal. Had to change the way I was implementing the modal in order for the spinner to show properly. 
+	- Creating the spinner within the modal. Had to change the way I was implementing the modal in order for the spinner to show properly.
 
 Name: Andres Prada
 
@@ -51,3 +51,15 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- CSCB36 Test
+
+	Name: Sayed Mojtaba Hosseini
+
+What have you done since yesterday?
+- Completed RecyclerView implementation for past_orders_customer_page, activity_customer_cart
+- Completed the cards for past orders and cart items to be used in backend
+
+What are you planning on doing today?
+  - Nothing related to the project as I need to allocate time for B36 Midterm
+
+Any impediments or stumbling blocks?
+	- Time, CSCB36H3 Midterm today.

@@ -34,7 +34,7 @@ What are you planning on doing today?
 	- Begin to work on elementary backend aspects to create links between attributes
 
 Any impediments or stumbling blocks?
-	- Initially struggled to be able to find buttons and text boxes that matched the shape and design we had wished for it to have in our UI on Figma however was later able to over come this as I found out that we could simply download the button and text boxes shapes and outlines from Figma and import them as backgrounds for our buttons and text boxes on Android studio  
+	- Initially struggled to be able to find buttons and text boxes that matched the shape and design we had wished for it to have in our UI on Figma however was later able to over come this as I found out that we could simply download the button and text boxes shapes and outlines from Figma and import them as backgrounds for our buttons and text boxes on Android studio
 
 Name: Nicole Droi
 
@@ -43,7 +43,7 @@ What have you done since yesterday?
 	- Completed owner set up profile page
 	- Completed owner products list page
 	- Completed customer view of products within a store
-	- Understood and learnt different elements of creating UI on android studio 
+	- Understood and learnt different elements of creating UI on android studio
 
 What are you planning on doing today?
    	- Look into modal creation for the UI
@@ -64,3 +64,19 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+	Name: Sayed Mojtaba Hosseini
+
+	What have you done since yesterday?
+		- Understood bravo studio won't be helpful in transferring code from Figma to Android Studio
+		- Updated the UI design of the landing page on Android Studio to match our Design on Figma (Added the bottom and top panels to the page to match the color scheme)
+		- Redesigned the Logos for Customers and Owners on the landing page
+		- Created the add products to store page on android studio
+
+	What are you planning on doing today?
+	   	- Fix minor UI design problems to (activity_add_products) i.e. replace the textViews with editText and vice e versa
+			- Start creating the Customer View Page (activity_customer_view) and made the layout match that of figma
+			- Start creating a template for the store cards on (activity_customer_view) so that this template can be used to create all the remaining stores in the future
+
+	Any impediments or stumbling blocks?
+		- Constraints within android studio were giving me a lot of issues.
