@@ -64,3 +64,17 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- No work left
+
+Name: Sauhaard Walia
+
+What have you done since yesterday?
+	- Fixed the modal for past orders as previously the text for "past orders" was not being seen and overlapped by the cards when the owner would scroll.
+	- Watched a lot of videos and did a lot of research on how to make modals appear at full length when opened however wasn't able to successfully find a solution for it.
+	- Removed the bug on the owners product page to enable the owner to be able to scroll and not have the text "products" be overlapped by the products below it hence needed to fix constraints in order to ensure the text products remained there even after scrolling.
+
+What are you planning on doing today?
+	- Assist my team in testing every single page and every single functionality to ensure that our final product is fully functional and smooth.
+	- Fix a minor bug on the owners past orders card as the quantity for the product was previously not being displayed hence I moved the linear layout to ensure it remains displayed regardless of the size of the product name or product price.
+
+Any impediments or stumbling blocks?
+	- None, today went really smooth and was a really good ending to our project with my team and peers.
