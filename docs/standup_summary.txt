@@ -33,12 +33,13 @@ Things I worked on:
 	- Lots of minor bugfixes, UI and code wise before submission day
 	- Implemented lots of input validation that was missing
 	- Code reviewed ALL PRs, approved and handled merge conflicts
+
 Nicole Droi
 Things I worked on:
 	- Contributed to the design of the UI on Figma
-	- Created the original UI for the set up store/create profile page on android studio 
-	- Created the original UI for the owners product list view page on android studio 
-	- Created the original UI for the customers product list view of a certain store on android studio 
+	- Created the original UI for the set up store/create profile page on android studio
+	- Created the original UI for the owners product list view page on android studio
+	- Created the original UI for the customers product list view of a certain store on android studio
 	- Added recycler view to the UI of some pages
 	- Created the owners order info card
 	- Created the xml for the image url modal and implemented what was needed to create interaction with the modal and the activity within the set up store page
@@ -55,7 +56,41 @@ Things I worked on:
 	- Implemented changing a products photo
 	- Fixed image implementation within set up store
 	- Attempted to change the height of the modals depending on their last elements (was not successful)
- 
 
-
-
+	Sayed Mojtaba Hosseini
+	Things I worked on:
+		- Created the Rough Design of the entire app including all the pages and modals on paper for implementation on Figma
+		- Contributed to the design of the UI on Figma(landing page, user login page, customer login page, customer view page, product view page, owner view page)
+		- Created the UI on Android Studio for the customer view page
+		- Created the UI on Android Studio for the past orders customer page
+		- Created the UI on Android Studio for the past orders owner page
+		- Created the framework of the UI on Android Studio for login customer page
+		- Re- designed the entire landing page
+		- Re- designed the entire customer_view_page to implement recyclerview for backend
+		- Re- designed the entire customer_store_product_view to implement recyclerview for backend
+		- Re- designed the entire past_orders_customer_page to implement recyclerview for backend
+		- Re- designed the entire customer_cart to implement recyclerview for backend
+		- Re- designed the entire landing page
+		- Created card design for Stores for backend implementation
+		- Created card design for Products for backend implementation
+		- Created card design for Past Orders for backend implementation
+		- Created card design for Cart Items for backend implementation
+		- Created the original UI for the customers product list view of a certain store on android studio
+		- Added Atreiks to mandatory fields to all the necessary pages
+		- Added necessary paddings to all the cards, textViews, editText, and recyclerView 2 days before submission to standardize the look and feel and placements of the cards on each page
+		- Hosted a Seminar for Peers to teach them recyclerview, so that they can implement it on the remaining pages
+		- Worked on some Modal Bottom Sheet Dialogs
+		- Backend of Customer cart:
+			- Made edits on CustomerCartActivity.java
+			- Made edits on CartListViewAdapter.java
+		- Backend of Owner Products Page:
+			- Worked on EditProductModalDialog.java
+			- Worked on OwnerProductListActivity.java
+			- Worked on OwnerProductListViewAdapter.java
+		- Backend for validation of login pages:
+			- Added to LoginOwnerActivity.java
+			- Added to LoginModelOwner.java
+			- Added to LoginCustomerActivity.java
+			- Added to LoginModelCustomer.java
+		- Attempted to change the order of card displays based on timestamps (was not successful)
+		- Conducted some testing and identified minor bugs which were later fixed by teammates
