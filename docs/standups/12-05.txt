@@ -54,3 +54,17 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Unable to pop up modal bottom sheet at full height despite of the help from youtube videos
+
+Name: Sauhaard Walia
+
+What have you done since yesterday?
+	- Figured out how to use .addeventvalue instead of .get in our backend to be able to have the owner product list constantly refresh upon any changes made to the product list by the owner when the owner adds products or edits products as previously the page was only refreshed to match the data from the firebase upon creation and this created a data out of date issue.
+	- Fixed the bug of overlapping text issue on the past orders page as it was previously being cut off every time the user would scroll the page down.
+
+What are you planning on doing today?
+   	- Fix the card on the past order modal as currently the text is being cropped out of the page and as a result doesn't get seen.
+	- Fix the error on owners products page as currently the text for "products" was being cropped out whenever the owner scrolls down.
+	- Try to figure out how to make all the modal bottom sheets appear at full length as currently the user needs to scroll to be able to see all of it.
+
+Any impediments or stumbling blocks?
+	- Reviewed several stack overflow and YouTube videos to try and understand how to make bottom sheets appear at full length however wasn't able to find any solutions that worked for us.
