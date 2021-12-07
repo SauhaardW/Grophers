@@ -55,7 +55,9 @@ Any impediments or stumbling blocks?
 Name: Sauhaard Walia
 
 What have you done since yesterday?
-	- 
+	- Went and fixed the buttons functionality and appearance on edit product modal due to previous bugs on that component
+	- Found out for every page how we can make a default button appear with a custom image background but at the same time be able to alter its color to match the theme of our app due to previously android studio fixing it's color to purple.
+	- Fixed the button on owner product list and enabled the page to be able to create a new product.
 
 What are you planning on doing today?
   	- 
