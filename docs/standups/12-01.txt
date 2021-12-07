@@ -41,11 +41,13 @@ What have you done since yesterday?
 	- Implemented the functionality of receiving input from the owner for each of the product images that they create and then passing that input to be reflected on the firebase database
 	- Tested and ensured that the images that are being passed in by the owner are the same ones that are as a result being shown on the Firebase.
 
-
 What are you planning on doing today?
-	- 
+	- Implement the backend code for the set up store activity and then be able to implement similar features to the add product feature to allow the owner to add an image a new store.
+	- Make sure that the images the owner adds for the store are getting fetched by his input and are being added to represent that store on the Firebase database.
+	- Remove the functionality of get content description from the code as it creates bugs and need to get rid of existing place holders we had from before. 
+
 Any impediments or stumbling blocks?
-	- 
+	- Struggled to be able to identify what areas of the existing code were creating errors in enabling me to be albe to fetch images from the owner for his store properly but later discovered it was the placeholders that was creating this issue.
 
 Name: Andres Prada
 
