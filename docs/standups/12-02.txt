@@ -51,10 +51,12 @@ Any impediments or stumbling blocks?
 Name: Sauhaard Walia
 
 What have you done since yesterday?
-   	- 
+   	- Created the code for set up store activity and then implemented the feature to create store to enable the owner to add an image url to serve as their stores logo.
+	- Ensured that the input by the owner for the store image is being correctly fetched by the listener and then is being accurately added into the firebase database.
+	- Removed parts of the code for images for an owner for both creating a product and adding a logo to a store as they were impeding on being able to actually obtain those images from the owner and get the right ones to be displayed.
 
 What are you planning on doing today?
-	- Implement the backend code for the set up store activity and then be able to implement similar features to the add product feature to allow the owner to add an image a new store.
+	
 	- Make sure that the images the owner adds for the store are getting fetched by his input and are being added to represent that store on the Firebase database.
 	- Remove the functionality of get content description from the code as it creates bugs and need to get rid of existing place holders we had from before. 
 
