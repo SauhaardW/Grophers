@@ -57,3 +57,17 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None (procrastination)
+
+Name: Sayed Mojtaba Hosseini
+
+What have you done since yesterday?
+	- Sucessfully taught my peers RecyclerView Implementation so that the remaining pages can be re-designed in this format
+	- Resolved some merge conflicts with branches I had previously created pull requests for
+
+What are you planning on doing today?
+   	- Short of time as half the day will be spent on solving B52 Quiz
+    - Make Minor UI changes
+    - Familiarize myself with Modal bottom sheet dialog implementation on android studio so that i can re-create the modal pages that were created by us on Figma
+
+Any impediments or stumbling blocks?
+	- Complete STAB52H3 quiz

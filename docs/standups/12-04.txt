@@ -10,7 +10,7 @@ What are you planning on doing today?
     - Rewatch critical parts of the Android testing lecture
     - Focus on designing as much testing as possible throughout
     the entire day for both the customer and owner login pages
-    
+
 
 Any impediments or stumbling blocks?
 	- Final Exam Preparation (MATB24 and MATB41)
@@ -38,6 +38,19 @@ What are you planning on doing today?
 	- Reviewing a ton of PRs and merging everything into main
 	- Smoke testing all features to ensure its stable
 	- Helping teammates finish implement their parts
+
+Any impediments or stumbling blocks?
+	- None
+
+Name: Sayed Mojtaba Hosseini
+
+What have you done since yesterday?
+	- Completed validation of Email and Password for customer login page
+	- Completed validation of Email and Password for owner login page
+	- Completed reversal of orders in which cards are displayed in recycler view for past order customer, past order owners
+
+What are you planning on doing today?
+   	- Nothing
 
 Any impediments or stumbling blocks?
 	- None

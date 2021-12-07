@@ -33,6 +33,32 @@ Things I worked on:
 	- Lots of minor bugfixes, UI and code wise before submission day
 	- Implemented lots of input validation that was missing
 	- Code reviewed ALL PRs, approved and handled merge conflicts
+
+Alejandro Iglesias Llobet
+Things I worked on:
+	- Contributed to the design of the UI on Figma
+	- Created the original UI for the Customer's order successfully placed page on Android Studio 
+	- Created the original UI for the Owner's order list view page on Android studio 
+	- Created the original UI for the Customer's cart page of a certain store on Android Studio
+	- Created the Recycler View for the Owner's order list view page
+	- Created the Card needed for the Owner's order list view page's Recycler View using a linear layout
+	- Created the original UI for the modal window of the Customer Order Info page on Android Studio
+	- Created the Card needed for the Customer Order Info modal window
+	- Implemented an 'onClick' property for Cards within the Recycler View (of the Customer Order Info page)
+	- Wrote Java code to always list the proper subtotal, taxes and total pricing for the listed products (and their respective quantities) within the Customer Order Info modal window
+	- Implemented the Hamburger Menu for the 'PastOrdersCustomer' page
+    - Implemented the Hamburger Menu for the 'CustomerStoreProductView' page
+    - Implemented the Hamburger Menu for the 'OwnerOrders' page
+    - Implemented the Back Button for the 'CustomerCartActivity' page
+	- Implemented the Back Button for the Owner's 'AddProductActivity' page
+    - Redesigned the layout code for the 'CustomerCart' page to be presentable for when a customer tries to view their cart before having selected any products to purchase yet
+	- Redesigned the entire Login Model-View Presenter (that Nicole initially made) for both the Customer and Owner Login
+	- Engineered a solution with Andres to properly test the submitButtonClicked method (for the 'LOG IN' button) in regards to our callback implementation (which we were forced to design due to an asynchronous Firebase method)
+	- Thoroughly tested every method in both the CustomerPresenter and OwnerPresenter classes using JUnit and Mockito (with 100% coverage)
+	- Designed several mock stores to make the app more visually appealing, including a store for Toyota Canada, Apple, Nike, Dick's Sporting Goods and GameStop
+	- Ensured every EditText View within the application has a restriction that disallows any Customer and Owner from inputting an empty string (as it would create null instances and crash the app)
+	- Thoroughly tested the application (manually) and fixed several UI design and implementation issues (especially regarding buttons)
+
 Nicole Droi
 Things I worked on:
 	- Contributed to the design of the UI on Figma

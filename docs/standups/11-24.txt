@@ -25,7 +25,7 @@ What have you done since yesterday?
 
 What are you planning on doing today?
    	- Fix a small bug on the owner log in page
-	- Fix a few constraint errors on log in owner page and make sure that the buttons are properly aligned 
+	- Fix a few constraint errors on log in owner page and make sure that the buttons are properly aligned
 
 Any impediments or stumbling blocks?
 	- Found that changing the button color for the log in and register buttons for both owner and customer was very challenging so had to do a lot of research on how to change that.
@@ -59,3 +59,21 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+Name: Sayed Mojtaba Hosseini
+
+What have you done since yesterday?
+	- Created the Customer View Page (activity_customer_view) and made the layout match that of figma
+	- Created a template for the store cards on (activity_customer_view) so that this template can be used to create all the remaining stores in the future
+	- Started working on past orders customer page
+
+What are you planning on doing today?
+   	- Complete Past Orders Customer page
+		- Change the rectangle of the stores in activity_customer_view to a shadowed rectangle as the one in Figma so the design matches everywhere
+		- Create RecyclerView Implementation of activity_customer_view page
+		- Create the card for the stores in activity_customer_view page to be added in its RecyclerView
+		- Create RecyclerView Implementation of activity_customer_store_product_view page
+		- Create the card for the products in activity_customer_store_product_view page to be added in its RecyclerView
+
+Any impediments or stumbling blocks?
+	- RecyclerView implementation was rather hard. I had to watch Youtube videos to overcome this impediment.

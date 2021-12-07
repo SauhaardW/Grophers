@@ -25,7 +25,7 @@ Name: Nicole Droi
 
 What have you done since yesterday?
 	- Implemented Spinner in order info modal
-	- Have yet to test it 
+	- Have yet to test it
 
 What are you planning on doing today?
    	- Test the spinner and make sure it's properly changing the status of orders within the database
@@ -44,7 +44,7 @@ What have you done since yesterday?
 What are you planning on doing today?
 	- Implement the backend code for the set up store activity and then be able to implement similar features to the add product feature to allow the owner to add an image a new store.
 	- Make sure that the images the owner adds for the store are getting fetched by his input and are being added to represent that store on the Firebase database.
-	- Remove the functionality of get content description from the code as it creates bugs and need to get rid of existing place holders we had from before. 
+	- Remove the functionality of get content description from the code as it creates bugs and need to get rid of existing place holders we had from before.
 
 Any impediments or stumbling blocks?
 	- Struggled to be able to identify what areas of the existing code were creating errors in enabling me to be able to fetch images from the owner for his store properly but later discovered it was the placeholders that was creating this issue.
@@ -62,6 +62,22 @@ What are you planning on doing today?
 	- Fix minor issues
 	- Implement cart counter
 	- Implement cart remove button
+
+Any impediments or stumbling blocks?
+	- None
+
+Name: Sayed Mojtaba Hosseini
+
+What have you done since yesterday?
+  - Almost completed backend for customer cart items
+
+What are you planning on doing today?
+	- Complete backend for customer cart items
+  - Start backend for Owner products
+  - Start backend for edit product modal dialog, owner_product_list_activity, owner_product_list_view_adapter
+  - UI changes to be made for activity_owner_product_list so that it meshes well with the backend
+  - UI changes to all the cards of the Recyclerview of our application so that the cards have padding from the sides and are all of the same size
+  -  Add asteriks wherever needed in the UI design to show compulsory fields, resized RecyclerView of customer_order_info_modal so that the cards have paddings from both sides, re-aligned the header of order_info_modal so that the textView has padding to the left
 
 Any impediments or stumbling blocks?
 	- None

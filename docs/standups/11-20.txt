@@ -39,7 +39,19 @@ What have you done since yesterday?
 
 What are you planning on doing today?
    	- Learn more about Firebase to try to understand it thoroughly
-	- Take another look at the design in Figma and make sure there is nothing missing that we had forgotten 
+	- Take another look at the design in Figma and make sure there is nothing missing that we had forgotten
 
 Any impediments or stumbling blocks?
 	- Time, other classes
+
+Name: Sayed Mojtaba Hosseini
+
+What have you done since yesterday?
+	- Nothing
+
+What are you planning on doing today?
+   	- Watch videos on Firebase and how to link one's android application to firebase.
+		- Familiarize myself with the basics of UI design on Android Studio for UI design this week.
+
+Any impediments or stumbling blocks?
+	- Time, busy with completing the take home quiz for STAB52H3

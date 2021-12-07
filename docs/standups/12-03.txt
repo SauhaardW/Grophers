@@ -14,11 +14,11 @@ What are you planning on doing today?
     - Start working on the testing process for both of
     the customer and owner login pages
     - Watch the CSCB07 lecture for Software Testing and
-    keep working on the testing process for both the 
+    keep working on the testing process for both the
     customer and owner login pages
     - Fix padding on UIs and ensure that it is perfect
     (If I still have some free time)
-    
+
 
 Any impediments or stumbling blocks?
 	- My illness (my headache got much better, although
@@ -51,3 +51,15 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+Name: Sayed Mojtaba Hosseini
+
+What have you done since yesterday?
+	- Started backend work for validation of login pages fields.
+
+What are you planning on doing today?
+  - Try completing the validation of Email and passwords for both the login pages
+	- Try starting backend work to reverse the order in which the cards in all recycler vies are displayed that depend on time stamp
+
+Any impediments or stumbling blocks?
+	- Time, trying to catchup on the backlog of B52 and start prepping for finals

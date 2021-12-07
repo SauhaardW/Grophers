@@ -53,3 +53,19 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- No I do not believe I faced any stumbling blocks in my work today and feel like it went very smoothly until I discovered the new bugs for the buttons color not being as wanted
+
+Name: Sayed Mojtaba Hosseini
+
+What have you done since yesterday?
+	- Completed RecyclerView implementation for activity_customer_view, activity_customer_store_product_view
+	- Completed the cards for stores and products to be used in backend
+
+What are you planning on doing today?
+   	- Rectify the small UI problems on activity_customer_store_product_view that have been caused due to the addition of recycler view. Re-allign the recycler view so that the cars are displayed correctly
+		- Redesign the past_orders_customer_page so that it incoperates RecyclerView implementation for creating new past orders in the backend
+		- Create the template for the past orders card to be added to the recycler view of past_orders_customer_page
+		- Redesign the activity_customer_cart so that it incoperates RecyclerView implementation for creating new past orders in the backend
+		- Create the template for the cart items card to be added to the recycler view of activity_customer_cart
+
+Any impediments or stumbling blocks?
+	- None

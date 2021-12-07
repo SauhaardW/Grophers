@@ -3,21 +3,21 @@ Name: Alejandro Iglesias Llobet
 What have you done since yesterday?
 	- Changed the layout features of certain pages such as
       the color of the main login page to match the overall
-      application's main light green and orange colors. 
+      application's main light green and orange colors.
 	- Created the standup file for today's scrum.
 
 What are you planning on doing today?
-	- Revisit our first Figma layout rough draft to 
+	- Revisit our first Figma layout rough draft to
       search for and add any overlooked pages and objects.
 
 Any impediments or stumbling blocks?
 	- Time, I had to communicate back and forth with the
       Co-op Office and write a 4-hour long exam.
 
-Name: Sauhaard Walia 
+Name: Sauhaard Walia
 
 What have you done since yesterday?
-	- Added final touch ups to existing pages such as owners orders list to include additional details such as the time and date the order was placed 
+	- Added final touch ups to existing pages such as owners orders list to include additional details such as the time and date the order was placed
 	- Did further reading into Android Studio and its features to be best prepared for when we begin coding on Android Studio
 
 What are you planning on doing today?
@@ -40,10 +40,22 @@ Name: Nicole Droi
 
 What have you done since yesterday?
 	- Created pages for the design on Figma
-	- Added details to existing pages, changed up the landing page to make it a bit more interesting, in the process I learnt more about the different features that Figma has	 
+	- Added details to existing pages, changed up the landing page to make it a bit more interesting, in the process I learnt more about the different features that Figma has
 
 What are you planning on doing today?
-   	- If time permits, take a look at the design on Figma 
+   	- If time permits, take a look at the design on Figma
 
 Any impediments or stumbling blocks?
 	- Time, many midterms/tests
+
+Name: Sayed Mojtaba Hosseini
+
+What have you done since yesterday?
+	- Created pages for the design on Figma
+	- Made edits to the Owner's View, Customer's View, Store View, and past orders customer namely added the cards to these pages and edited the look and feel of them.
+
+What are you planning on doing today?
+   	- Nothing because of time impediments
+
+Any impediments or stumbling blocks?
+	- 2 Midterms (STAB52H3,CSCB36H3), 1 Quiz (STAB52H3)

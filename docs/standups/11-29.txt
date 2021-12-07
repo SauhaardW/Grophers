@@ -5,7 +5,7 @@ What have you done since yesterday?
 	- Consulted with group members about what we are doing regarding the remaining tasks
 
 What are you planning on doing today?
-   	- Nothing because of my impediments as stated below 
+   	- Nothing because of my impediments as stated below
 
 Any impediments or stumbling blocks?
 	- No wifi at my house, unable to do any work
@@ -46,3 +46,17 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- Got stuck in finding out how exactly a recycler view functions and how to properly be able to set it up for it to be able to fetch the data from the database however after a few tutorials this was made very apparent to me
+
+Name: Sayed Mojtaba Hosseini
+
+What have you done since yesterday?
+- Made Minor UI changes
+- Familiarized myself with Modal bottom sheet dialog implementation on android studio so that i can re-create the modal pages that were created by us on Figma
+
+What are you planning on doing today?
+   	- Go through our Firebase components to understand the product and user classes for backend
+		- Go through my peers backend java codes so that i can get started on backend work for the remaining pages
+		- Hosted a group meeting to allocate tasks
+
+Any impediments or stumbling blocks?
+	- Time impediments as i need to catch up on missed lectures
