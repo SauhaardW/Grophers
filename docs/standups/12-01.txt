@@ -37,7 +37,10 @@ Any impediments or stumbling blocks?
 Name: Sauhaard Walia
 
 What have you done since yesterday?
-   	- 
+   	- Found out how to add image urls to serve as the products image for the owner products and for that image to be reflected on the firebase too for each of the products once it is created by the owner
+	- Implemented the functionality of receiving input from the owner for each of the product images that they create and then passing that input to be reflected on the firebase database
+	- Tested and ensured that the images that are being passed in by the owner are the same ones that are as a result being shown on the Firebase.
+
 
 What are you planning on doing today?
 	- 
