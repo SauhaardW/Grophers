@@ -47,3 +47,16 @@ What are you planning on doing today?
 
 Any impediments or stumbling blocks?
 	- None
+
+Name: Sauhaard Walia
+
+What have you done since yesterday?
+   	- 
+
+What are you planning on doing today?
+	- Implement the backend code for the set up store activity and then be able to implement similar features to the add product feature to allow the owner to add an image a new store.
+	- Make sure that the images the owner adds for the store are getting fetched by his input and are being added to represent that store on the Firebase database.
+	- Remove the functionality of get content description from the code as it creates bugs and need to get rid of existing place holders we had from before. 
+
+Any impediments or stumbling blocks?
+	- 
