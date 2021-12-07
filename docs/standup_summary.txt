@@ -116,3 +116,39 @@ Things I worked on:
 			- Added to LoginModelCustomer.java
 		- Attempted to change the order of card displays based on timestamps (was not successful)
 		- Conducted some testing and identified minor bugs which were later fixed by teammates
+
+Sauhaard Walia
+Things I worked on:
+	- Set up our teams design project on Figma
+	- Share design project with the team on Figma
+	- Contributing to the design structure for the entire app
+	- Worked intensively on understanding the basics of Figma and how to set up pages
+	- Set up past orders, reset password for users, reset password for customers
+	- Added to color scheme on our front end and develop more pages for the application on Figma
+	- Remove the forgot password feature for both login page for owner and user as that is no 		   		 longer a feature we plan to provide.
+	- Completed Log in for Customer page UI on Android Studio
+	- Completed Log in for Owner page UI on Android Studio
+	- Completed Register for Customer page UI on Android Studio
+	- Complete Register for Owner page UI on Android Studio
+	- Worked on elementary backend aspects to create links between attributes enabling the functionality of the buttons to work with the other page
+	- Fixed a small bug on the owner log in page
+	- Fixed a few constraint errors on log in owner page and make sure that the buttons are properly aligned
+	- Fixed the button colors for all the pages as they were all missing an attribute which had default set all of them to appear purple
+	- Split up our pages on Figma to make them be divided into sections that are implemented already and those that still need dividing
+	- Added recycler view on the owner product list page and make the card for its functionality and make its appearance properly too to match the theme of our app
+	- Created and implemented back end code for the functionality of the edit product modal 
+	- Completed the backend code for the dialogue we have created in order to enable the owner to add products
+	- Found out how to add image urls to serve as the products image for the owner products and for that image to be reflected on the firebase too for each of the products once it is created by the owner and tested that it works
+	- Created the code for set up store activity to create store whilst also enabling the owner to add an image url to serve as their stores logo and make sure that this information gets added to the Firebase for their store.
+	- Went and fixed the buttons functionality and appearance on edit product modal due to previous bugs on that component
+	- Fixed the button on owner product list and enabled the page to be able to create a new product.
+	- On every single page that had a edit text entry box added padding all around every single edit text entry box on all the pages to make the appearance of the user input text appear better as it was currently looking slightly ugly so added 10dp of padding.
+	- Moved up the invisible limit modal text box to make it be able to cut off the modal page at the right length.
+	- Figured out how to use .addeventvalue instead of .get in our backend to be able to have the owner product list constantly refresh upon any changes made to the product list by the owner when the owner adds products or edits products as previously the page was only refreshed to match the data from the firebase upon creation and this created a data out of date issue.
+	- Fixed the bug of overlapping text issue on the past orders page as it was previously being cut off every time the user would scroll the page down.
+	- Fixed a minor bug on the owners past orders card as the quantity for the product was previously not being displayed.
+	- Removed the bug on the owners product page to enable the owner to be able to scroll and not have the text "products" be overlapped by the products below it.
+	 
+
+
+
