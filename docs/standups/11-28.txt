@@ -58,7 +58,7 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- None (procrastination)
 
-  Name: Sayed Mojtaba Hosseini
+Name: Sayed Mojtaba Hosseini
 
 What have you done since yesterday?
 	- Sucessfully taught my peers RecyclerView Implementation so that the remaining pages can be re-designed in this format

@@ -43,14 +43,14 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Time as I have a MATB24 Midterm tomorrow hence I was really unable to be able to find enough time to be able to spend on this project instead of studying for my midterm.
 
-	Name: Sayed Mojtaba Hosseini
+Name: Sayed Mojtaba Hosseini
 
-	What have you done since yesterday?
-		- Familiarized myself with the linking of Firebase (Realtime Database) to an android project
-		- Understood the fundamentals of UI design on android studio from Lecture Notes and You tube Videos
+What have you done since yesterday?
+	- Familiarized myself with the linking of Firebase (Realtime Database) to an android project
+	- Understood the fundamentals of UI design on android studio from Lecture Notes and You tube Videos
 
-	What are you planning on doing today?
-	   	- Nothing in relation to this project.
+What are you planning on doing today?
+   	- Nothing in relation to this project.
 
-	Any impediments or stumbling blocks?
-		- Time, preparing for Co-op job applications  
+Any impediments or stumbling blocks?
+	- Time, preparing for Co-op job applications  

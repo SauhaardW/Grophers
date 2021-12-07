@@ -47,7 +47,7 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Got stuck in finding out how exactly a recycler view functions and how to properly be able to set it up for it to be able to fetch the data from the database however after a few tutorials this was made very apparent to me
 
-	Name: Sayed Mojtaba Hosseini
+Name: Sayed Mojtaba Hosseini
 
 What have you done since yesterday?
 - Made Minor UI changes

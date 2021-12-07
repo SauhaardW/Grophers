@@ -48,14 +48,14 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Time, many midterms/tests
 
-	Name: Sayed Mojtaba Hosseini
+Name: Sayed Mojtaba Hosseini
 
-	What have you done since yesterday?
-		- Created pages for the design on Figma
-		- Made edits to the Owner's View, Customer's View, Store View, and past orders customer namely added the cards to these pages and edited the look and feel of them.
+What have you done since yesterday?
+	- Created pages for the design on Figma
+	- Made edits to the Owner's View, Customer's View, Store View, and past orders customer namely added the cards to these pages and edited the look and feel of them.
 
-	What are you planning on doing today?
-	   	- Nothing because of time impediments
+What are you planning on doing today?
+   	- Nothing because of time impediments
 
-	Any impediments or stumbling blocks?
-		- 2 Midterms (STAB52H3,CSCB36H3), 1 Quiz (STAB52H3)
+Any impediments or stumbling blocks?
+	- 2 Midterms (STAB52H3,CSCB36H3), 1 Quiz (STAB52H3)

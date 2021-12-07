@@ -54,13 +54,13 @@ What have you done since yesterday?
 What are you planning on doing today?
    	- Look over the project
 
-		Name: Sayed Mojtaba Hosseini
+Name: Sayed Mojtaba Hosseini
 
-		What have you done since yesterday?
-			- Made an effort to be part of testing discussions to understand how the testing works
+What have you done since yesterday?
+	- Made an effort to be part of testing discussions to understand how the testing works
 
-		What are you planning on doing today?
-			- Read through the codes written by my peers so that I understand how things that have not be designed by me are implemented and be well versed with the full functionality of our program
+What are you planning on doing today?
+	- Read through the codes written by my peers so that I understand how things that have not be designed by me are implemented and be well versed with the full functionality of our program
 
-		Any impediments or stumbling blocks?
-			- No work left
+Any impediments or stumbling blocks?
+	- No work left

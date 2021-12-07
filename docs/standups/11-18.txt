@@ -50,15 +50,15 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Due to have 3 midterms it has been extremely difficult to be able to allocate time.
 
-	Name: Sayed Mojtaba Hosseini
+Name: Sayed Mojtaba Hosseini
 
-		What have you done since yesterday?
-			- Tried understanding the basic functionalities on Figma to design the layout of our app
-			- Edited some pages on Figma that were created by my teammates
+	What have you done since yesterday?
+		- Tried understanding the basic functionalities on Figma to design the layout of our app
+		- Edited some pages on Figma that were created by my teammates
 
-		What are you planning on doing today?
-		   	- Edit the Owner's view page for our application
-				- Edit the Customer's view page for our application
+	What are you planning on doing today?
+	   	- Edit the Owner's view page for our application
+			- Edit the Customer's view page for our application
 
-		Any impediments or stumbling blocks?
-			- Wasn't able to allocate proper time for the project today due to my ongoing preparations for 3 midterms over the course of Friday and Saturday
+	Any impediments or stumbling blocks?
+		- Wasn't able to allocate proper time for the project today due to my ongoing preparations for 3 midterms over the course of Friday and Saturday

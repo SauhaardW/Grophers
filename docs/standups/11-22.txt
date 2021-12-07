@@ -45,13 +45,13 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- Due to my MATB24 I really struggled to be able to find ample time.
 
-	Name: Sayed Mojtaba Hosseini
+Name: Sayed Mojtaba Hosseini
 
-	What have you done since yesterday?
-		- Nothing, busy with Co-op job applications
+What have you done since yesterday?
+	- Nothing, busy with Co-op job applications
 
-	What are you planning on doing today?
-	   	- Understand Bravo studio and see if it is possible to transfer code from bravo studio to android studio
+What are you planning on doing today?
+   	- Understand Bravo studio and see if it is possible to transfer code from bravo studio to android studio
 
-	Any impediments or stumbling blocks?
-		- Time, catch up on missed lectures due to the the two midterms and the quiz between 18-19th November
+Any impediments or stumbling blocks?
+	- Time, catch up on missed lectures due to the the two midterms and the quiz between 18-19th November
