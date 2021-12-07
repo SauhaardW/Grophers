@@ -56,9 +56,9 @@ What have you done since yesterday?
 	- Removed parts of the code for images for an owner for both creating a product and adding a logo to a store as they were impeding on being able to actually obtain those images from the owner and get the right ones to be displayed.
 
 What are you planning on doing today?
-	
-	- Make sure that the images the owner adds for the store are getting fetched by his input and are being added to represent that store on the Firebase database.
-	- Remove the functionality of get content description from the code as it creates bugs and need to get rid of existing place holders we had from before. 
+	- Work on creating and making sure the buttons on edit product modal appear nice and and match the color scheme of the entire code
+	- Fix the button on owner product list to be able to create a new product due to the functionality of that button currently being lacking
+	- Figure out how to make a default button with a custom image background be able to be any other color other than purple as that is what it is currently hard coded to purple for some reason that we can't find in the code
 
 Any impediments or stumbling blocks?
-	- 
+	- Struggled to find ample time today as my MGEB01 assignment took up a large majority of my time today.
