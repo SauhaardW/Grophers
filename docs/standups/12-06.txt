@@ -33,8 +33,8 @@ What have you done since yesterday?
 	- Created GameStop store
 	- Fixed back button on CustomerStoreProductViewActivity
 	not showing properly
-	- Fixed several UI issues
-
+	- Added a back button to the Owner AddProductActivity page
+	- Fixed several UI design and implementation issues
 
 What are you planning on doing today?
    	- Manually testing the app to see if I can catch any more bugs

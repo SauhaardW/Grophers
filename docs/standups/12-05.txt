@@ -29,10 +29,10 @@ Name: Alejandro Iglesias Llobet
 What have you done since yesterday?
 	- Redesigned the entire Model-View Presenter design pattern
 	for both the Customer and Owner login
-	- Thoroughly tested every method in both the CustomerPresenter and
-	and OwnerPresenter classes using JUnit and Mockito
 	- Collaborated with Andres to engineer a plan for testing the callback
 	implementation of the login button (due to an asynchronous Firebase method)
+	- Thoroughly tested every method in both the CustomerPresenter
+	and OwnerPresenter classes using JUnit and Mockito (with 100% coverage)
 
 What are you planning on doing today?
    	- Finish my MATB41 Assignment

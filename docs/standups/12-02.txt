@@ -48,17 +48,17 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- None
 
-Name: Sayed Mojtaba Hosseini
+Name: Sauhaard Walia
 
 What have you done since yesterday?
-- Completed backend for customer cart items
-- Completed backend for Owner products
-- Completed backend for edit product modal dialog, owner_product_list_activity, owner_product_list_view_adapter
-- Completed changes to all the cards of the Recyclerview of our application so that the cards have padding from the sides and are all of the same size
-- Added asteriks wherever needed in the UI design to show compulsory fields, resized RecyclerView of customer_order_info_modal so that the cards have paddings from both sides, re-aligned the header of order_info_modal so that the textView has padding to the left
+   	- Created the code for set up store activity and then implemented the feature to create store to enable the owner to add an image url to serve as their stores logo.
+	- Ensured that the input by the owner for the store image is being correctly fetched by the listener and then is being accurately added into the firebase database.
+	- Removed parts of the code for images for an owner for both creating a product and adding a logo to a store as they were impeding on being able to actually obtain those images from the owner and get the right ones to be displayed.
 
 What are you planning on doing today?
-	- Help teammates if requested
+	- Work on creating and making sure the buttons on edit product modal appear nice and and match the color scheme of the entire code
+	- Fix the button on owner product list to be able to create a new product due to the functionality of that button currently being lacking
+	- Figure out how to make a default button with a custom image background be able to be any other color other than purple as that is what it is currently hard coded to purple for some reason that we can't find in the code
 
 Any impediments or stumbling blocks?
-	- None
+	- Struggled to find ample time today as my MGEB01 assignment took up a large majority of my time today.

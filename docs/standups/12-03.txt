@@ -52,6 +52,20 @@ What are you planning on doing today?
 Any impediments or stumbling blocks?
 	- None
 
+Name: Sauhaard Walia
+
+What have you done since yesterday?
+	- Went and fixed the buttons functionality and appearance on edit product modal due to previous bugs on that component
+	- Found out for every page how we can make a default button appear with a custom image background but at the same time be able to alter its color to match the theme of our app due to previously android studio fixing it's color to purple.
+	- Fixed the button on owner product list and enabled the page to be able to create a new product.
+
+What are you planning on doing today?
+  	- Add padding around every single edit text box we have on any page on our app as they currently don't look amazing and so I will add at least 10dp of padding all around the user input so it looks more clean
+	- Fix the limit model invisible textbox as it is currently set as to being too high and makes the modal appear cut off but I am not sure if this will solve our problem
+
+Any impediments or stumbling blocks?
+	- No impediments today as I think my tasks that I had to work on were done properly and had no stumbling blocks along the way.
+
 Name: Sayed Mojtaba Hosseini
 
 What have you done since yesterday?
