@@ -45,13 +45,15 @@ Any impediments or stumbling blocks?
 Name: Sauhaard Walia
 
 What have you done since yesterday?
-	- 
+	- On every single page that had a edit text entry box I added padding all around every single edit text entry box on all the pages to make the appearance of the user input text appear better as it was currently looking slightly ugly so I added 10dp of padding.
+	- Moved up the invisible limit modal text box to make it be able to cut off the modal page at the right length.
 
 What are you planning on doing today?
-   	- 
+   	- Work tirelessly on the back end code for owner product page to be able to constantly refresh and display accurate information as the owner is adding products or editing products as previously it only fetched information once and didn't refresh.
+	- Fix the text overlapping issue on the past orders page as it is being cut off as the user scrolls along the page
 
 Any impediments or stumbling blocks?
-	- 
+	- Time as I have to start studying for final exams and was rewatching STAB52 lectures to be prepared.
 
 Name: Sayed Mojtaba Hosseini
 
